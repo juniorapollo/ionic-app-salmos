@@ -15,11 +15,10 @@ export class ListPage {
   }
 
   initializeItems() {
-     for (let i = 1; i < 150; i++) {
+     for (let i = 1; i <= 150; i++) {
        this.items[i-1] ='Salmos ' + i;
     }
   }
-
 
   getItems(ev) {
     // Reset items back to all of the items

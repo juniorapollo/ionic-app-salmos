@@ -8,20 +8,35 @@
     </ion-title>
   </ion-toolbar>
 </ion-header>
+  
+    <ion-img src="https://flashtrafficblog.files.wordpress.com/2015/09/bible-hebrewmanuscript.jpg"></ion-img>
+    
+    <ion-card-header>
+    
+        <ion-card-subtitle class="list-subtitle">Salmos Melodia de Genebra</ion-card-subtitle>
+      </ion-card-header>
+    
+      <ion-searchbar  placeholder="Pesquisar"
+          color = "medium"
+          type="search"
+          animated 
+          showCancelButton
+          spellcheck 
+          cancelButtonText="Cancelar"
+          (ionInput)="getItems($event)">
+</ion-searchbar>
+      
+      
+      <ion-content>
+          
+        <ion-list>
+          <ion-item *ngFor="let item of items">
+            {{item}}
+          </ion-item>
+        </ion-list>  
+      
+  
+        
 
-<ion-searchbar  placeholder="Pesquisar"
-                  type="search"
-                  animated 
-                  showCancelButton
-                  spellcheck 
-                  cancelButtonText="Cancelar"
-                  (ionInput)="getItems($event)">
-  </ion-searchbar>
-
-<ion-content>
-  <ion-list>
-    <ion-item *ngFor="let item of items">
-      {{item}}
-    </ion-item>
-  </ion-list>  
+      
 </ion-content>
