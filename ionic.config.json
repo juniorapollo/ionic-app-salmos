@@ -1,6 +1,8 @@
 {
   "name": "Salmos-Genebrinos",
-  "integrations": {},
+  "integrations": {
+    "cordova": {}
+  },
   "type": "angular",
   "id": "0a995e10"
 }
