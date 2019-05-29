@@ -9,34 +9,35 @@
   </ion-toolbar>
 </ion-header>
   
-    <ion-img src="https://flashtrafficblog.files.wordpress.com/2015/09/bible-hebrewmanuscript.jpg"></ion-img>
-    
-    <ion-card-header>
+<ion-content>
+  <ion-img src="https://flashtrafficblog.files.wordpress.com/2015/09/bible-hebrewmanuscript.jpg"></ion-img>
+</ion-content>
+ <ion-card-header>
     
         <ion-card-subtitle class="list-subtitle">Salmos Melodia de Genebra</ion-card-subtitle>
       </ion-card-header>
     
       <ion-searchbar  placeholder="Pesquisar"
-          color = "medium"
-          type="search"
-          animated 
-          showCancelButton
-          spellcheck 
-          cancelButtonText="Cancelar"
-          (ionInput)="getItems($event)">
-</ion-searchbar>
+                      color = "medium"
+                      type="search"
+                      animated 
+                      showCancelButton
+                      spellcheck 
+                      cancelButtonText="Cancelar"
+                      (ionInput)="getItems($event)">
+      </ion-searchbar>
       
       
-      <ion-content>
-          
-        <ion-list>
-          <ion-item *ngFor="let item of items">
-            {{item}}
+  <ion-content>
+      <!-- <ion-list *ngFor="let salmos of arraySalmos; let i = index;"> 
+          <ion-item >
+              <ion-label>{{salmos.item}} <p>{{salmos.metrificador}}</p></ion-label>
           </ion-item>
-        </ion-list>  
-      
-  
-        
+        </ion-list>   -->
 
-      
-</ion-content>
+        <ion-list *ngFor="let item of items; let i = index;"> 
+            <ion-item [routerDirection]="'root'" [routerLink]="['/'/item.split('')[0]]">
+                <ion-label id="{{i}}">{{item}} <p>{{metrificador[i]}}</p></ion-label>
+            </ion-item>
+          </ion-list> 
+  </ion-content> 

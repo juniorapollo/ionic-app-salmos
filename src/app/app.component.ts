@@ -19,6 +19,11 @@ export class AppComponent {
       title: 'Salmos Genebrinos',
       url: '/list',
       icon: 'list'
+    },
+    {
+      title: 'SALMOS 1',
+      url: '/salmos',
+      icon: 'list'
     }
   ];
 
