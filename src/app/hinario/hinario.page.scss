@@ -1,0 +1,28 @@
+audio {
+    width: 100%;
+}
+
+#title {
+    padding-bottom: 0px;
+    color:red;
+}
+#subtitle {
+    padding-top: 0px;
+    color: rgb(14, 104, 110);
+}
+#linha {
+    padding-top: 0px;
+    font-size: 80%;
+    font-family: "Segoe UI", Candara, "Bitstream Vera Sans", "DejaVu Sans", "Bitstream Vera Sans", "Trebuchet MS", Verdana, "Verdana Ref", sans-serif;
+
+    text-align: center !important;
+    -webkit-hyphens: auto; /**Chrome/Android**/
+    -moz-hyphens: auto; /**Firefox**/
+    -ms-hyphens: auto; /**Edge**/
+    hyphens: auto; /**Outros**/
+
+}
+
+#numberStrofe {
+    padding-bottom: 0px;
+}

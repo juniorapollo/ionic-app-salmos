@@ -1,0 +1,38 @@
+{
+  "songs": [
+    {
+      "id": "1",
+      "type": "SALMOS",
+      "author": "COMISSÃO BRASILEIRA DE SALMÓDIA",
+      "title": "SALMO 1",
+      "coro": [],
+      "pathMp3":null,
+      "estrofes": [
+        [
+          "1. QUÃO BEM-AVENTURADO É_O VARÃO",
+          "QUE NUNCA ANDA EM ÍMPIA SUGESTÃO;",
+          "NÃO SE DETÉM NO_ANDAR DE PECADORES",
+          "NEM SE_ASSOCIA_AOS ESCARNECEDORES,",
+          "2. MAS SEU PRAZER NA LEI DE DEUS ESTÁ",
+          "E DIA E NOITE NELA MEDITAR."
+        ],
+        [
+          "3. TAL COMO ARBUSTO À BEIRA DE ÁGUA ESTÁ,",
+          "QUE EM TEMPO PRÓPRIO O FRUTO ELE DÁ.",
+          "SUA FOLHAGEM NUNCA DESVANECE;",
+          "TUDO QUE FAZ É BOM, PROSPERA E CRESCE.",
+          "4. OS ÍMPIOS NUNCA PODEM IGUALAR",
+          "SÃO COMO A PALHA AO VENTO, A VOAR."
+        ],
+        [
+          "5. POR ISSO OS ÍMPIOS NÃO SUBSISTIRÃO",
+          "E NO JUÍZO TODOS CAIRÃO;",
+          "ENTRE OS JUSTOS QUANDO CONGREGADOS",
+          "SERÃO OS PECADORES DERRUBADOS.",
+          "6. DOS JUSTOS DEUS CONHECE O CAMINHAR,",
+          "MAS O ÍMPIO, SEU CAMINHO MORRERÁ."
+        ]
+      ]
+    }
+  ]
+}

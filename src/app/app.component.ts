@@ -16,7 +16,7 @@ export class AppComponent {
       icon: 'home'
     },
     {
-      title: 'Salmos Genebrinos',
+      title: 'Salmos & Hinos',
       url: '/list',
       icon: 'list'
     }
