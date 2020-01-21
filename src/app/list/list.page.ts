@@ -3,32 +3,39 @@ import { Router, NavigationExtras } from '@angular/router';
 
 import { HttpClient, HttpParams, HttpResponse, HttpRequest } from '@angular/common/http';
 import { SongsService } from '../services/songs.service';
+import { Song } from '../models/song_model';
+import { LoadingController } from '@ionic/angular';
+import { UtilService } from '../services/util.service';
 
 @Component({
   selector: 'app-list',
   templateUrl: 'list.page.html',
   styleUrls: ['list.page.scss']
 })
-export class ListPage {
-  private selectedItem: any;
 
-  private items:any=[];
-  private data :any;
+export class ListPage {
+ 
+  private items:any;
 
   constructor(private router: Router,
               private http: HttpClient,
-              private songsService: SongsService) { 
-    
-    this.initializeItems();
-   
-    
+              private songsService: SongsService,
+              private utilService: UtilService) { }
 
+  ngOnInit() {
+    this.utilService.showAutoHideLoader('Carregando...',2000);
+    
+    if(this.items===undefined)this.initializeItems(); 
   }
 
-  async openHinario(item) {
+  ngOnDestroy(){
+    
+  }
+  
+  async openHinario( data:Song ) {
     let navigationExtras: NavigationExtras = {
       state: {
-        song: item
+        song: data
       }
     };
   
@@ -36,10 +43,8 @@ export class ListPage {
   }
 
   async initializeItems() {
+    console.log('inicializeItems');
     this.items = await this.songsService.findAll();
-    //  for (let i = 1; i <= 150; i++) {
-    //    this.items[i-1] ='Salmos ' + i;
-    // }
   }
 
   async getItems(ev) {
@@ -65,17 +70,10 @@ export class ListPage {
     }
   }
 
-async filtrarPorEstrofe(data:any , val:string){
-    let a = data.filter((r) => {
-      return (r.toLowerCase().indexOf(val.toLowerCase()) > -1);
-    })
-
-    //  data.filter((r)=>{
-    //   console.log(r.linhas)
-    //  a=  r.linhas.toLowerCase().indexOf(val.toLowerCase()) >= 0 
-    //  return a
-    // })
-    // return a
+  async filtrarPorEstrofe(data:any , val:string){
+      let a = data.filter((r) => {
+        return (r.toLowerCase().indexOf(val.toLowerCase()) > -1);
+      })
   }
 
   filtrarPorId(data : any, val:string){
@@ -91,9 +89,6 @@ async filtrarPorEstrofe(data:any , val:string){
     return data.title.toLowerCase().indexOf(val.toLowerCase()) >= 0
   }
 
-  
-
-  ngOnInit() {}
   // add back when alpha.4 is out
   // navigate(item) {
   //   this.router.navigate(['/list', JSON.stringify(item)]);

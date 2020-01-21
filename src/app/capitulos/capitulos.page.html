@@ -1,0 +1,71 @@
+<ion-header>
+  <ion-toolbar>
+      
+    <ion-buttons slot="start" *ngIf="listCapitulo">
+      <ion-back-button></ion-back-button>
+    </ion-buttons>
+
+    <ion-buttons slot="start" *ngIf="!listCapitulo">
+     <ion-button (click)="listCapitulo=true">
+        <ion-icon slot="icon-only" ios="ios-arrow-back" md="md-arrow-back"></ion-icon>
+    </ion-button>
+    </ion-buttons>
+
+
+      <ion-title start size="small">
+       <strong>
+         {{ name | uppercase }}
+        <span *ngIf="!listCapitulo">{{ ' '+ capAtual+'. ' }} {{ 1 +'-'+ capituloLenght }}  </span>
+      </strong>
+      
+      </ion-title>
+      
+    </ion-toolbar>
+    <!-- <div class="swiper-lazy-preloader pull-right"></div> -->
+</ion-header>
+<!-- <ion-content class="ion-padding">
+
+<ion-list *ngFor="let capitulo of capitulos; let i = index">
+  <ion-item > 
+    <ion-label >
+      <p>Capítulo {{i+1}}</p>
+    </ion-label>
+  </ion-item>
+</ion-list>
+
+</ion-content> -->
+
+<ion-content fullscreen padding *ngIf="listCapitulo">
+
+  <ion-list *ngFor="let capitulo of capitulos; let i = index;">
+      <ion-item (click)="goToCapitulo(i)">
+          <ion-label>
+              <h2>Capítulo {{ i+1 }}</h2>
+          </ion-label>
+      </ion-item>
+  </ion-list>
+</ion-content>
+
+<!-- Slides -->
+<ion-content *ngIf="!listCapitulo" class="ion-padding" zoom="true"> 
+  <ion-slides [options]="sliderConfig" 
+              (ionSlideDidChange)="slideChanged(index,slides)"
+              (ionSlidesDidLoad)="sidesDidLoad()"
+              >
+
+      <ion-slide *ngFor="let capitulos of capSelecionado" >
+        <div class="swiper-zoom-container">
+            <ion-row>
+                <ion-col class="swiper-lazy" size="12" *ngFor="let verso of capitulos; let j = index;">
+                    <div class="text-justify swiper-zoom-container swiper-lazy">
+                        {{ j+1 }}. {{ verso}}
+                    </div>
+                   
+                </ion-col>
+            </ion-row>
+          </div>
+            
+      </ion-slide>
+      
+  </ion-slides>
+</ion-content> 

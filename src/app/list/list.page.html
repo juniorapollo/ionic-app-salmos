@@ -3,8 +3,8 @@
     <ion-buttons slot="start">
       <ion-menu-button></ion-menu-button>
     </ion-buttons>
-    <ion-title start>
-      Salmos & Hinos
+    <ion-title start size="small">
+      <strong> Salmos & Hinos</strong>
     </ion-title>
   </ion-toolbar>
 </ion-header> 
@@ -16,13 +16,16 @@
     <ion-img src="https://flashtrafficblog.files.wordpress.com/2015/09/bible-hebrewmanuscript.jpg"></ion-img>
   </ion-thumbnail>
      -->
-      <ion-searchbar  
+      <ion-searchbar  id='search'
           placeholder="Pesquisar"
           color = "medium"
           type="search"
-          animated 
-          showCancelButton
-          spellcheck 
+          animated="true"
+          showCancelButton="true"
+          spellcheck="true"
+          debounce="800"
+          inputmode="search" 
+          mode="ios"
           cancelButtonText="Cancelar"
           (ionInput)="getItems($event)">
       </ion-searchbar>

@@ -18,7 +18,9 @@ const routes: Routes = [
   { 
     path: 'hinario', 
     loadChildren: './hinario/hinario.module#HinarioPageModule' 
-  }
+  },
+  { path: 'listBiblia', loadChildren: './list-biblia/list-biblia.module#ListBibliaPageModule' },
+  { path: 'capitulos', loadChildren: './capitulos/capitulos.module#CapitulosPageModule' }
 ];
 
 @NgModule({

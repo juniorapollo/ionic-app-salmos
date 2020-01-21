@@ -19,6 +19,10 @@ export class AppComponent {
       title: 'Salmos & Hinos',
       url: '/list',
       icon: 'list'
+    },{
+      title: 'Blíblia - ACF',
+      url: '/listBiblia',
+      icon: 'list'
     }
   ];
 
