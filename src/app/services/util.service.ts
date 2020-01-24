@@ -19,6 +19,27 @@ export class UtilService {
       });
   }
 
+
+   showLoader(message) {
+    this.loadingController.create({
+        message: message,
+        }).then(async (res) => {
+            await res.present();
+        
+            await res.onDidDismiss().then((dis) => {});
+        });
+    
+  }
+
+  hideLoader(duration) {
+    setTimeout(async () => {
+        await this.loadingController.dismiss();
+        }, duration);
+    
+  }
+
+
+
   //return an array of objects according to key, value, or key and value matching
   getObj(obj, key, val) {
     var objects = [];

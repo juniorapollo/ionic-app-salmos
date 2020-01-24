@@ -2,148 +2,162 @@ import { Component, OnInit, ViewChild } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
 import { UtilService } from '../services/util.service';
 import { BibliaService } from '../services/biblia.service';
+import { Observable, Subject } from 'rxjs';
+import { Bible } from '../models/bible_model';
 
 
 @Component({
   selector: 'app-capitulos',
   templateUrl: './capitulos.page.html',
   styleUrls: ['./capitulos.page.scss'],
-  
+
 })
 export class CapitulosPage implements OnInit {
 
-  capitulos: any = null;
-  index:number=0;
-  capSelecionado= new Array<[]>();
-  name:any = null;
-  listCapitulo:boolean = true;
-  slides:any = null;
-  capituloLenght:number = 0;
-  capAtual:number=0;
+  constructor(private route: ActivatedRoute,
+    private router: Router,
+    private bibliaService: BibliaService,
+    private utilService: UtilService) {
+    this.listCapitulo = true;
+  }
 
+  indexInicial: number = 0;
+  index: number = 0;
   sliderConfig = {
     slidesPerView: 1,
     spaceBetween: 1,
     centeredSlides: true,
-    speed:1,
-    effect:'flip',
-    autoHeight:true, 
-    cssMode:true,
-    initialSlide:this.index,
-    allowClick:false,
+    speed: 1,
+    effect: 'flip',
+    autoHeight: true,
+    cssMode: true,
+    //initialSlide: this.index,
+    allowClick: false,
+    loop: true
+    //autoplay:true,
 
-    preloadImages: false,
+    //preloadImages: false,
     // Enable lazy loading
-    lazy: true
- };
+    //lazy: true
+  };
 
-//   slideOpts = {
-//   on: {
-//     beforeInit() {
-//       const swiper = this;
-//       swiper.classNames.push(`${swiper.params.containerModifierClass}flip`);
-//       swiper.classNames.push(`${swiper.params.containerModifierClass}3d`);
-//       const overwriteParams = {
-//         slidesPerView: 1,
-//         slidesPerColumn: 1,
-//         slidesPerGroup: 1,
-//         watchSlidesProgress: true,
-//         spaceBetween: 0,
-//         virtualTranslate: true,
-//       };
-//       swiper.params = Object.assign(swiper.params, overwriteParams);
-//       swiper.originalParams = Object.assign(swiper.originalParams, overwriteParams);
-//     },
-//     setTranslate() {
-//       const swiper = this;
-//       const { $, slides, rtlTranslate: rtl } = swiper;
-//       for (let i = 0; i < slides.length; i += 1) {
-//         const $slideEl = slides.eq(i);
-//         let progress = $slideEl[0].progress;
-        
-//         if (swiper.params.flipEffect.limitRotation) {
-//           progress = Math.max(Math.min($slideEl[0].progress, 1), -1);
-         
-//         }
-//         const offset$$1 = $slideEl[0].swiperSlideOffset;
-//         const rotate = -180 * progress;
-//         let rotateY = rotate;
-//         let rotateX = 0;
-//         let tx = -offset$$1;
-//         let ty = 0;
-//         if (!swiper.isHorizontal()) {
-//           ty = tx;
-//           tx = 0;
-//           rotateX = -rotateY;
-//           rotateY = 0;
-//         } else if (rtl) {
-//           rotateY = -rotateY;
-//         }
+  capitulos: any[] = new Array();
+  //capSelecionado= new Array<[]>();
+  name: any = null;
+  listCapitulo: boolean = true;
+  slides: any = null;
+  capituloLenght: number = 0;
+  capAtual: number = 0;
+  livro: Bible;
+  count: number = 0
+  capSelecionado: any[] = new Array()
+  outros: any[] = new Array()
+  
+  observable = new Observable(observer => {
+     observer.next(this.livro.chapters[this.index])
+  });
 
-//          $slideEl[0].style.zIndex = -Math.abs(Math.round(progress)) + slides.length;
+  capitulosParaCarregar = new Observable(observer => {
+    let capitulosRestantes: any[] = new Array();
 
-//          if (swiper.params.flipEffect.slideShadows) {
-//           // Set shadows
-//           let shadowBefore = swiper.isHorizontal() ? $slideEl.find('.swiper-slide-shadow-left') : $slideEl.find('.swiper-slide-shadow-top');
-//           let shadowAfter = swiper.isHorizontal() ? $slideEl.find('.swiper-slide-shadow-right') : $slideEl.find('.swiper-slide-shadow-bottom');
-//           if (shadowBefore.length === 0) {
-//             shadowBefore = swiper.$(`<div class="swiper-slide-shadow-${swiper.isHorizontal() ? 'left' : 'top'}"></div>`);
-//             $slideEl.append(shadowBefore);
-//           }
-//           if (shadowAfter.length === 0) {
-//             shadowAfter = swiper.$(`<div class="swiper-slide-shadow-${swiper.isHorizontal() ? 'right' : 'bottom'}"></div>`);
-//             $slideEl.append(shadowAfter);
-//           }
-//           if (shadowBefore.length) shadowBefore[0].style.opacity = Math.max(-progress, 0);
-//           if (shadowAfter.length) shadowAfter[0].style.opacity = Math.max(progress, 0);
-//         }
-//         $slideEl
-//           .transform(`translate3d(${tx}px, ${ty}px, 0px) rotateX(${rotateX}deg) rotateY(${rotateY}deg)`);
-//       }
-//     },
-//     setTransition(duration) {
-//       const swiper = this;
-//       const { slides, activeIndex, $wrapperEl } = swiper;
-//       slides
-//         .transition(duration)
-//         .find('.swiper-slide-shadow-top, .swiper-slide-shadow-right, .swiper-slide-shadow-bottom, .swiper-slide-shadow-left')
-//         .transition(duration);
-//       if (swiper.params.virtualTranslate && duration !== 0) {
-//         let eventTriggered = false;
-//         // eslint-disable-next-line
-//         slides.eq(activeIndex).transitionEnd(function onTransitionEnd() {
-//           if (eventTriggered) return;
-//           if (!swiper || swiper.destroyed) return;
+    // let indexSelecioned = this.livro.chapters.indexOf(this.livro.chapters[this.index])
 
-//           eventTriggered = true;
-//           swiper.animating = false;
-//           const triggerEvents = ['webkitTransitionEnd', 'transitionend'];
-//           for (let i = 0; i < triggerEvents.length; i += 1) {
-//             $wrapperEl.trigger(triggerEvents[i]);
-//           }
-//         });
-//       }
-//     }
-//   }
-// };
+    // capitulosRestantes = this.livro.chapters.filter((x, index) => {
+    //   return index != indexSelecioned;
+    // })
 
-  constructor( private route: ActivatedRoute, 
-               private router: Router,
-               private bibliaService : BibliaService,
-               private utilService : UtilService ) {
-                 this.listCapitulo = true;
-               }
+    capitulosRestantes = this.getArrayOrganizado();
 
- async ngOnInit() {
-    this.route.queryParams.subscribe(async ()=> {
-      if (this.router.getCurrentNavigation().extras.state) {
-        let obj = await this.router.getCurrentNavigation().extras.state;
-        this.capitulos =  await obj.chapters
-        this.name = await obj.name
-        //this.listCapitulo = await obj.listCapitulo
+    const restantes = capitulosRestantes.entries();
+    const subject = new Subject<any>();
+    let r:any[] = new Array();    
+
+    let intervalId = setInterval(() => { 
+      try {
+        r.push(restantes.next().value[1]);
+        subject.next(r) 
+      } catch (error) {
+        console.log('Stop SetInterval')
+        clearInterval(intervalId);
       }
-      
+     }, 1000);
+    
+     subject.subscribe({
+      next: (value) => observer.next(value)
     });
+
+    //observer.next(result.value[1]);
+    // this.slides = document.querySelector('ion-slides');
+    // let swiper = this.slides.swiper;
+
+    // swiper.destroy( true , true );
+    // observer.next(capitulosRestantes);     
+
+    //observer.next(this.capSelecionado)
+
+
+  });
+
+
+  ngOnInit() {
+    this.route.queryParams.subscribe(() => {
+      if (this.router.getCurrentNavigation().extras.state) {
+        let obj = this.router.getCurrentNavigation().extras.state;
+        this.livro = obj.data
+        // this.name = await obj.data.name
+        //this.listCapitulo = await obj.listCapitulo
+        // this.capSelecionado = await obj.data.chapters
+        //console.log(this.capSelecionado)
+      }
+    });
+    
+  }
+
+  getArrayOrganizado(){
+    let arrAux:any[] = new Array();
+    this.livro.chapters.forEach((element)=>{
+      arrAux.push(element);
+    })
+    let newArray = new Array();
+    newArray = arrAux.filter((x,index)=>{
+      return index > this.index
+    })
+    return newArray.concat(arrAux.splice(0,this.index+1))
+  
+  }
+
+  returnListCap() {
+    this.slides = document.querySelector('ion-slides');
+    if (this.slides != null) {
+      let swiper = this.slides.swiper;
+      swiper.update();
+    }
+    this.listCapitulo = true;
+  }
+
+  async sidesDidLoad(mySlider) {
+    console.log('sidesDidLoad')
+    this.slides = await document.querySelector('ion-slides');
+    let swiper = this.slides.swiper;
+   // swiper.slideTo(0, this.index);
+
+    swiper.update();
+
+    // this.capitulosParaCarregar.subscribe(()=>{});
+  }
+
+  goToCapitulo(index) {
+    // this.capitulosParaCarregar.subscribe((x:any)=>{
+    //   console.log(x[1])
+    // })
+    this.listCapitulo = !this.listCapitulo;
+
+    this.indexInicial = index;
+    this.index = index;
+    this.capAtual = this.index + 1
+    // let a = await this.utilService.showAutoHideLoader('Carregando',1);
+
+    // this.observable.subscribe(()=>{})
   }
 
   // nextCapitulo(index){
@@ -154,50 +168,58 @@ export class CapitulosPage implements OnInit {
   //    console.log(index);
   //    }
 
-  async goToCapitulo( index ){
-    this.listCapitulo = await !this.listCapitulo ;
-   // let a = await this.utilService.showAutoHideLoader('Carregando',1);
- 
-    this.index = await index;
-    this.capAtual = await this.index+1
-    this.capituloLenght = await this.capitulos[index].length;
-    this.capSelecionado = await this.capitulos;
-  }
- 
-  async slideChanged() {
+  // onSlideMoved(event) {
+  //   console.log(event);
+  //   /** isEnd true when slides reach at end slide */
+  //   event.target.isEnd().then(isEnd => {
+  //     console.log('End of slide', isEnd);
+  //   });
+
+  //   event.target.isBeginning().then((istrue) => {
+  //     console.log('isBeginning', istrue);
+  //   });
+  // }
+
+  
+
+  async slideChanged(event, mySlider, index, slides) {
     //const { slides, activeIndex, $wrapperEl, slideNext } = swiper; 
     //if (activeIndex == undefined) return;
     //console.log(slides[activeIndex]);
-    
-    this.slides.swiper.swipeDirection ==='next'? this.capAtual++ : this.capAtual
-    this.slides.swiper.swipeDirection ==='prev'? this.capAtual-- : this.capAtual
-    this.capituloLenght = await this.capitulos[this.capAtual-1].length 
+    // console.log('slideChanged');
+    // console.log(mySlider);
+    // console.log(index);
+    // console.log(slides);
+
+    // this.slides.swiper.swipeDirection ==='next'? this.capAtual++ : this.capAtual
+    // this.slides.swiper.swipeDirection ==='prev'? this.capAtual-- : this.capAtual
+    // this.slides.swiper.swipeDirection ==='next'? this.index++ : this.index
+    // this.slides.swiper.swipeDirection ==='prev'? this.index-- : this.index
+
+    // this.capituloLenght = await this.capitulos[this.capAtual-1].length 
+    // this.observable.subscribe(()=>{})
     //console.log(this.capitulos[this.index]);
-   // if(isNext) {this.capSelecionado[this.index+1] = this.capitulos[this.index+1]}
-  
+    // if(isNext) {this.capSelecionado[this.index+1] = this.capitulos[this.index+1]}
+
   }
 
-  async sidesDidLoad(){
-    this.slides= await document.querySelector('ion-slides') ;
-    let swiper = this.slides.swiper;
-    swiper.slideTo(this.index,1);
-  }
-      
-    
-    
-   // this.capSelecionado.push(this.capitulos[activeIndex+1]);  
-
-    
-    // let biblia = await this.bibliaService.findAllBooks();
-    // console.log(biblia);
-    
-   // console.log('Current index is', currentIndex);
-
-
-    
   
 
-  }
 
- 
+
+  // this.capSelecionado.push(this.capitulos[activeIndex+1]);  
+
+
+  // let biblia = await this.bibliaService.findAllBooks();
+  // console.log(biblia);
+
+  // console.log('Current index is', currentIndex);
+
+
+
+
+
+}
+
+
 

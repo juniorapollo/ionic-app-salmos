@@ -23,7 +23,7 @@ export class ListPage {
               private utilService: UtilService) { }
 
   ngOnInit() {
-    this.utilService.showAutoHideLoader('Carregando...',2000);
+    // this.utilService.showAutoHideLoader('Carregando...',2000);
     
     if(this.items===undefined)this.initializeItems(); 
   }
