@@ -21,7 +21,9 @@ const routes: Routes = [
   },
   { path: 'listBiblia', loadChildren: './list-biblia/list-biblia.module#ListBibliaPageModule' },
   { path: 'capitulos', loadChildren: './capitulos/capitulos.module#CapitulosPageModule' },
-  { path: 'confissoes', loadChildren: './confissoes/confissoes.module#ConfissoesPageModule' }
+  { path: 'confissoes', loadChildren: './confissoes/confissoes.module#ConfissoesPageModule' },
+  { path: 'heidelberg-modal', loadChildren: './confissoes/heidelberg-modal/heidelberg-modal.module#HeidelbergModalPageModule' },
+  { path: 'belga-modal', loadChildren: './confissoes/belga-modal/belga-modal.module#BelgaModalPageModule' }
 ];
 
 @NgModule({
