@@ -20,7 +20,8 @@ const routes: Routes = [
     loadChildren: './hinario/hinario.module#HinarioPageModule' 
   },
   { path: 'listBiblia', loadChildren: './list-biblia/list-biblia.module#ListBibliaPageModule' },
-  { path: 'capitulos', loadChildren: './capitulos/capitulos.module#CapitulosPageModule' }
+  { path: 'capitulos', loadChildren: './capitulos/capitulos.module#CapitulosPageModule' },
+  { path: 'confissoes', loadChildren: './confissoes/confissoes.module#ConfissoesPageModule' }
 ];
 
 @NgModule({
