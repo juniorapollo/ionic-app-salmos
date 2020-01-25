@@ -1,0 +1,41 @@
+/*---------------------------------------------------------------------------*/
+/* Recursos externos */
+@import url('https://fonts.googleapis.com/css?family=Open+Sans|Tinos:400,700&display=swap');
+/*---------------------------------------------------------------------------*/
+/* Custom declarations */
+
+
+.card-body p {
+  font-size: 1.5rem;
+}
+
+.row .col a {
+  text-decoration: none;
+  color: #343a40;
+}
+
+.row .col a:active {
+  color: #343a40;
+}
+
+.row .col a:visited {
+  color: #343a40;
+}
+
+a:focus { 
+  outline: none; 
+}
+
+p.info span {
+  display: block;
+}
+
+p.links a {
+  display: inline-block;
+  width: min-content;
+  padding: 0px 4px;
+}
+
+span.bold {
+  font-weight: bold;
+}

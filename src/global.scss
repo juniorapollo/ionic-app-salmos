@@ -9,3 +9,7 @@
 @import '~@ionic/angular/css/text-alignment.css';
 @import '~@ionic/angular/css/text-transformation.css';
 @import '~@ionic/angular/css/flex-utils.css';
+
+p, h1, h2, h3, h4, ul, ol, li .text_font_tinos {
+    font-family: 'Tinos' !important;
+}

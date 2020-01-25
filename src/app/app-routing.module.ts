@@ -15,9 +15,9 @@ const routes: Routes = [
     path: 'list',
     loadChildren: './list/list.module#ListPageModule'
   },
-  { 
-    path: 'hinario', 
-    loadChildren: './hinario/hinario.module#HinarioPageModule' 
+  {
+    path: 'hinario',
+    loadChildren: './hinario/hinario.module#HinarioPageModule'
   },
   { path: 'listBiblia', loadChildren: './list-biblia/list-biblia.module#ListBibliaPageModule' },
   { path: 'capitulos', loadChildren: './capitulos/capitulos.module#CapitulosPageModule' },
@@ -30,4 +30,4 @@ const routes: Routes = [
   ],
   exports: [RouterModule]
 })
-export class AppRoutingModule {}
+export class AppRoutingModule { }
