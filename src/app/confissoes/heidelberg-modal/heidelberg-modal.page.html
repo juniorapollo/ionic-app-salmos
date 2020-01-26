@@ -1,5 +1,5 @@
 
-<ion-header>
+<ion-header class="bar bar-header bar-dark">
   <ion-toolbar>
     <ion-title>Catecismo de Heidelberg</ion-title>
     <ion-buttons slot="end">
@@ -7,12 +7,27 @@
         <ion-icon slot="end" name="close"></ion-icon>
       </ion-button>
     </ion-buttons>
+    
   </ion-toolbar>
+  <ion-select class="selector" placeholder="Pesquisar..." cancelText="Voltar" [(ngModel)]="valueOptions" (ionChange)="scrollPage()" class="ion-padding" [interfaceOptions]="customActionSheetOptions" interface="action-sheet">
+    <ion-select-option *ngFor="let opt of arrayForLoop(51); let i = index" 
+                        [value]="i+1" 
+                        selected>Dia do Senhor {{i+1}}
+                        
+    </ion-select-option>
+  </ion-select>
+
 </ion-header>
 
-<ion-content class="ion-padding">
-  
-  <h1 className="display-3 text-dark text-center text_font_tinos font_variant_smallcaps">Catecismo de Heidelberg</h1>
+<ion-content 
+            class="ion-padding" 
+            (scrollY)="true"
+            (ionScrollStart)="logScrollStart()"
+            (ionScroll)="logScrolling($event)"
+            (ionScrollEnd)="logScrollEnd()"
+            >
+            
+  <h1 className="display-3 text-dark ion-text-center text_font_tinos font_variant_smallcaps">Catecismo de Heidelberg</h1>
   <p>O Catecismo de Heidelberg é o segundo dos padrões doutrinários da Igreja Reformada e originou-se no ano de 1563
     na cidade de Heidelberg (daí seu nome), capital do eleitorado alemão do Palatinado. O príncipe eleitor Frederico
     III, que se tornou calvinista em 1560, encarregou Zacarias Ursinus (professor da faculdade de teologia de
@@ -21,9 +36,9 @@
     imediato e em sua terceira edição as perguntas e respostas foram agrupadas em 52 <em>Dias do Senhor</em>, de modo
     que seu conteúdo pudesse ser estudado ao longo de um ano.</p>
 
-  <h3><strong>Dia do Senhor 1</strong></h3>
+  <hr/><h3 id="dia1">Dia do Senhor 1</h3>
 
-  <h4><strong>Qual é o seu único fundamento, na vida e na morte?</strong></h4>
+  <h4>Qual é o seu único fundamento, na vida e na morte?</h4>
 
   <p>O meu único fundamento é meu fiel Salvador Jesus Cristo<sup>l</sup>. A Ele pertenço, em corpo e alma, na vida e
     na morte<sup>2</sup>, e não pertenço a mim mesmo<sup>3</sup>. Com seu precioso sangue Ele pagou<sup>4</sup> por
@@ -56,7 +71,7 @@
   </ol>
 
 
-  <h2>Parte 1: Nossa miséria</h2>
+  <hr/><h2 id="dia2">Parte 1: Nossa miséria</h2>
 
   <h3>Dia do Senhor 2</h3>
 
@@ -87,7 +102,7 @@
     <li>Gn 6:5; Gn 8:21; Jr 17:9; Rm 7:23; Rm 8:7; Ef 2:3; Tt 3:3</li>
   </ol>
 
-  <h3>Dia do Senhor 3</h3>
+  <hr/><h3 id="dia3">Dia do Senhor 3</h3>
 
 
   <h4>Mas Deus criou o homem tão mau e perverso?</h4>
@@ -118,7 +133,7 @@
     <li>Jo 3:3,5; 1 Co 12:3; 2 Co 3:5</li>
   </ol>
 
-  <h3>Dia do Senhor 4</h3>
+  <hr/><h3 id="dia4">Dia do Senhor 4</h3>
 
   <h4>Então, Deus exige do homem, em sua lei, o que este não pode cumprir. Isto não é injusto?</h4>
 
@@ -155,7 +170,7 @@
   </ol>
 
 
-  <h2>Parte 2: Nossa salvação</h2>
+  <hr/><h2 id="dia5">Parte 2: Nossa salvação</h2>
 
   <h3>Dia do Senhor 5</h3>
 
@@ -202,10 +217,7 @@
     <li>Is 7:14; Is 9:6; Jr 23:6; Lc 11:22; Rm 8:3,4</li>
   </ol>
 
-
-  <h3>Dia do Senhor 6</h3>
-
-
+  <hr/><h3 id="dia6">Dia do Senhor 6</h3>
 
   <h4>Por que o Mediador deve ser verdadeiro homem e homem justo?</h4>
 
@@ -259,9 +271,7 @@
   </ol>
 
 
-  <h3>Dia do Senhor 7</h3>
-
-
+  <hr/><h3 id="dia7">Dia do Senhor 7</h3>
 
   <h4>Todos os homens, então, tornam-se salvos por Cristo, assim como pereceram em Adão?</h4>
 
@@ -318,8 +328,7 @@
   </ol>
 
 
-  <h3>Dia do Senhor 8</h3>
-
+  <hr/><h3 id="dia8">Dia do Senhor 8</h3>
 
   <h4>Como se divide este Credo?</h4>
 
@@ -339,7 +348,7 @@
 
   </ol>
 
-  <h2>DEUS PAI E NOSSA CRIAÇÃO</h2>
+  <hr/><h2 id="dia9">DEUS PAI E NOSSA CRIAÇÃO</h2>
 
 
   <h3>Dia do Senhor 9</h3>
@@ -366,7 +375,7 @@
   </ol>
 
 
-  <h3>Dia do Senhor 10</h3>
+  <hr/><h3 id="dia10">Dia do Senhor 10</h3>
 
   <h4>O que é a providência de Deus?</h4>
 
@@ -400,7 +409,7 @@
   </ol>
 
 
-  <h2>DEUS FILHO E NOSSA SALVAÇÃO</h2>
+  <hr/><h2 id="dia11">DEUS FILHO E NOSSA SALVAÇÃO</h2>
 
 
   <h3>Dia do Senhor 11</h3>
@@ -429,7 +438,7 @@
     <li>Is 9:7; Jo 1:16; Cl 1:19,20; Cl 2:10; Hb 12:2; 1 Jo 1:7</li>
   </ol>
 
-  <h3>Dia do Senhor 12</h3>
+  <hr/><h3 id="dia12">Dia do Senhor 12</h3>
 
   <h4>O nome &ldquo;Cristo&rdquo; significa &ldquo;Ungido.&rdquo; Por que Jesus tem também este nome?</h4>
 
@@ -468,7 +477,7 @@
   </ol>
 
 
-  <h3>Dia do Senhor 13</h3>
+  <hr/><h3 id="dia13">Dia do Senhor 13</h3>
 
 
   <h4>Por que Cristo é chamado &ldquo;o único Filho de Deus&rdquo;, se nós também somos filhos de Deus?</h4>
@@ -492,7 +501,7 @@
   </ol>
 
 
-  <h3>Dia do Senhor 14</h3>
+  <hr/><h3 id="dia14">Dia do Senhor 14</h3>
 
 
   <h4>O que você entende, quando diz que Cristo &ldquo;foi concebido pelo Espírito Santo e nasceu da virgem
@@ -524,7 +533,7 @@
   </ol>
 
 
-  <h3>Dia do Senhor 15</h3>
+  <hr/><h3 id="dia15">Dia do Senhor 15</h3>
 
 
   <h4>que você quer dizer com a palavra &ldquo;padeceu&rdquo;?</h4>
@@ -565,7 +574,7 @@
   </ol>
 
 
-  <h3>Dia do Senhor 16</h3>
+  <hr/><h3 id="dia16">Dia do Senhor 16</h3>
 
   <h4>Por que Cristo devia sofrer a morte?</h4>
   <p>Porque a justiça e a verdade de Deus<sup>1</sup> exigiam a morte do Filho de Deus; não houve outro meio de pagar
@@ -617,7 +626,7 @@
     <li>Is 53:5</li>
   </ol>
 
-  <h3>Dia do Senhor 17</h3>
+  <hr/><h3 id="dia17">Dia do Senhor 17</h3>
   <h4>Que importância tem, para nós, a ressurreição de Cristo?</h4>
   <p>Primeiro: pela ressurreição, Ele venceu a morte, para que nós pudéssemos participar da justiça, que Ele
     conquistou por sua morte<sup>1</sup>. Segundo: nos também, por seu poder, somos ressuscitados para a nova
@@ -630,7 +639,7 @@
   </ol>
 
 
-  <h3>Dia do Senhor 18</h3>
+  <hr/><h3 id="dia18">Dia do Senhor 18</h3>
   <h4>O que você quer dizer com as palavras: &ldquo;subiu ao céu&rdquo;?</h4>
   <p>Que Cristo, à vista de seus discípulos, foi elevado da terra ao céu<sup>1</sup> e lá esta para nosso
     bem<sup>2</sup>, até que volte para julgar os vivos e os mortos<sup>3</sup>.</p>
@@ -674,7 +683,7 @@
   </ol>
 
 
-  <h3>Dia do Senhor 19</h3>
+  <hr/><h3 id="dia19">Dia do Senhor 19</h3>
   <h4>Por que se acrescenta: &ldquo;e está sentado à direita de Deus&rdquo;?</h4>
   <p>Porque Cristo subiu ao céu para mani festar-se, lá mesmo, como o Cabeça de sua igreja cristã<sup>1</sup> e para
     governar tudo em nome de seu Pai<sup>2</sup>.</p>
@@ -705,7 +714,7 @@
   </ol>
 
 
-  <h2>DEUS ESPÍRITO SANTO E NOSSA SANTIFICAÇÃO</h2>
+  <hr/><h2 id="dia20">DEUS ESPÍRITO SANTO E NOSSA SANTIFICAÇÃO</h2>
 
   <h3>Dia do Senhor 20</h3>
   <h4>O que você crê sobre o Espírito Santo?</h4>
@@ -721,7 +730,7 @@
   </ol>
 
 
-  <h3>Dia do Senhor 21</h3>
+  <hr/><h3 id="dia21">Dia do Senhor 21</h3>
   <h4>O que você crê sobre &ldquo;a santa igreja universal de Cristo&rdquo;? </h4>
   <p>Creio que o Filho de Deus<sup>1</sup> reúne, protege e conserva<sup>2</sup>, dentre todo o gênero
     humano<sup>3</sup>, sua comunidade<sup>4</sup> eleita para a vida eterna<sup>5</sup>. Isto Ele fez por seu
@@ -759,7 +768,7 @@
     <li>Jo 3:18; Jo 5:24</li>
   </ol>
 
-  <h3>Dia do Senhor 22</h3>
+  <hr/><h3 id="dia22">Dia do Senhor 22</h3>
   <h4>Que consolo traz a você &ldquo;a ressurreição da carne&rdquo;?</h4>
   <p>Meu consolo é que depois desta vida minha alma será imediatamente elevada para Cristo, seu Cabeça<sup>1</sup>. E
     que também esta minha carne, ressuscitada pelo poder de Cristo, será unida novamente à minha alma e se tornará
@@ -777,7 +786,7 @@
     <li>Jo 17 3; 2 Co 5:2,3</li>
     <li>Jo 17:24; 1 Co 2:9</li>
   </ol>
-  <h2>A JUSTIFICAÇÃO</h2>
+  <hr/><h2 id="dia23">A JUSTIFICAÇÃO</h2>
 
   <h3>Dia do Senhor 23</h3>
   <h4>Mas que proveito tem sua fé no Evangelho?</h4>
@@ -816,7 +825,7 @@
   </ol>
 
 
-  <h3>Dia do Senhor 24</h3>
+  <hr/><h3 id="dia24">Dia do Senhor 24</h3>
   <h4>Mas por que nossas boas obras não nos podem justificar perante Deus, pelo menos em parte?</h4>
   <p>Porque a justiça que pode subsistir perante o juízo de Deus deve ser absolutamente perfeita e completamente
     conforme a lei de Deus<sup>1</sup>. Entretanto, nesta vida, todas as nossas obras, até as melhores, são
@@ -841,7 +850,7 @@
   </ol>
 
 
-  <h2>A PALAVRA E OS SACRAMENTOS</h2>
+  <hr/><h2 id="dia25">A PALAVRA E OS SACRAMENTOS</h2>
 
 
   <h3>Dia do Senhor 25</h3>
@@ -872,7 +881,7 @@
   <h4>Quantos sacramentos Cristo instituiu na nova aliança?</h4>
   <p>Dois: o santo batismo e a santa ceia.</p>
 
-  <h2>O SANTO BATISMO</h2>
+  <hr/><h2 id="dia26">O SANTO BATISMO</h2>
 
   <h3>Dia do Senhor 26</h3>
 
@@ -905,7 +914,7 @@
     22:16).</p>
 
 
-  <h3>Dia do Senhor 27</h3>
+  <hr/><h3 id="dia27">Dia do Senhor 27</h3>
   <h4>Então, a própria água do batismo é a purificação dos pecados?</h4>
   <p>Não<sup>1</sup>, pois somente o sangue de Jesus Cristo e o Espírito Santo nos purificam de todos os
     pecados<sup>2</sup>.</p>
@@ -941,8 +950,10 @@
   </ol>
 
 
-  <h2>A SANTA CEIA</h2>
+  <hr/><h2 id="dia28">A SANTA CEIA</h2>
+
   <h3>Dia do Senhor 28</h3>
+
   <h4>Como a santa ceia ensina e garante que você tem parte no único sacrifício de Cristo na cruz e em todos os seus
     benefícios?</h4>
   <p>Da seguinte maneira: Cristo me mandou, assim como a todos os fiéis, comer do pão partido e beber do cálice, em
@@ -984,7 +995,7 @@
     <li>Mt 26:26-28; Mc 14:22-24; Lc 22-19,20</li>
   </ol>
 
-  <h3>Dia do Senhor 29</h3>
+  <hr/><h3 id="dia29">Dia do Senhor 29</h3>
   <h4>Pão e vinho, então, se transformam no próprio corpo e sangue de Cristo?</h4>
   <p>Não<sup>1</sup>. Neste ponto há igualdade entre o batismo e a ceia. A água do batismo não se transforma no sangue
     de Cristo, nem tira os pecados. Ela é somente um sinal divino e uma garantia disto<sup>2</sup>. Igualmente o pão
@@ -1013,7 +1024,7 @@
   </ol>
 
 
-  <h3>Dia do Senhor 30</h3>
+  <hr/><h3 id="dia30">Dia do Senhor 30</h3>
   <h4>Que diferença há entre a ceia do Senhor e a missa do papa?</h4>
   <p>A ceia do Senhor nos testemunha que temos completo perdão de todos os nossos pecados, pelo único sacrifício de
     Jesus Cristo, que Ele mesmo, uma única vez, realizou na cruz<sup>1</sup>; e também que, pelo Espírito Santo, somos
@@ -1049,7 +1060,7 @@
   </ol>
 
 
-  <h3>Dia do Senhor 31</h3>
+  <hr/><h3 id="dia31">Dia do Senhor 31</h3>
   <h4>Que são as chaves do reino dos céus?</h4>
   <p>A pregação do santo Evangelho e a disciplina cristã. É por estes dois meios que o reino dos céus se abre para
     aqueles que crêem e se fecha para aqueles que não crêem<sup>1</sup>.</p>
@@ -1079,9 +1090,10 @@
   </ol>
 
 
-  <h2>Parte 3: Nossa gratidão</h2>
+  <hr/><h2 id="dia32">Parte 3: Nossa gratidão</h2>
 
   <h3>Dia do Senhor 32</h3>
+
   <h4>Visto que fomos libertados de nossa miséria, por Cristo, sem mérito algum de nossa parte, somente pela graça,
     por que ainda devemos fazer boas obras?</h4>
   <p>Primeiro: porque Cristo não somente nos comprou e libertou com seu sangue, mas também nos renova, à sua imagem,
@@ -1105,7 +1117,7 @@
     <li>1 Co 6:9,10; Ef 5:5,6; 1 Jo 3:14,15</li>
   </ol>
 
-  <h3>Dia do Senhor 33</h3>
+  <hr/><h3 id="dia33">Dia do Senhor 33</h3>
   <h4>Quantas partes há na verdadeira conversão do homem?</h4>
   <p>Duas: a morte do velho homem e o nascimento do novo homem<sup>1</sup>.</p>
 
@@ -1140,7 +1152,7 @@
     <li>Is 29:13,14; Ez 20:18,19; Mt 15:7-9</li>
   </ol>
 
-  <h2>OS DEZ MANDAMENTOS</h2>
+  <hr/><h2 id="dia34">OS DEZ MANDAMENTOS</h2>
 
   <h3>Dia do Senhor 34</h3>
 
@@ -1218,7 +1230,7 @@
   </ol>
 
 
-  <h3>Dia do Senhor 35</h3>
+  <hr/><h3 id="dia35">Dia do Senhor 35</h3>
   <h4>O que Deus exige no segundo mandamento?</h4>
   <p>Não podemos, de maneira alguma, representar Deus por imagem ou figura<sup>1</sup>. Devemos adorá-Lo somente da
     maneira que Ele ordenou em sua palavra<sup>2</sup>.</p>
@@ -1244,7 +1256,7 @@
 
 
 
-  <h3>Dia do Senhor 36</h3>
+  <hr/><h3 id="dia36">Dia do Senhor 36</h3>
   <h4>O que Deus exige no terceiro mandamento?</h4>
   <p>Não devemos blasfemar ou profanar o santo nome de Deus por maldições<sup>1</sup> ou juramentos falsos<sup>2</sup>
     nem por juramentos desnecessários<sup>3</sup>. Também não devemos tomar parte em pecados tão horríveis, ficando
@@ -1270,7 +1282,7 @@
     <li>Lv 24:16; Ef 5:11</li>
   </ol>
 
-  <h3>Dia do Senhor 37</h3>
+  <hr/><h3 id="dia37">Dia do Senhor 37</h3>
   <h4>Mas não podemos nós, de modo piedoso, fazer juramento em nome de Deus?</h4>
   <p>Podemos sim, quando as autoridades o exigirem ou quando for preciso, para manter e promover a fidelidade e a
     verdade, para a glória de Deus e o bem-estar do próximo. Por tal juramento está baseado na Palavra de
@@ -1291,7 +1303,7 @@
   </ol>
 
 
-  <h3>Dia do Senhor 38</h3>
+  <hr/><h3 id="dia38">Dia do Senhor 38</h3>
   <h4>O que Deus ordena no quarto mandamento?</h4>
   <p>Primeiro: o ministério do Evangelho e as escolas cristãs devem ser mantidos<sup>1</sup>, e eu devo reunir-me
     fielmente com o povo de Deus, especialmente no dia de descanso<sup>2</sup>, para conhecer a palavra de
@@ -1312,7 +1324,7 @@
   </ol>
 
 
-  <h3>Dia do Senhor 39</h3>
+  <hr/><h3 id="dia39">Dia do Senhor 39</h3>
 
   <h4>O que Deus exige no quinto mandamento?</h4>
   <p>Devo prestar toda honra, amor e fidelidade a meu pai e a minha mãe e a todos os meus superiores; devo submeter-me
@@ -1325,7 +1337,7 @@
   </ol>
 
 
-  <h3>Dia do Senhor 40</h3>
+  <hr/><h3 id="dia40">Dia do Senhor 40</h3>
   <h4>O que Deus exige no sexto mandamento?</h4>
   <p>Eu não devo desonrar, odiar, ofender ou matar meu proximo<sup>1</sup>, por mim mesmo ou através de outros. Isto
     não posso fazer, nem por pensamentos, palavras, ou gestos e muito menos por atos. Mas devo abandonar todo desejo
@@ -1363,7 +1375,7 @@
 
 
 
-  <h3>Dia do Senhor 41</h3>
+  <hr/><h3 id="dia41">Dia do Senhor 41</h3>
   <h4>O que o sétimo mandamento nos ensina?</h4>
   <p>Toda impureza sexual é amaldiçoada por Deus<sup>1</sup>. Por isso, devemos detestá-la profundamente e viver de
     maneira pura e disciplinada<sup>2</sup>, sejamos casados ou solteiros<sup>3</sup>.</p>
@@ -1385,7 +1397,7 @@
   </ol>
 
 
-  <h3>Dia do Senhor 42</h3>
+  <hr/><h3 id="dia42">Dia do Senhor 42</h3>
   <h4>O que Deus proíbe no oitavo mandamento?</h4>
   <p>Deus não somente proíbe o furto<sup>1</sup> e o roubo<sup>2</sup> que as autoridades castigam, mas também
     classifica como roubo todos os maus propósitos e as práticas maliciosas, através dos quais tentamos nos apropriar
@@ -1412,7 +1424,7 @@
   </ol>
 
 
-  <h3>Dia do Senhor 43</h3>
+  <hr/><h3 id="dia43">Dia do Senhor 43</h3>
   <h4>O que Deus exige no nono mandamento?</h4>
   <p>Jamais posso dar falso testemunho contra meu próximo<sup>1</sup>, nem torcer suas palavras<sup>2</sup> ou ser
     mexeriqueiro ou caluniador<sup>3</sup>. Também não posso ajudar a condenar alguém levianamente, sem o ter
@@ -1432,7 +1444,7 @@
     <li>1 Pe 4:8</li>
   </ol>
 
-  <h3>Dia do Senhor 44</h3>
+  <hr/><h3 id="dia44">Dia do Senhor 44</h3>
   <h4>O que Deus exige no décimo mandamento?</h4>
   <p>Jamais pode surgir em nosso coração o menor desejo ou pensamento contra qualquer mandamento de Deus. Pelo
     contrário, devemos sempre, de todo o coração odiar todos os pecados e amar toda justiça<sup>1</sup>.</p>
@@ -1463,9 +1475,7 @@
     <li>1 Co 9:24; Fp 3:12-14</li>
   </ol>
 
-
-  <h2>A ORAÇÃO</h2>
-
+  <hr/><h2 id="dia45">A ORAÇÃO</h2>
 
   <h3>Dia do Senhor 45</h3>
   <h4>Por que a oração e necessária aos cristãos?</h4>
@@ -1507,7 +1517,7 @@
     perdoado aos nossos devedores;e não nos deixes cair em tentação, mas livra nos do mal; pois teu é o reino, o poder
     e a glória para sempre. Amém&rdquo; (Mateus 6:9-13; Lucas 11:2-4).</p>
 
-  <h3>Dia do Senhor 46</h3>
+  <hr/><h3 id="dia46">Dia do Senhor 46</h3>
   <h4>Por que Cristo nos ordenou dizer a Deus &ldquo;Pai nosso&rdquo;?</h4>
   <p>Porque Cristo quer despertar em nós, logo no início como base da oração, respeito e confiança, como uma criança
     para com Deus. Pois Deus se tornou nosso Pai, por Cristo. E muito menos do que nossos pais nos recusam bens
@@ -1526,7 +1536,7 @@
   </ol>
 
 
-  <h3>Dia do Senhor 47</h3>
+  <hr/><h3 id="dia47">Dia do Senhor 47</h3>
   <h4>Qual e a primeira petição?</h4>
   <p>&ldquo;Santificado seja o teu nome.&rdquo; Quer dizer: Faze primeiro, com que Te conheçamos em
     verdade<sup>1</sup> e Te santifiquemos, honremos e glorifiquemos em todas as tuas obras<sup>2</sup>, em que
@@ -1542,7 +1552,7 @@
   </ol>
 
 
-  <h3>Dia do Senhor 48</h3>
+  <hr/><h3 id="dia48">Dia do Senhor 48</h3>
   <h4>Qual é a segunda petição?</h4>
   <p>&ldquo;Venha o teu reino.&rdquo; Quer dizer: Governa-nos por tua palavra e por teu Espírito, de tal maneira que,
     cada vez mais, nos submetamos a Ti<sup>1</sup>;conserve e aumenta tua igreja<sup>2</sup>;destrói as obras do
@@ -1558,7 +1568,7 @@
   </ol>
 
 
-  <h3>Dia do Senhor 49</h3>
+  <hr/><h3 id="dia49">Dia do Senhor 49</h3>
   <h4>Qual é a terceira petição ?</h4>
   <p>&ldquo;Faça-se a tua vontade, assim na terra como no céu.&rdquo; Quer dizer: Faze com que nós e todos os homens
     renunciemos à nossa própria vontade<sup>1</sup> e obedeçamos, sem protestos, à tua vontade<sup>2</sup>, a única
@@ -1572,7 +1582,7 @@
   </ol>
 
 
-  <h3>Dia do Senhor 50</h3>
+  <hr/><h3 id="dia50">Dia do Senhor 50</h3>
   <h4>Qual é a quarta petição?</h4>
   <p>&ldquo;O pão nosso de cada dia dá-nos hoje.&rdquo; Quer dizer: Cuida de nós com tudo o que for necessário ao
     nosso corpo<sup>1</sup>, para que reconheçamos que Tu és a única fonte de todo o bem<sup>2</sup> e que, sem tua
@@ -1586,7 +1596,7 @@
   </ol>
 
 
-  <h3>Dia do Senhor 51</h3>
+  <hr/><h3 id="dia51">Dia do Senhor 51</h3>
   <h4>Qual é a quinta petição?</h4>
   <p>&ldquo;E perdoa-nos as nossas dividas, assim como nós temos perdoado aos nossos devedores.&rdquo; Quer dizer: Por
     causa do sangue de Cristo, não cobres de nós, miseráveis pecadores que somos, nossas transgressões nem o mal que
@@ -1598,7 +1608,7 @@
   </ol>
 
 
-  <h3>Dia do Senhor 52</h3>
+  <hr/><h3 id="dia52">Dia do Senhor 52</h3>
   <h4>Qual é a sexta petição?</h4>
   <p>&ldquo;E não nos deixes cair em tentação, mas livra-nos do mal.&rdquo; Quer dizer: Somos tão fracos que, por nós
     mesmos, não podemos subsistir por um só momento<sup>1</sup>; além disto, nossos inimigos declarados: o

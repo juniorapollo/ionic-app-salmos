@@ -21,6 +21,6 @@ const routes: Routes = [
     IonicModule,
     RouterModule.forChild(routes)
   ],
-  declarations: [HeidelbergModalPage]
+  // declarations: [HeidelbergModalPage]
 })
 export class HeidelbergModalPageModule {}

@@ -14,11 +14,16 @@ export class ConfissoesPage implements OnInit {
   modals:any =[
     {
       page: HeidelbergModalPage,
-      nome: 'Catecismo de Heidelberg', 
+      nome: 'Catecismo de Heidelberg ( 1563 )',
+      author:'Zacarias Ursino & Gaspar Oleviano',
+      avatar:'./assets/img/capa_heidelber.jpeg'
   },
   {
     page: BelgaModalPage,
-    nome: 'Confissão Belga'
+    nome: 'Confissão Belga ( 1561 )',
+    author:'Guido de Brès',
+    avatar:'./assets/img/capa_belga.jpeg'
+
   }
 ]
     ;
