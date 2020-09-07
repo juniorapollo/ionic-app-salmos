@@ -14,6 +14,8 @@ import { UtilService } from '../services/util.service';
 })
 
 export class ListPage {
+
+  private title:string = "Salmos";
  
   private items:any;
 
@@ -36,6 +38,9 @@ export class ListPage {
     let navigationExtras: NavigationExtras = {
       state: {
         song: data
+      }, 
+      queryParams: {
+        title: data.title
       }
     };
   

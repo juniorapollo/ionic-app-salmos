@@ -13,13 +13,16 @@ import { Platform } from '@ionic/angular';
 export class HinarioPage implements OnInit {
 
   data: any = null;
+  title:string = ""
 
   constructor( private route: ActivatedRoute, 
-               private router: Router, 
-                private platform: Platform ) {
+               private router: Router
+             ) {
                   
         
       this.route.queryParams.subscribe(params => {
+        this.title = params.title
+
         if (this.router.getCurrentNavigation().extras.state) {
           this.data = this.router.getCurrentNavigation().extras.state.song
         }
