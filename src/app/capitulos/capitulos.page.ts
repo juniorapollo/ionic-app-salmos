@@ -100,6 +100,8 @@ export class CapitulosPage implements OnInit {
 
 
   ngOnInit() {
+
+    // Recebo o Livro Selecionado na  pagina ListBiblia
     this.route.queryParams.subscribe(() => {
       if (this.router.getCurrentNavigation().extras.state) {
         let obj = this.router.getCurrentNavigation().extras.state;
@@ -155,6 +157,10 @@ export class CapitulosPage implements OnInit {
     this.indexInicial = index;
     this.index = index;
     this.capAtual = this.index + 1
+    this.capituloLenght = this.livro.chapters[index].length
+
+
+    debugger
     // let a = await this.utilService.showAutoHideLoader('Carregando',1);
 
     // this.observable.subscribe(()=>{})

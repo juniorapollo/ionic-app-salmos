@@ -17,16 +17,15 @@ export class ConfissoesPage implements OnInit {
       nome: 'Catecismo de Heidelberg ( 1563 )',
       author:'Zacarias Ursino & Gaspar Oleviano',
       avatar:'./assets/img/capa_heidelber.jpeg'
-  },
-  {
-    page: BelgaModalPage,
-    nome: 'Confissão Belga ( 1561 )',
-    author:'Guido de Brès',
-    avatar:'./assets/img/capa_belga.jpeg'
+    },
+    {
+      page: BelgaModalPage,
+      nome: 'Confissão Belga ( 1561 )',
+      author:'Guido de Brès',
+      avatar:'./assets/img/capa_belga.jpeg'
 
-  }
-]
-    ;
+    }
+  ];
 
 
   constructor(public navCtrl: NavController,public modalCtrl : ModalController) { }

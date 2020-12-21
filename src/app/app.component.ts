@@ -20,14 +20,19 @@ export class AppComponent {
       url: '/list',
       icon: 'list'
     },
-    {
-      title: 'Blíblia - ACF',
-      url: '/listBiblia',
-      icon: 'list'
-    },
+    // {
+    //   title: 'Blíblia - ACF',
+    //   url: '/listBiblia',
+    //   icon: 'list'
+    // },
     {
       title: 'Confissões de Fé',
       url: '/confissoes',
+      icon: 'photos'
+    },
+    {
+      title: 'Credos',
+      url: '/credos',
       icon: 'photos'
     }
   ];

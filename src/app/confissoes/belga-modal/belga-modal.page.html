@@ -10,10 +10,10 @@
     </ion-buttons>
     
   </ion-toolbar>
-  <ion-select class="selector" placeholder="Pesquisar..." cancelText="Voltar" [(ngModel)]="valueOptions" (ionChange)="scrollPage()" class="ion-padding" [interfaceOptions]="customActionSheetOptions" interface="action-sheet">
-    <ion-select-option *ngFor="let opt of arrayForLoop(51); let i = index" 
+  <ion-select class="selector" placeholder="Pesquisar..." cancelText="Voltar" [(ngModel)]="valueOptions" (ionChange)="scrollPage(true)" class="ion-padding" [interfaceOptions]="customActionSheetOptions" interface="action-sheet">
+    <ion-select-option *ngFor="let opt of arrayForLoop(); let i = index" 
                         [value]="i+1" 
-                        selected>Artigo {{i+1}}        
+                        selected>{{opt}}        
     </ion-select-option>
   </ion-select>
 </ion-header>
@@ -23,12 +23,11 @@
               (ionScrollStart)="logScrollStart()"
               (ionScroll)="logScrolling($event)"
               (ionScrollEnd)="logScrollEnd()">
-  <h1 className="display-3 text-dark text-center text_font_tinos font_variant_smallcaps">Confissão Belga</h1>
+  <h1 id=˜artigo0˜ className="display-3 text-dark text-center text_font_tinos font_variant_smallcaps">Confissão Belga</h1>
   <p>O primeiro dos padrões doutrinários da Igreja Reformada na Holanda foi a Confissão de Fé. Ela é normalmente conhecida como Confissão Belga porque originou-se na área agora conhecida como Bélgica.</p>
   <p>Seu principal autor foi Guido de Brès, um pregador reformado martirizado em 1567. Durante o século XVI as igrejas naquela região foram expostas às mais terríveis perseguições pelo governo católico. Para protestar contra essa cruel opressão e para provar aos opressores que os reformados não eram rebeldes revolucionários, como os acusavam, mas cidadãos cumpridores das leis que professavam as verdadeiras doutrinas cristãs de acordo com as Sagradas Escrituras, de Brés preparou esta Confissão no ano de 1561. No ano seguinte, uma cópia dela foi enviada ao rei Felipe II, junto com uma declaração em que os signatários afirmavam estar prontos a obedecer ao governo em tudo o que fosse legítimo, mas que ofereceriam suas costas ao chicote e seus corpos ao fogo antes de negar as verdades expressas na Confissão.</p>
   
-  
-  <h2>Artigo 1 &ndash; O único Deus</h2>
+  <hr/><h2 id="artigo1">Artigo 1 &ndash; O único Deus</h2>
   
   
   
@@ -49,7 +48,7 @@
           <li>Mt 19:17. Veja também Is 40, 44 e 46</li>
       </ol>
   
-  <h2>Artigo 2 &ndash; Como conhecemos a Deus</h2>
+  <hr/><h2 id="artigo2">Artigo 2 &ndash; Como conhecemos a Deus</h2>
   
   <p>Nós O conhecemos por dois meios. Primeiro: pela criação, manutenção e governo do mundo inteiro, visto que o mundo, perante nossos olhos, é como um livro formoso<sup>1</sup>, em que todas as criaturas, grandes e pequenas, servem de letras que nos fazem contemplar &ldquo;os atributos invisíveis de Deus&rdquo;, isto é, &ldquo;o seu eterno poder e a sua divindade&rdquo;, como diz o apóstolo Paulo (Romanos 1:20). Todos estes atributos são suficientes para convencer os homens e torná-los indesculpáveis.</p>
   
@@ -61,7 +60,7 @@
   </ol>
   
   
-  <h2>Artigo 3 &ndash; A Palavra de Deus</h2>
+  <hr/><h2 id="artigo3">Artigo 3 &ndash; A Palavra de Deus</h2>
   
   <p>Confessamos que a palavra de Deus não foi enviada nem produzida &ldquo;por vontade humana, mas homens falaram da parte de Deus, movidos pelo Espírito Santo&rdquo;, como diz o apóstolo Pedro (2 Pedro 1:21).</p>
   
@@ -75,7 +74,7 @@
       <li>2 Tm 3:16</li>
   </ol>
   
-  <h2>Artigo 4 &ndash; Os livros canônicos</h2>
+  <hr/><h2 id="artigo4">Artigo 4 &ndash; Os livros canônicos</h2>
   
   
   <p>A Sagrada Escritura consiste de dois volumes: O Antigo e o Novo Testamento, que são canônicos e não podem ser contraditos de forma alguma.</p>
@@ -90,7 +89,7 @@
   
   <p>Mateus, Marcos, Lucas, João (os quatro evangelistas); Atos dos Apóstolos; Romanos, 1 e 2 Coríntios, Gálatas, Efésios, Filipenses, Colossenses, 1 e 2 Tessalonicenses, 1 e 2 Timóteo, Tito, Filemom (as treze epístolas do apóstolo Paulo); Hebreus, Tiago, 1 e 2 Pedro, 1, 2 e 3 João, Judas e Apocalipse.</p>
   
-  <h2>Artigo 5 &ndash; A autoridade da Sagrada Escritura</h2>
+  <hr/><h2 id="artigo5">Artigo 5 &ndash; A autoridade da Sagrada Escritura</h2>
   
   <p>Recebemos<sup>1</sup> todos estes livros, e somente estes, como sagrados e canônicos, para regular, fundamentar e confirmar nossa fé<sup>2</sup>. Acreditamos, sem dúvida nenhuma, em tudo que eles contêm, não tanto porque a igreja aceita e reconhece estes livros como canônicos, mas principalmente porque o Espírito Santo testifica em nossos corações que eles vêm de Deus<sup>3</sup>, como eles mesmos provam. Pois até os cegos podem sentir que as coisas, preditas neles, se cumprem<sup>4</sup>.</p>
   
@@ -101,14 +100,14 @@
       <li>Dt 18:21,22; 1Rs 22:28; Jr 28:9; Ez 33:33</li>
   </ol>
   
-  <h2>Artigo 6 &ndash; A diferença entre os livros canônicos e apócrifos</h2>
+  <hr/><h2 id="artigo6">Artigo 6 &ndash; A diferença entre os livros canônicos e apócrifos</h2>
   
   
   <p>Distinguimos estes livros sagrados dos livros apócrifos que são os seguintes: 3 e 4 Esdras, Tobias, Judite, Sabedoria, Eclesiástico, Baruc, os Acréscimos ao livro de Ester e Daniel, a Oração de Manassés e 1 e 2 Macabeus.</p>
   
   <p>A igreja pode, sim, ler estes livros e tirar deles ensino, na medida em que concordem com os livros canônicos. Porém, os apócrifos não têm tanto poder e autoridade que o testemunho deles possa confirmar qualquer artigo da fé ou da religião cristã; e muito menos podem eles diminuir a autoridade dos sagrados livros.</p>
   
-  <h2>Artigo 7 &ndash; A Sagrada Escritura: perfeita e completa</h2>
+  <hr/><h2 id="artigo7">Artigo 7 &ndash; A Sagrada Escritura: perfeita e completa</h2>
   
   <p>Cremos que esta Sagrada Escritura contém perfeitamente a vontade de Deus e suficientemente ensina tudo o que o homem deve crer para ser salvo<sup>1</sup>. Nela, Deus descreveu, por extenso, toda a maneira de servi-Lo. por isso, não e lícito aos homens, mesmo que fossem apóstolos &ldquo;ou um anjo vindo do céu&rdquo;, conforme diz o apóstolo Paulo (Gálatas 1:8), ensinarem outra doutrina, senão aquela da Sagrada Escritura<sup>2</sup>. É proibido &ldquo;acrescentar algo a Palavra de Deus ou tirar algo dela&rdquo;<sup>3</sup> (Deuteronômio 12:32; Apocalipse 22:18,19). Assim se mostra claramente que sua doutrina é perfeitíssima e, em todos os sentidos, completa<sup>4</sup>.</p>
   
@@ -126,7 +125,7 @@
   </ol>
   
   
-  <h2>Artigo 8 &ndash; A trindade: um só Deus, três pessoas</h2>
+  <hr/><h2 id="artigo8">Artigo 8 &ndash; A trindade: um só Deus, três pessoas</h2>
   
   
   <p>Conforme esta verdade e esta palavra de Deus, cremos em um só Deus<sup>1</sup>, que é um único ser, em que há três Pessoas: o Pai, o Filho e o Espírito Santo<sup>2</sup>. Estas são, realmente e desde a eternidade, distintas conforme os atributos próprios de cada Pessoa.</p>
@@ -146,7 +145,7 @@
       <li>Mq 5:1; Jo 1:1,2</li>
   </ol>
   
-  <h2>Artigo 9 &ndash; O testemunho da Escritura sobre a trindade</h2>
+  <hr/><h2 id="artigo9">Artigo 9 &ndash; O testemunho da Escritura sobre a trindade</h2>
   
   
   <p>Tudo isto sabemos tanto pelo testemunho da Sagrada Escritura<sup>1</sup>, como pelas obras das três Pessoas, principalmente por aquelas que percebemos em nós. Os testemunhos das Sagradas Escrituras, que nos ensinam a crer nesta Trindade, se acham em muitos lugares do Antigo Testamento. Não é preciso alistá-los, somente escolhê-los cuidadosamente. Em Gênesis 1:26 e 27, Deus diz: &ldquo;Façamos o homem a nossa imagem, conforme a nossa semelhança&rdquo; etc. &ldquo;Criou Deus, pois, o homem a sua imagem; homem e mulher os criou&rdquo;.</p>
@@ -167,7 +166,7 @@
   <p>* Originalmente o texto incluía aqui as seguintes palavras: &ldquo;E: &lsquo;há três que dão testemunho no céu: o Pai, a Palavra, e o Espírito Santo; e estes três são um&rsquo; (1 Jo 5:7)&rdquo;. A referência a 1 João 5:7b é duvidosa, porque este texto não se acha nos manuscritos antigos.</p>
   
   
-  <h2>Artigo 10 &ndash; Jesus Cristo é Deus</h2>
+  <hr/><h2 id="artigo10">Artigo 10 &ndash; Jesus Cristo é Deus</h2>
   
   
   <p>Cremos que Jesus Cristo, segundo sua natureza divina, é o único Filho de Deus<sup>1</sup>, gerado desde a eternidade. Ele não foi feito, nem criado – pois, assim, Ele seria uma criatura, – mas é de igual substância do pai, co-eterno, &ldquo;o resplendor da glória e a expressão exata do seu Ser&rdquo; (Hebreus 1:3), igual a Ele em tudo<sup>2</sup>.</p>
@@ -187,7 +186,7 @@
       <li>1 Co 8:6; Cl 1:16</li>
   </ol>
   
-  <h2>Artigo 11 – O Espírito Santo é Deus</h2>
+  <hr/><h2 id="artigo11">Artigo 11 – O Espírito Santo é Deus</h2>
   
 <p>  Cremos e confessamos, também, que o Espírito Santo procede do Pai e do Filho, desde a eternidade. Ele não foi feito, nem criado, nem gerado; mas procede de ambos<sup>1</sup>.</p>
   
@@ -199,7 +198,7 @@
       <li>Gn 1:2; Mt 28:19; At 5:3,4; 1 Co 2:10; 1 Co 6:11; 1 Jo 5:6</li>
  </ol>
   
-  <h2>Artigo 12 – A criação do mundo e dos anjos</h2>
+  <hr/><h2 id="artigo12">Artigo 12 – A criação do mundo e dos anjos</h2>
   
   <p>Cremos que o Pai, por seu Verbo – quer dizer: por seu Filho –, criou, do nada, o céu, a terra e todas as criaturas, quando bem Lhe aprouve<sup>1</sup>. A cada criatura Ele deu sua própria natureza e forma e sua própria função para servir ao seu Criador. Também, Ele ainda hoje sustenta todas essas criaturas e as governa segundo sua eterna providencia e por seu infinito poder, para elas servirem ao homem, a fim de que o homem sirva a seu Deus.</p>
   
@@ -217,7 +216,7 @@
       <li>At 23:8</li>
   </ol>
   
-  <h2>Artigo 13 – A providência de Deus</h2>
+  <hr/><h2 id="artigo13">Artigo 13 – A providência de Deus</h2>
   
   
   <p>Cremos que o bom Deus, depois de ter criado todas as coisas, não as abandonou, nem as entregou ao acaso ou a sorte<sup>1</sup>, mas que as dirige e governa conforme sua santa vontade, de tal maneira que neste mundo nada acontece sem sua determinação<sup>2</sup>. Contudo, Deus não é o autor, nem tem culpa do pecado que se comete<sup>3</sup>. Pois seu poder e bondade são tão grandes e incompreensíveis, que Ele ordena e faz sua obra muito bem e com justiça, mesmo que os demónios e os ímpios ajam injustamente<sup>4</sup>. E as obras dEle que ultrapassam o entendimento humano, não queremos investigá-las curiosamente, além da nossa capacidade de entender. Mas, adoramos humilde e piedosamente a Deus em seus justos julgamentos, que nos estão escondidos<sup>5</sup>. Contentamo-nos em ser discípulos de Cristo, a fim de que aprendamos somente o que Ele nos ensina na sua Palavra, sem ultrapassar estes limites<sup>6</sup>.</p>
@@ -234,7 +233,7 @@
       <li>Gn 45:8; Gn 50:20; 2Sm 16:10; Rm 8:28,38,39</li>
   </ol>
   
-  <h2>Artigo 14 – A criação do homem, sua queda e sua incapacidade de fazer o bem</h2>
+  <hr/><h2 id="artigo14">Artigo 14 – A criação do homem, sua queda e sua incapacidade de fazer o bem</h2>
   
   <p>Cremos que Deus criou o homem do pó da terra<sup>1</sup>, e o fez e formou conforme sua imagem e semelhança: bom, justo e santo<sup>2</sup>, capaz de concordar, em tudo, com a vontade de Deus. Mas, quando o homem estava naquela posição excelente, ele não a valorizou e não a reconheceu. Dando ouvidos às palavras do diabo, submeteu-se por livre vontade ao pecado e assim à morte e à maldição<sup>3</sup>. Pois transgrediu o mandamento da vida, que tinha recebido e, pelo pecado, separou-se de Deus, que era sua verdadeira vida. Assim ele corrompeu toda a sua natureza e mereceu a morte corporal e espiritual<sup>4</sup>.</p>
   
@@ -252,7 +251,7 @@
       <li>Ef 5:8</li>
   </ol>
   
-  <h2>Artigo 15 – O pecado original</h2>
+  <hr/><h2 id="artigo15">Artigo 15 – O pecado original</h2>
   
   
   <p>Cremos que, pela desobediência de Adão, o pecado original se estendeu por todo o gênero humano<sup>1</sup>. Este pecado é uma depravação de toda a natureza humana<sup>2</sup> e um mal hereditário, com que até as crianças no ventre de suas mães estão contaminadas<sup>3</sup>. É a raiz que produz no homem todo tipo de pecado. por isso, é tão repugnante e abominável diante de Deus que é suficiente para condenar o gênero humano<sup>4</sup>.</p>
@@ -270,7 +269,7 @@
       <li>Ef 2:4,5</li>
   </ol>
   
-  <h2>Artigo 16 – Eleição eterna por Deus</h2>
+  <hr/><h2 id="artigo16">Artigo 16 – Eleição eterna por Deus</h2>
   
   
   <p>Cremos que Deus, quando o pecado do primeiro homem lançou Adão e toda a sua descendência na perdição<sup>1</sup> mostrou-se como Ele é, a saber: misericordioso e justo. Misericordioso, porque Ele livra e salva da perdição aqueles que Ele em seu eterno e imutável conselho<sup>2</sup>, somente pela bondade, elegeu<sup>3</sup> em Jesus Cristo nosso Senhor<sup>4</sup>, sem levar em consideração obra alguma deles<sup>5</sup>. Justo, porque Ele deixa os demais na queda e perdição, em que eles mesmos se lançaram<sup>6</sup>.</p>
@@ -283,7 +282,7 @@
       <li>Rm 9:19-22; 1 Pe 2:8</li>
   </ol>
   
-  <h2>Artigo 17 – O Salvador prometido por Deus</h2>
+  <hr/><h2 id="artigo17">Artigo 17 – O Salvador prometido por Deus</h2>
   
   
   <p>Cremos que nosso bom Deus, vendo que o homem havia se lançado assim na morte corporal e espiritual e se havia feito totalmente miserável, foi pessoalmente em busca do homem, quando este, tremendo, fugia de sua presença<sup>1</sup>. Assim Deus mostrou sua maravilhosa sabedoria e bondade. Ele confortou o homem com a promessa de lhe dar seu Filho, que nasceria de uma mulher (Gálatas 4:4) a fim de esmagar a cabeca da serpente (Gênesis 3:15) e de tornar feliz o homem</p><p>2</p>.
@@ -292,7 +291,7 @@
       <li>Gn 22:18; Is 7:14; Jo 1:14; Jo 5:46; Jo 7:42; At 13:32; Rm 1:2,3; Gl 3:16; 2 Tm 2:8; Hb 7:14</li>
   </ol>
   
-  <h2>Artigo 18 – A encarnação do Filho de Deus</h2>
+  <hr/><h2 id="artigo18">Artigo 18 – A encarnação do Filho de Deus</h2>
   
   <p>Confessamos, então, que Deus cumpriu a promessa, feita aos pais antigos pela boca dos seus santos profetas<sup>1</sup>, quando enviou ao mundo seu próprio, único e eterno Filho, no tempo determinado por Ele<sup>2</sup>. Este assumiu a forma de servo e tornou-se semelhante aos homens (Filipenses 2:7), tomando realmente a verdadeira natureza humana com todas as suas fraquezas<sup>3</sup>, mas sem o pecado<sup>4</sup>. Foi concebido no ventre da bemaventurada virgem Maria, pelo poder do Espírito Santo, sem intervenção do homem<sup>5</sup>. E não somente tomou a natureza humana quanto ao corpo, mas também a verdadeira alma humana, para que fosse um verdadeiro homem. Pois, estando perdidos tanto a alma como o corpo, Ele devia tomar ambos para salvá-los.</p>
   
@@ -308,7 +307,7 @@
       <li>Gl 3:16</li>
   </ol>
   
-  <h2>Artigo 19 – As duas naturezas de Cristo</h2>
+  <hr/><h2 id="artigo19">Artigo 19 – As duas naturezas de Cristo</h2>
   
   <p>Cremos que, por esta concepção, a pessoa do Filho está unida e conjugada inseparavelmente, com a natureza humana<sup>1</sup>. Não há, então, dois filhos de Deus, nem duas pessoas, mas duas naturezas, unidas numa só pessoa, mantendo cada uma delas suas características distintas. A natureza divina permaneceu não criada, sem início, nem fim de vida (Hebreus 7:3), preenchendo céu e terra<sup>2</sup>. Do mesmo modo a natureza humane não perdeu suas características, mas permaneceu criatura, tendo início, sendo uma natureza finita e mantendo tudo o que é próprio de um verdadeiro corpo<sup>3</sup>. E ainda que, por meio da sua ressurreição, Cristo tenha concedido imortalidade a sua natureza humana, Ele não transformou a realidade da mesma<sup>4</sup>, pois nossa salvação e ressurreição dependem também da realidade de seu corpo5.</p>
   
@@ -326,7 +325,7 @@
       <li>Rm 1:4</li>
   </ol>
   
-  <h2>Artigo 20 – A Justiça e a misericórdia de Deus em Cristo</h2>
+  <hr/><h2 id="artigo20">Artigo 20 – A Justiça e a misericórdia de Deus em Cristo</h2>
   
   
   <p>Cremos que Deus, perfeitamente misericordioso e justo, enviou seu Filho para assumir a natureza humane em que foi cometida a desobediência<sup>1</sup>. Nesta natureza, Ele satisfez a Deus, carregando o castigo pelos pecados, através de seu mui amargo sofrimento e morte<sup>2</sup>. Assim Deus provou sua justiça sobre seu Filho, quando carregou sobre Ele nossos pecados<sup>3</sup> e derramou sua bondade e misericórdia sobre nós, culpados e dignos da condenação. Por amor perfeitíssimo, Ele entregou seu Filho a morte, por nós, e O ressuscitou para nossa justificação<sup>4</sup>, a fim de que, por Ele, tivéssemos a imortalidade e a vida eterna.</p>
@@ -338,7 +337,7 @@
       <li>Rm 4:25</li>
   </ol>
   
-  <h2>Artigo 21 – A satisfação por Cristo</h2>
+  <hr/><h2 id="artigo21">Artigo 21 – A satisfação por Cristo</h2>
   
   
   <p>Cremos que Jesus Cristo é um eterno Sumo Sacerdote, segundo a ordem de Melquisedeque, o que Deus confirmou por juramento<sup>1</sup>. Perante seu Pai e para apaziguar-Lhe a ira, Ele se apresentou em nosso nome, por satisfação própria<sup>2</sup>, sacrificando-se a si mesmo e derramando seu precioso sangue, para purificação dos nossos pecados<sup>3</sup>, conforme os profetas predisseram<sup>4</sup>.</p>
@@ -364,7 +363,7 @@
       <li>Lc 1:31; At 4:12</li>
   </ol>
   
-  <h2>Artigo 22 – A justificação pela fé em Cristo</h2>
+  <hr/><h2 id="artigo22">Artigo 22 – A justificação pela fé em Cristo</h2>
   
   
   <p>Cremos que, para obtermos verdadeiro conhecimento desse grande mistério, o Espírito Santo acende, em nosso coração, verdadeira fé<sup>1</sup>. Esta fé abraça Jesus Cristo com todos os seus méritos, apropria-se dEle e nada mais busca fora dEle<sup>2</sup>. Pois das duas, uma: ou não se ache em Jesus Cristo tudo o que é necessário para nossa salvação, ou tudo se acha nEle, e, então, aquele que possui Jesus Cristo pela fé, tem a salvação completa<sup>3</sup>. Dizer porém que Cristo não é suficiente, mas que, além dEle, algo mais é necessário, significaria uma blasfêmia horrível. Pois Cristo seria apenas um salvador incompleto.</p>
@@ -380,7 +379,7 @@
   <li>Jr 23:6; Mt 20:28; Rm 8:33; 1 Co 1:30,31; 2 Co 5:21; 1 Jo 4:10</li>
   </ol>
   
-  <h2>Artigo 23 – Nossa justiça perante Deus em Cristo</h2>
+  <hr/><h2 id="artigo23">Artigo 23 – Nossa justiça perante Deus em Cristo</h2>
   
   
   <p>Cremos que nossa verdadeira felicidade consiste no perdão dos pecados, por causa de Jesus Cristo, e que isto significa para nós a justiça perante Deus<sup>1</sup>. Assim nos ensinam Davi e Paulo, declarando: &ldquo;Bem-aventurado o homem a quem Deus atribui justiça, independentemente de obras&rdquo; (Romanos 4:6; Salmo 32:2). E o mesmo apóstolo diz que somos &ldquo;justificados gratuitamente, por sua graça, mediante a redenção que há em Cristo Jesus&rdquo;<sup>2</sup> (Romanos 3:24).</p>
@@ -398,7 +397,7 @@
   <li>Lc 16:15; Fp 3:4-9</li>
   </ol>
   
-  <h2>Artigo 24 – A santificação</h2>
+  <hr/><h2 id="artigo24">Artigo 24 – A santificação</h2>
   
   
   <p>Cremos que a verdadeira fé, tendo sido acesa no homem pelo ouvir da Palavra de Deus e pela obra do Espírito Santo<sup>1</sup>, regenera o homem e o torna um homem novo<sup>2</sup>. Esta verdadeira fé o faz viver na vida nova e o liberta da escravidão do pecado<sup>3</sup>.</p>
@@ -425,7 +424,7 @@
   <li>Tg 2:10</li>
   <li>Hc 2:4; Mt 11:28; Rm 10:11</li>
   </ol>
-  <h2>Artigo 25 – Cristo, o cumprimento da lei</h2>
+  <hr/><h2 id="artigo25">Artigo 25 – Cristo, o cumprimento da lei</h2>
   
   
   <p>Cremos que as cerimônias e figuras da lei terminaram com a vinda de Cristo e que, assim, todas as sombras chegaram ao fim<sup>1</sup>. Por isso, os cristãos não devem mais usá-las. Contudo, para nós, sua verdade e substância permanecem em Cristo Jesus, em quem têm seu cumprimento<sup>2</sup>.</p>
@@ -440,7 +439,7 @@
       <li>Rm 13:8-10; Rm 15:4; 2 Pe 1:19; 2 Pe 3:2</li>
   </ol>
   
-  <h2>Artigo 26 – Cristo, nosso único Advogado</h2>
+  <hr/><h2 id="artigo26">Artigo 26 – Cristo, nosso único Advogado</h2>
   
   
   <p>Cremos que nenhum acesso temos a Deus, senão pelo único Mediador<sup>1</sup> e Advogado Jesus Cristo, o Justo<sup>2</sup>. Porque Ele se tornou homem e uniu as naturezas divina e humana, para que nós, homens, tivéssemos acesso à majestade divina3. De outro modo, nenhum acesso teríamos. Mas este Mediador que o Pai constituiu entre Ele e nós, não nos deve assustar por sua grandeza, a ponto de fazer-nos procurar um outro, conforme nossa própria vontade. Porque não há ninguém , nem no céu, nem na terra, entre as criaturas, que nos ame mais que Jesus Cristo<sup>4</sup>. &ldquo;Pois ele, subsistindo em forma de Deus ... a si mesmo se esvaziou, assumindo a forma de servo, tornando-se em semelhança de homens&rdquo; por nós, &ldquo;em todas as coisas ... semelhante aos irmãos&rdquo; (Filipenses 2:6,7; Hebreus 2:17).</p>
@@ -472,7 +471,7 @@
   </ol>
   
   
-  <h2>Artigo 27 – A Igreja Católica ou Universal</h2>
+  <hr/><h2 id="artigo27">Artigo 27 – A Igreja Católica ou Universal</h2>
   
   
   <p>Cremos e confessamos uma só igreja católica ou universal<sup>1</sup>. Ela é uma santa congregação e assembléia<sup>2</sup> dos verdadeiros crentes em Cristo, que esperam toda a sua salvação de Jesus Cristo<sup>3</sup>, lavados pelo sangue dEle, santificados e selados pelo Espírito Santo<sup>4</sup>.</p>
@@ -494,7 +493,7 @@
       <li>Sl 119:63; At 4:32; Ef 4:4</li>
   </ol>
   
-  <h2>Artigo 28 – O dever de juntar se à igreja</h2>
+  <hr/><h2 id="artigo28">Artigo 28 – O dever de juntar se à igreja</h2>
   
   
   <p>Esta santa assembléia é a congregação daqueles que são salvos, e fora dela não há salvação<sup>1</sup>. Cremos, então, que ninguém, qualquer que seja a posição ou qualidade, deve viver afastado dela e contentar-se com sua própria pessoa. Mas cada um deve se juntar e se reunir a ela<sup>2</sup>, mantendo a unidade da igreja, submetendo-se a sua instrução e disciplina<sup>3</sup>, curvando-se diante do jugo de Jesus Cristo<sup>4</sup> e servindo para a edificação dos irmãos<sup>5</sup>, conforme os dons que Deus concedeu a todos, como membros do mesmo corpo<sup>6</sup>.</p>
@@ -516,7 +515,7 @@
   </ol>
   
   
-  <h2>Artigo 29 – As marcas da verdadeira igreja, de seus membros e da falsa igreja</h2>
+  <hr/><h2 id="artigo29">Artigo 29 – As marcas da verdadeira igreja, de seus membros e da falsa igreja</h2>
   
   
   <p>Cremos que se deve discernir diligentemente e com muito cuidado, pela Palavra de Deus, qual é a verdadeira igreja, visto que todas as seitas, que atualmente existem no mundo, se chamam igreja, mas sem razão<sup>1</sup>. Não falamos aqui dos hipócritas que, na igreja, se acham entre os sinceros fiéis; contudo, não pertencem à igreja, embora sejam membros dela<sup>2</sup>. Mas queremos dizer que se deve distinguir o corpo e a comunhão da verdadeira igreja, de todas as seitas que se dizem igreja.</p>
@@ -548,7 +547,7 @@
       <li>Jo 16:2</li>
   </ol>
   
-  <h2>Artigo 30 – O governo da igreja</h2>
+  <hr/><h2 id="artigo30">Artigo 30 – O governo da igreja</h2>
   
   
   <p>Cremos que esta verdadeira igreja deve ser governada conforme a ordem espiritual, que nosso Senhor nos ensinou na sua Palavra<sup>1</sup>. Deve haver ministros ou pastores para pregarem a Palavra de Deus e administrarem os sacramentos<sup>2</sup>; deve haver também presbíteros<sup>3</sup> e diaconos<sup>4</sup> para formarem, com os pastores, o conselho da igreja<sup>5</sup>. Assim, eles devem manter a verdadeira religião e fazer com que a verdadeira doutrina seja propagada, que os transgressores sejam castigados e contidos, de forma espiritual, e que os pobres e os aflitos recebam ajuda e consolação, conforme necessitam<sup>6</sup>.</p>
@@ -566,7 +565,7 @@
   </ol>
   
   
-  <h2>Artigo 31 – Os ofícios na igreja</h2>
+  <hr/><h2 id="artigo31">Artigo 31 – Os ofícios na igreja</h2>
   
   <p>Cremos que os ministros da palavra de Deus, os presbíteros e os diáconos devem ser escolhidos para seus ofícios mediante eleição legítima pela igreja, sob invocação do nome de Deus e em boa ordem, conforme a palavra de Deus ensina<sup>1</sup>.</p>
   
@@ -583,7 +582,7 @@
       <li>1 Ts 5:12,13; 1 Tm 5:17; Hb 13:17</li>
   </ol>
   
-  <h2>Artigo 32 – A ordem e a disciplina da igreja</h2>
+  <hr/><h2 id="artigo32">Artigo 32 – A ordem e a disciplina da igreja</h2>
   
   
   <p>Cremos que os que governam a igreja devem cuidar para não se desviarem do que Cristo, nosso único Mestre, nos ordenou<sup>1</sup>; embora seja útil e bom que, entre eles, se estabeleça e conserve determinada ordem para manter o corpo da igreja.</p>
@@ -599,7 +598,7 @@
   </ol>
   
   
-  <h2>Artigo 33 – Os sacramentos</h2>
+  <hr/><h2 id="artigo33">Artigo 33 – Os sacramentos</h2>
   
   <p>Cremos que nosso bom Deus, atento à nossa ignorância e fraqueza, instituiu os sacramentos, a fim de nos selar suas promessas e nos conceder penhores de sua benevolência e graça para conosco e, também, alimentar e sustentar nossa fé<sup>1</sup>. Ele acrescentou os sacramentos à palavra do Evangelho<sup>2</sup> para melhor apresentar aos nossos sentidos tanto o que Ele nos declara por sua Palavra, como o que Ele opera em nossos coraçoes.</p>
   
@@ -614,7 +613,7 @@
       <li>Mt 26:26-28; 1 Co 11:23-26</li>
   </ol>
   
-  <h2>Artigo 34 – O Santo Batismo</h2>
+  <hr/><h2 id="artigo34">Artigo 34 – O Santo Batismo</h2>
   
   
   <p>Cremos e confessamos que Jesus Cristo, o qual é &ldquo;o fim da lei&rdquo; (Romanos 10:4), derramando seu sangue, acabou com qualquer outro derramamento de sangue, que se possa ou queira realizar para reconciliação dos pecados. Tendo abolido a circuncisão, que se praticava com sangue, Ele instituiu, em lugar dela, o sacramento do batismo<sup>1</sup>.</p>
@@ -650,7 +649,7 @@
       <li>Lv 12:6</li>
   </ol>
   
-  <h2>Artigo 35 – A Santa Ceia</h2>
+  <hr/><h2 id="artigo35">Artigo 35 – A Santa Ceia</h2>
   
   
   <p>Cremos e confessamos que nosso Salvador Jesus Cristo ordenou e instituiu o sacramento da santa ceia<sup>1</sup>, a fim de alimentar e sustentar aqueles que Ele já fez nascer de novo e incorporou à sua família, que é a sua igreja.</p>
@@ -691,7 +690,7 @@
   </ol>
   
   
-  <h2>Artigo 36 – O ofício das autoridades civis</h2>
+  <hr/><h2 id="artigo36">Artigo 36 – O ofício das autoridades civis</h2>
   
   
   <p>Cremos que nosso bom Deus, por causa da per versidade do gênero humano, constituiu reis, governos e autoridades<sup>1</sup>. Ele quer que o mundo seja governado por leis e códigos<sup>2</sup>, para que a indisciplina dos homens seja contida e tudo ocorra entre eles em boa ordem<sup>3</sup>. Para este fim Ele forneceu às autoridades a espada para castigar os maus e proteger os bons (Romanos 13:4).</p>
@@ -714,7 +713,7 @@
   
   <p>* Originalmente o texto incluía aqui as se guintes palavras: &ldquo;...impedir e exterminar toda idolatria e falso culto a Deus, destruir o reino do anticristo e ...&rdquo;.</p>
   
-  <h2>Artigo 37 – O juízo final</h2>
+  <hr/><h2 id="artigo37">Artigo 37 – O juízo final</h2>
   
   <p>Finalmente, cremos conforme a palavra de Deus que, quando chegar o momento determinado pelo Senhor<sup>1</sup> – o qual todas as criaturas desconhecem –, e o número dos eleitos estiver completo<sup>2</sup>, nosso Senhor Jesus Cristo virá do céu, corporal e visívelmente<sup>3</sup>, assim como subiu ao céu (Atos 1:11), com grande glória e majestade<sup>4</sup>. Ele se manifestará Juiz sobre vivos e mortos<sup>5</sup>, enquanto porá em fogo e chamas este velho mundo para purificá-lo<sup>6</sup>.</p>
   

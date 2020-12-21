@@ -23,7 +23,8 @@ const routes: Routes = [
   { path: 'capitulos', loadChildren: './capitulos/capitulos.module#CapitulosPageModule' },
   { path: 'confissoes', loadChildren: './confissoes/confissoes.module#ConfissoesPageModule' },
   { path: 'heidelberg-modal', loadChildren: './confissoes/heidelberg-modal/heidelberg-modal.module#HeidelbergModalPageModule' },
-  { path: 'belga-modal', loadChildren: './confissoes/belga-modal/belga-modal.module#BelgaModalPageModule' }
+  { path: 'belga-modal', loadChildren: './confissoes/belga-modal/belga-modal.module#BelgaModalPageModule' },
+  { path: 'credos', loadChildren: './credos/credos.module#CredosPageModule' }
 ];
 
 @NgModule({

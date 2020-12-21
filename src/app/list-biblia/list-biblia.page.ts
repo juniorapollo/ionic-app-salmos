@@ -13,7 +13,7 @@ export class ListBibliaPage implements OnInit {
 
   private items:any
   
-
+  private title:string = "Almeida Corrigida Fiel"
   items$ =  new Observable(observer=>{
    // observer.next(this.bibliaService.findAll())
     //this.utilService.showLoader('Carregando..')
@@ -67,7 +67,6 @@ export class ListBibliaPage implements OnInit {
   }
 
   async goToListCapitulo( livro ){
-
     //console.log(keyName)
 
     //let obj:any =  await this.bibliaService.findAllBooks();
@@ -85,6 +84,8 @@ export class ListBibliaPage implements OnInit {
     };
   
     this.router.navigate(['capitulos'], navigationExtras).then(res=>{
+      
+      console.log("******************")
       console.log(res);
     }).catch(err=>{
       console.log(err);

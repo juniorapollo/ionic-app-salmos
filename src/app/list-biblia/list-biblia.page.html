@@ -3,8 +3,8 @@
     <ion-buttons slot="start">
       <ion-menu-button></ion-menu-button>
     </ion-buttons>
-    <ion-title start size="small">
-      <strong> Almeida Corrigida Fiel</strong>
+    <ion-title start size="medium">
+      <strong> {{title}} </strong>
     </ion-title>
   </ion-toolbar>
 </ion-header> 
@@ -28,7 +28,7 @@
 <ion-content>
   <ion-list *ngFor="let livro of items; let index= index  ">   
     <ion-item-group>
-      <ion-item-divider mode="ios"  full *ngIf="index == 0" color="light">{{'Velho Testamento' | uppercase}}</ion-item-divider>
+      <ion-item-divider mode="ios" full *ngIf="index == 0" color="light">{{'Velho Testamento' | uppercase}}</ion-item-divider>
       <ion-item-divider *ngIf="index == 39" color="light">{{'Novo Testamento' | uppercase}}</ion-item-divider>
       <ion-item (click)="goToListCapitulo(livro)"> 
         <ion-label>

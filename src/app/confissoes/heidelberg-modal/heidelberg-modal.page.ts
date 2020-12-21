@@ -21,12 +21,17 @@ export class HeidelbergModalPage implements OnInit{
     translucent: true
    };
 
-  ngOnInit(){}
-
-  scrollPage(){
-    this.content.el.scrollToTop()
-    const offsetTop = document.getElementById("dia"+this.valueOptions).offsetTop; 
-    this.content.el.scrollByPoint(null,offsetTop,1000)
+  ngOnInit() {
+    this.scrollPage(false)
+  }
+  scrollPage(setLocal?:boolean){
+    setLocal ? localStorage.setItem(`heidelberg`,`dia${this.valueOptions}`) : null
+    let lastPosition = localStorage.getItem('heidelberg')
+    setTimeout(() => {
+      this.content.el.scrollToTop()
+      const offsetTop = document.getElementById(lastPosition).offsetTop; 
+      this.content.el.scrollByPoint(null,offsetTop,1000)
+    }, 100);
   }
   closeModal(){
     this.modalController.dismiss()
