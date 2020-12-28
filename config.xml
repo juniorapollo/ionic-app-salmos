@@ -1,6 +1,6 @@
 <?xml version='1.0' encoding='utf-8'?>
-<widget android-versionCode="01" id="br.com.ReformedFaith" version="0.0.1" xmlns="http://www.w3.org/ns/widgets" xmlns:cdv="http://cordova.apache.org/ns/1.0">
-    <name>Reformed Faith</name>
+<widget android-versionCode="01" id="br.com.fereformada" version="0.0.1" xmlns="http://www.w3.org/ns/widgets" xmlns:cdv="http://cordova.apache.org/ns/1.0">
+    <name>Fé Reformada e cânticos Salmos</name>
     <description>Aplicativo criado para divulgar cantigos de Salmos Genebrinos e a Fé Reformada</description>
     <author email="daniel.a.junior@hotmail.com" href="https://www.linkedin.com/in/daniel-de-araujo-junior-b3735445/">Daniel de Araujo Junior</author>
     <content src="index.html" />

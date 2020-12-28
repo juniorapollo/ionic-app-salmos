@@ -26,7 +26,7 @@ export class AppComponent {
     //   icon: 'list'
     // },
     {
-      title: 'Confissões de Fé',
+      title: 'Pilares da Fé Reformada',
       url: '/confissoes',
       icon: 'photos'
     },

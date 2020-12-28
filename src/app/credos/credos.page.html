@@ -11,15 +11,14 @@
 
 <ion-content>
   <ion-list *ngFor="let modal of modals" > 
-    <ion-item  (click)="openModal(modal.page)">
+    <ion-item  (click)="openModal(modal)">
       <ion-avatar>
         <img [src]="modal.avatar" />
       </ion-avatar>
       <ion-label>
-        <h2>{{modal.nome}}</h2>
+        <h2>{{modal.title}}</h2>
         <p>{{modal.author}}</p>
       </ion-label>
-     
     </ion-item>
   </ion-list>
 </ion-content>

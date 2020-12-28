@@ -11,9 +11,24 @@ export class CredosPage implements OnInit {
   modals:any =[
     {
       page: CredosModalPage,
-      nome: 'Credo Apostólico',
+      title: 'Credo Apostólico',
+      name: 'apostolico',
       author:'Apóstolos de Cristo',
-      avatar:'./assets/img/capa_heidelber.jpeg'
+      avatar:'./assets/img/credo_apostolico.jpg'
+    },
+    {
+      page: CredosModalPage,
+      title: 'Credo Niceno',
+      name: 'niceno',
+      author:'',
+      avatar:'./assets/img/credo_niceno.jpg'
+    },
+    {
+      page: CredosModalPage,
+      title: 'Credo Atanasiano',
+      name: 'atanasiano',
+      author:'',
+      avatar:'./assets/img/credo_atanasiano.jpg'
     }
   ];
 
@@ -22,11 +37,18 @@ export class CredosPage implements OnInit {
   ngOnInit() {
   }
 
-  async openModal( page ) {
-    const modal = await this.modalCtrl.create({
-      component: page
+  async openModal( modal:any ) {
+
+    const modalCredo = await this.modalCtrl.create({
+      component: modal.page,
+      componentProps:[
+        {
+          name: modal.name,
+          title: modal.title
+        }
+      ]
     });
-    return await modal.present();
+    return await modalCredo.present();
   }
 
 }
