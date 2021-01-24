@@ -15,9 +15,8 @@ import { UtilService } from '../services/util.service';
 
 export class ListPage {
 
-  private title:string = "Salmos";
- 
-  private items:any;
+  title:string = "Salmos";
+  items:any;
 
   constructor(private router: Router,
               private http: HttpClient,

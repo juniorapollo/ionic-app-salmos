@@ -11,12 +11,12 @@ import { StatusBar } from '@ionic-native/status-bar/ngx';
 export class AppComponent {
   public appPages = [
     {
-      title: 'Home',
+      title: 'Playlist',
       url: '/home',
       icon: 'home'
     },
     {
-      title: 'Salmos & Hinos',
+      title: 'Salmos Genebrinos',
       url: '/list',
       icon: 'list'
     },
@@ -37,12 +37,24 @@ export class AppComponent {
     }
   ];
 
+  dark = false;
+
+
   constructor(
     private platform: Platform,
     private splashScreen: SplashScreen,
     private statusBar: StatusBar
   ) {
+    // const prefersColor = window.matchMedia('(prefers-color-scheme: dark)');
+    // this.dark = prefersColor.matches;
+   
+        this.updateDarkMode();
+   
     this.initializeApp();
+  }
+
+  updateDarkMode() {
+    document.body.classList.toggle('dark', true);
   }
 
   initializeApp() {
@@ -50,5 +62,10 @@ export class AppComponent {
       this.statusBar.styleDefault();
       this.splashScreen.hide();
     });
+  }
+
+  ngOnInit(){ 
+    console.log("ngOnInit(): appComponent")
+
   }
 }
