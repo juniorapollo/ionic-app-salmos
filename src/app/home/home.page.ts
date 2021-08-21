@@ -2,6 +2,8 @@ import { Component, ViewChild } from '@angular/core';
 import { Howl } from 'howler';
 import { IonRange } from '@ionic/angular';
 import { SongsService } from '../services/songs.service';
+import { ActivatedRoute , ParamMap, Router} from '@angular/router';
+
 
 
 export interface Track {
@@ -25,8 +27,14 @@ export class HomePage {
   	progress = 0;
   	isRandom = false;
 	@ViewChild('range') range: IonRange;
+	isPtBr:boolean;
 
-  constructor(private songsService: SongsService) {}
+  constructor(
+	  private songsService: SongsService,
+	  private route: ActivatedRoute,	  
+	  ) {
+		
+	  }
 
 
   async ngOnInit() {
@@ -39,11 +47,26 @@ export class HomePage {
        player.author =  song.author
        this.playlist.push(player)
      });
+
+	
+	this.route.queryParams.subscribe(params => {	
+		if(this.isPlaying) 
+	  		this.togglePlayer(true)
+	
+		if(params['ptBr'])		
+			this.isPtBr = JSON.parse(params['ptBr']) 
+	});
+
+	
   }
 
 
-  ngOnDestroy() {
-	  if(this.isPlaying) this.togglePlayer(true)
+  	ngOnDestroy() {
+	  if(this.isPtBr)
+	    this.isPtBr = !this.isPtBr		  	  
+	  if(this.isPlaying) 
+	  	this.togglePlayer(true)
+		  
 	}
 
 	// function to stop playing existing track (if playing) then play audio file.
@@ -96,16 +119,16 @@ export class HomePage {
 		}
   }
   
-  random(){
-    const indexOriginal = this.playlist.indexOf(this.activeTrack);
-    const min = Math.ceil(0);
-    const max = Math.floor(this.playlist.length-1);
-    const index =  Math.floor(Math.random() * (max - min+1)) + min;
+	random(){
+		const indexOriginal = this.playlist.indexOf(this.activeTrack);
+		const min = Math.ceil(0);
+		const max = Math.floor(this.playlist.length-1);
+		const index =  Math.floor(Math.random() * (max - min+1)) + min;
 
-    if(indexOriginal == index) this.random()
+		if(indexOriginal == index) this.random()
 
-    this.start(this.playlist[index]);
-  }
+		this.start(this.playlist[index]);
+	}
 
 	seek() {
 		const newValue = +this.range.value;
@@ -119,7 +142,7 @@ export class HomePage {
 		setTimeout(() => {
 			this.updateProgress();
 		}, 1000);
-  }
+  	}
   
   setRandom(){
     this.isRandom = !this.isRandom
