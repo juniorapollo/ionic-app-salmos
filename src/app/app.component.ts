@@ -16,8 +16,18 @@ export class AppComponent {
       title: 'Salmos Genebrinos',
       url: '/list',
       icon: 'list',
-      queryParams:{}
+      queryParams:{
+        favoritos: false
+      }
 
+    },
+    {
+      title: 'Salmos Genebrinos Favoritos',
+      url: '/list',
+      icon: 'star',
+      queryParams:{
+        favoritos: true
+      }
     },
     // {
     //   title: 'Blíblia - ACF',
@@ -46,13 +56,14 @@ export class AppComponent {
       }
     },
     {
-      title: 'Playlist - Inglês',
+      title: 'Playlist Salmos - Inglês',
       url: '/home',
       icon: 'musical-notes',
       queryParams:{
         ptBr: false
       }
     },
+    
     
 
     
@@ -70,12 +81,12 @@ export class AppComponent {
     const prefersColor = window.matchMedia('(prefers-color-scheme: dark)');
     this.dark = prefersColor.matches;
    
-        this.updateDarkMode(true);
+        this.updateDarkMode(false);
 
-        setTimeout(() => {
-          this.updateDarkMode(false);
+        // setTimeout(() => {
+        //   this.updateDarkMode(false);
 
-        }, 5000);
+        // }, 5000);
    
     this.initializeApp();
   }

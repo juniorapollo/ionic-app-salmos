@@ -6,5 +6,7 @@ export interface Song{
     coro: string[],
     title: string,
     author: string,
-    estrofes: [string[]]
+    estrofes: [string[]],
+    previa:string[]
+
 }

@@ -1,8 +1,10 @@
-import { Component, ViewChild } from '@angular/core';
+import { Component, OnInit, ViewChild } from '@angular/core';
 import { Howl } from 'howler';
 import { IonRange } from '@ionic/angular';
 import { SongsService } from '../services/songs.service';
 import { ActivatedRoute , ParamMap, Router} from '@angular/router';
+import { UtilService } from '../services/util.service';
+import { MSG } from '../enum/msg.enum';
 
 
 
@@ -17,7 +19,7 @@ export interface Track {
   templateUrl: 'home.page.html',
   styleUrls: ['home.page.scss'],
 })
-export class HomePage {
+export class HomePage implements OnInit {
 
   	playlist: Track[] = []
 
@@ -29,44 +31,48 @@ export class HomePage {
 	@ViewChild('range') range: IonRange;
 	isPtBr:boolean;
 
-  constructor(
-	  private songsService: SongsService,
-	  private route: ActivatedRoute,	  
-	  ) {
+  	constructor(
+		private songsService: SongsService,
+		private route: ActivatedRoute,
+		private readonly utilService: UtilService	  
+		) {}
+
+
+	async ngOnInit() {
+		this.utilService.openLoader(MSG.CARREGANDO_PAGINA)
+
+		let songs:any = await this.songsService.findAll();
+
+		songs.forEach(song => {
+		let player:Track = {}
+		player.name = song.title
+		player.path = song.pathMp3
+		player.author =  song.author
+		this.playlist.push(player)
+		});
+
 		
-	  }
+		this.route.queryParams.subscribe(params => {	
+			if(this.isPlaying) 
+				this.togglePlayer(true)
+		
+			if(params['ptBr'])		
+				this.isPtBr = JSON.parse(params['ptBr']) 
+		});
 
-
-  async ngOnInit() {
-     let songs:any = await this.songsService.findAll();
-
-     songs.forEach(song => {
-       let player:Track = {}
-       player.name = song.title
-       player.path = song.pathMp3
-       player.author =  song.author
-       this.playlist.push(player)
-     });
-
+		
+	}
 	
-	this.route.queryParams.subscribe(params => {	
+	ionViewDidEnter(){
+		this.utilService.closeLoader()
+	}
+
+	ngOnDestroy() {
+		if(this.isPtBr)
+		this.isPtBr = !this.isPtBr		  	  
 		if(this.isPlaying) 
-	  		this.togglePlayer(true)
-	
-		if(params['ptBr'])		
-			this.isPtBr = JSON.parse(params['ptBr']) 
-	});
-
-	
-  }
-
-
-  	ngOnDestroy() {
-	  if(this.isPtBr)
-	    this.isPtBr = !this.isPtBr		  	  
-	  if(this.isPlaying) 
-	  	this.togglePlayer(true)
-		  
+		this.togglePlayer(true)
+			
 	}
 
 	// function to stop playing existing track (if playing) then play audio file.

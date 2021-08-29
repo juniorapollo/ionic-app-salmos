@@ -8,6 +8,38 @@ export class UtilService {
 
   constructor( private loadingController: LoadingController) {}
 
+
+  openLoader(message){
+    
+    return this.loadingController.create({
+      message: message
+    }).then((res) => {
+        res.present();
+   
+        res.onDidDismiss().then((dis) => { });
+      });
+  }
+
+  async closeLoader() {
+    // Instead of directly closing the loader like below line
+    // return await this.loadingController.dismiss();
+	
+    this.checkAndCloseLoader();
+	
+	// sometimes there's delay in finding the loader. so check if the loader is closed after one second. if not closed proceed to close again
+    setTimeout(() => this.checkAndCloseLoader(), 1000);
+    
+  }
+  
+  async checkAndCloseLoader() {
+    // Use getTop function to find the loader and dismiss only if loader is present.
+    const loader = await this.loadingController.getTop();
+    // if loader present then dismiss
+     if(loader !== undefined) { 
+       await this.loadingController.dismiss();
+     }
+   }
+
   showAutoHideLoader(message, duration) {
     this.loadingController.create({
       message: message,

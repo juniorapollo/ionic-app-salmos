@@ -4,41 +4,42 @@
       <ion-menu-button></ion-menu-button>
     </ion-buttons>
     <ion-title start size="medium">
-      <strong> {{title}} </strong>
+      <strong> {{title}} <span *ngIf="favoritos">Favoritos</span></strong>
     </ion-title>
   </ion-toolbar>
 </ion-header> 
-  <div>
-    <ion-img ></ion-img>
-  </div>
 
-
-<!-- <ion-thumbnail slot="start" >
-    <ion-img src="https://flashtrafficblog.files.wordpress.com/2015/09/bible-hebrewmanuscript.jpg"></ion-img>
-  </ion-thumbnail>
-     -->
-      <ion-searchbar  id='search'
-          placeholder="Pesquisar"
+  <ion-searchbar  id='search'
+          placeholder="Título/Trecho"
           color = "medium"
           type="search"
           animated="true"
           showCancelButton="true"
           spellcheck="true"
-          debounce="800"
           inputmode="search" 
           mode="ios"
           cancelButtonText="Cancelar"
           (ionInput)="getItems($event)">
-      </ion-searchbar>
+  </ion-searchbar>
 
-      <ion-content class="ion-padding">
+  <ion-content>
 
-        <ion-list *ngFor="let item of items">
-          <ion-item (click)="openHinario(item)"> 
-            <ion-label>
-              <h2>{{ item.title | titlecase }}</h2>
-              <p>{{ item.author | titlecase }}</p>
-            </ion-label>
-          </ion-item>
-        </ion-list>
-      </ion-content>
+    <ion-list *ngFor="let item of items">
+      <ion-item > 
+        <ion-icon *ngIf="isFavorito(item)"  (click)="addOrRemoveFavoritos(item)" slot="end" name="star"></ion-icon>
+        <ion-icon *ngIf="!isFavorito(item)" (click)="addOrRemoveFavoritos(item)" slot="end" name="star-outline"></ion-icon>
+
+        <ion-label (click)="openHinario(item)">
+          <h2>{{ item.title | titlecase }}</h2>
+          <p>{{ item.author | titlecase }}</p>
+        
+          <ion-label *ngIf="item?.previa?.length > 0" >
+            <p *ngFor="let previa of item?.previa; let i = index">
+              <span [innerHTML]="previa"></span>
+            </p>
+          </ion-label>
+      </ion-label>
+        
+      </ion-item>
+    </ion-list>
+  </ion-content>

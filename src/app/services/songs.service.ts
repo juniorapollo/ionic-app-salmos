@@ -2,6 +2,7 @@ import { Injectable } from '@angular/core';
 import { UtilService } from './util.service';
 import { HttpClient } from '@angular/common/http';
 import { Song } from '../models/song_model';
+import { Favoritos } from '../enum/favoritos.enum';
 
 
 
@@ -9,13 +10,28 @@ import { Song } from '../models/song_model';
   providedIn: 'root'
 })
 export class SongsService {
+  async findAllFavoritos(){
+    let all:any[] =  await this.findAll();
+
+   return all.filter(data=>{
+     let storageFavoritos:any[] =  JSON.parse(localStorage.getItem(Favoritos.SALMOS_GENEBRINOS) || '[]');
+
+     if(storageFavoritos.length > 0){
+       return storageFavoritos.includes(data.id.trim())
+     }
+          
+    })
+
+  
+
+  }
   
   private dataUrl: string = "assets/data/songs.json";
 
   constructor( private utilService: UtilService,
                private http: HttpClient ) { }
 
-  async findAll(){
+  async findAll(): Promise<any> {
     return new Promise(resolve => {
       this.http.get(this.dataUrl)
       .subscribe(result =>{
