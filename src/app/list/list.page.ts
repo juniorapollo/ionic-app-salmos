@@ -17,14 +17,16 @@ import { MSG } from '../enum/msg.enum';
 
 export class ListPage {
 
-  title:string = "Salmos";
-  items:any;
+  title:string = "Salmos Metrificados";
+  items:any[];
   fitlrar:boolean = true
   previa:[string[]]
   favoritos:boolean = false
   storageFavoritos:string[] = []
   timeout 
   modal
+  isSearch:boolean = false 
+  loading:boolean = true
 
   constructor(private router: Router,
               private http: HttpClient,
@@ -33,9 +35,12 @@ export class ListPage {
               private utilService: UtilService,
               ) {}
 
-  ngOnInit() {
-    this.utilService.openLoader(MSG.CARREGANDO_PAGINA);
+              segmentChanged(ev: any) {
+                console.log('Segment changed', ev);
+              }
 
+  ngOnInit() {
+    this.loading = true
     this.initializeItems();
     this.storageFavoritos = this.getStorageFavoritos();
 
@@ -48,11 +53,10 @@ export class ListPage {
 
   }
 
-
-  
-
   ionViewDidEnter(){
-    this.utilService.closeLoader()
+    setTimeout(() => {
+      this.loading = !(this.items.length > 0)
+    }, 1000);
   }
 
   ngOnDestroy(){
@@ -82,23 +86,17 @@ export class ListPage {
 
   }
 
-  async getItems(ev) {
-
+  async searchItems(ev) {
+    this.isSearch = true
     // Reset items back to all of the items
     await this.initializeItems();    
     
     // set val to the value of the ev target
     var val = ev.target.value;
-
-    if(!Number(val)){
-      clearTimeout(this.timeout);
-      this.timeout = setTimeout(() => {
-        this.filtrar(val)   
-      }, 500);
-    }else{
-      this.filtrar(val)
-    }
     
+    this.filtrar(val)   
+
+    this.isSearch = false
   }
 
   async filtrar(val){
@@ -106,12 +104,10 @@ export class ListPage {
     // if the value is an empty string don't filter the items
     if (val && val.trim() != '') {
       let isNumber = Number(val)
-
-      if(!isNumber)
-      this.utilService.openLoader(MSG.PESQUISANDO);
       
-      // Removendo acentos
-      val = this.removerAcentos(val)
+      // Removendo acentos  
+      if(!isNumber)      
+        val = this.removerAcentos(val)
 
       this.items = await this.items.filter((data) => {
         if(isNumber)
@@ -123,47 +119,42 @@ export class ListPage {
       })
     }
 
-    this.utilService.closeLoader()
-
   }
 
-   filtrarPorEstrofe(data:any , val:string){
+  filtrarPorEstrofe(data:any , val:string){
 
     let filtrado  = []
 
-    if(val.length > 3){
-      // console.log(data.estrofes)
+    let estrofres:[string[]] = data.estrofes
+    let filtrou:boolean = false
+    filtrado =  estrofres.filter(
+      (estrofe)=>{
+        const a:string[] =  estrofe.filter((res) => {
+          filtrou = this.removerAcentos(res.toLowerCase()).indexOf(val.toLowerCase()) >= 0
 
-      let estrofres:[string[]] = data.estrofes
-      let filtrou:boolean = false
-      filtrado =  estrofres.filter(
-        (estrofe)=>{
-          const a:string[] =  estrofe.filter((res) => {
-            filtrou = this.removerAcentos(res.toLowerCase()).indexOf(val.toLowerCase()) >= 0
+          if(filtrou){
+            data.previa = estrofe
+          }
+            
+          return filtrou;
+          
+        })
 
-            if(filtrou){
-              data.previa = estrofe
+        if(a.length > 0){
+        data.previa =  data.previa.map((data)=>{ 
+            if(data == a[0]){ 
+              data= ` <strong class="previa"> ${data} </strong>`
             }
-              
-            return filtrou;
-            
-          })
+            return data;
+          }) 
+        } 
+          
+        return a.length > 0
+      }
 
-          if(a.length > 0){
-          data.previa =  data.previa.map((data)=>{ 
-              if(data == a[0]){ 
-                data= ` <strong class="previa"> ${data} </strong>`
-              }
-              return data;
-            }) 
-          } 
-            
-          return a.length > 0
-        }
+    )
 
-      )
-     }  
-      return filtrado.length > 0
+    return filtrado.length > 0
 
 
   }
@@ -181,17 +172,16 @@ export class ListPage {
     return data.title.toLowerCase().indexOf(val.toLowerCase()) >= 0
   }
 
-  // add back when alpha.4 is out
-  // navigate(item) {
-  //   this.router.navigate(['/list', JSON.stringify(item)]);
-  // }
 
   addOrRemoveFavoritos(item:Song){
+    let title = item.title.charAt(0).toUpperCase() + item.title.slice(1).toLowerCase();
     
     if(this.storageFavoritos.includes(item.id)){
       const index = this.storageFavoritos.indexOf(item.id)
       this.storageFavoritos.splice(index, 1)
+      this.utilService.presentToast(`${title} removido com sucesso.`, 2000);
     } else {
+      this.utilService.presentToast(`${title} adicionado com sucesso.`, 2000);
       this.storageFavoritos.push(item.id);
     }
 

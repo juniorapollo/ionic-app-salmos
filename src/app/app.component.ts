@@ -13,7 +13,7 @@ export class AppComponent {
   public appPages = [
     
     {
-      title: 'Salmos Genebrinos',
+      title: 'Salmos Metrificados',
       url: '/list',
       icon: 'list',
       queryParams:{
@@ -22,7 +22,7 @@ export class AppComponent {
 
     },
     {
-      title: 'Salmos Genebrinos Favoritos',
+      title: 'Favoritos',
       url: '/list',
       icon: 'star',
       queryParams:{
@@ -35,7 +35,7 @@ export class AppComponent {
     //   icon: 'list'
     // },
     {
-      title: 'Documentos Fé Reformada',
+      title: 'Confissões Fé',
       url: '/confissoes',
       icon: 'paper',
       queryParams:{}
@@ -63,6 +63,14 @@ export class AppComponent {
         ptBr: false
       }
     },
+    {
+      title: 'Blog Guardião da Doutrina',
+      url: 'https://guardiaodadoutrina.blogspot.com/',
+      icon: 'musical-notes',
+      openBrowser: true
+    },
+
+
     
     
 

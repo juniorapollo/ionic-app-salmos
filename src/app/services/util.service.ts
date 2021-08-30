@@ -1,12 +1,13 @@
 import { Injectable } from '@angular/core';
-import { LoadingController } from '@ionic/angular';
+import { LoadingController, ToastController } from '@ionic/angular';
 
 @Injectable({
   providedIn: 'root'
 })
 export class UtilService {
 
-  constructor( private loadingController: LoadingController) {}
+  constructor(private loadingController: LoadingController,
+              private toastController: ToastController) {}
 
 
   openLoader(message){
@@ -68,6 +69,17 @@ export class UtilService {
         await this.loadingController.dismiss();
         }, duration);
     
+  }
+
+  // Mensagem rapida no inferior da tela
+  async presentToast(msg:string, duration:number) {
+    const toast = await this.toastController.create({
+      message: msg,
+      duration: duration,
+      cssClass: "toast"
+
+    });
+    toast.present();
   }
 
 
