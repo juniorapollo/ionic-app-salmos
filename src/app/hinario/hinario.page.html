@@ -3,15 +3,17 @@
       <ion-buttons slot="start">
           <ion-back-button defaultHref="/list"></ion-back-button>
       </ion-buttons>
+
       <ion-title start size="small">
-        <ion-item > 
-          <strong> {{title}} </strong>
-          <ion-icon *ngIf="favorito"(click)="addOrRemoveFavoritos(data)" slot="end" name="star"></ion-icon>
-          <ion-icon *ngIf="!favorito"(click)="addOrRemoveFavoritos(data)" slot="end" name="star-outline"></ion-icon>
-
-        </ion-item>
-
+          <strong> {{title | titlecase}} </strong>
+         
       </ion-title>
+
+      <ion-buttons slot="end">
+        <ion-icon *ngIf="favorito"(click)="addOrRemoveFavoritos(data)" slot="end" name="star" class="star favorito"></ion-icon>
+        <ion-icon *ngIf="!favorito"(click)="addOrRemoveFavoritos(data)" slot="end" name="star-outline" class="star"></ion-icon>
+      </ion-buttons>
+  
   </ion-toolbar>
 </ion-header>
 
@@ -42,7 +44,7 @@
     </ion-slides>
 
 </ion-content> -->
-<div>
+<div id="audio">
   <audio controls>
     <source src={{data.pathMp3}} type="audio/ogg">
     Esse dispositivo não suporta player.

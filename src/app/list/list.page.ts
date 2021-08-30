@@ -35,9 +35,9 @@ export class ListPage {
               private utilService: UtilService,
               ) {}
 
-              segmentChanged(ev: any) {
-                console.log('Segment changed', ev);
-              }
+  segmentChanged(ev: any) {
+    console.log('Segment changed', ev);
+  }
 
   ngOnInit() {
     this.loading = true
@@ -55,8 +55,8 @@ export class ListPage {
 
   ionViewDidEnter(){
     setTimeout(() => {
-      this.loading = !(this.items.length > 0)
-    }, 1000);
+      this.loading = false
+    }, 800);
   }
 
   ngOnDestroy(){

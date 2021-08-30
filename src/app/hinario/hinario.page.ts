@@ -46,13 +46,13 @@ export class HinarioPage implements OnInit {
     if(storageFavoritos.includes(item.id)){
       const index = storageFavoritos.indexOf(item.id)
       storageFavoritos.splice(index, 1)
-      this.favorito = false
     } else {
       storageFavoritos.push(item.id);
-      this.favorito = true
     }
 
     this.setStorageFavoritos(storageFavoritos);
+
+    this.favorito = this.isFavorito(item)
   } 
 
   isFavorito(item:Song): boolean{

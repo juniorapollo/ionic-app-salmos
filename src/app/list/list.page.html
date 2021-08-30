@@ -34,8 +34,8 @@
       <ion-segment-button value="genebrino" checked>
         <ion-label>Genebrinos</ion-label>
       </ion-segment-button>
-      <ion-segment-button disabled value="musicalizado">
-        <ion-label>Musicalizado</ion-label>
+      <ion-segment-button disabled value="harmonico">
+        <ion-label>Harmônico</ion-label>
       </ion-segment-button>
     </ion-segment>
     
@@ -59,7 +59,7 @@
          
             <ion-item > 
 
-              <ion-icon *ngIf="isFavorito(item)"  (click)="addOrRemoveFavoritos(item)" slot="end" name="star"></ion-icon>
+              <ion-icon *ngIf="isFavorito(item)"  (click)="addOrRemoveFavoritos(item)" slot="end" name="star" class="favorito"></ion-icon>
               <ion-icon *ngIf="!isFavorito(item)" (click)="addOrRemoveFavoritos(item)" slot="end" name="star-outline"></ion-icon>
 
               <ion-label (click)="openHinario(item)">
