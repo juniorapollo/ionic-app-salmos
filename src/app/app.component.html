@@ -9,19 +9,13 @@
       <ion-content class="main-content">
         <ion-list lines="full">
           <ion-menu-toggle auto-hide="false" *ngFor="let p of appPages">
-            <ion-item *ngIf="!p?.openBrowser" [routerDirection]="'root'" [routerLink]="[p.url]"  [queryParams]="p.queryParams" >
+            <ion-item [routerDirection]="'root'" [routerLink]="[p.url]"  [queryParams]="p.queryParams" >
               <ion-icon slot="start" [name]="p.icon"></ion-icon>
               <ion-label>
                 {{p.title}} 
               </ion-label>
             </ion-item>
-            <ion-item *ngIf="p?.openBrowser">
-              <ion-label>
-                <a href="#" onclick="window.open(p.url, '_self', 'location=yes'); return false;">
-                {{p.title}}
-                </a>
-              </ion-label>
-            </ion-item>
+            
           </ion-menu-toggle>
         </ion-list>
       </ion-content>

@@ -4,14 +4,25 @@
       <ion-menu-button></ion-menu-button>
     </ion-buttons>
     <ion-title>
-      <strong> Salmos Genebrinos </strong>
+      <strong>Playlist Salmos Genebrinos</strong>
     </ion-title>
   </ion-toolbar>
 </ion-header>
 
+  <!-- Default Segment -->
+  <ion-segment [(ngModel)]="musics" (ionChange)="segmentChanged($event)" color="seconday"> 
+	<ion-segment-button value="ingles" checked>
+	  <ion-label>Inglês</ion-label>
+	</ion-segment-button>
+	<ion-segment-button [disabled]="!isOnline" value="portugues" (click)="this.player?.stop()">
+	  <ion-label>Português <span *ngIf="!isOnline">/Offline</span></ion-label>
+	</ion-segment-button>
+  </ion-segment>
+
 	<ion-content>
-		<div *ngIf="isPtBr" style="height: 100%;">
-			<iframe id="iframe-salmos" 
+		<div [ngSwitch]="musics" style="height: 100%;">
+			<iframe *ngSwitchCase="'portugues'" 
+					id="iframe-salmos" 
 					name="iframe-salmos" 
 					scrolling="no"
 					src="https://castbox.fm/app/castbox/player/id3078172/id335887881?v=8.22.11&autoplay=0" 
@@ -22,10 +33,8 @@
 					>
 			
 			</iframe>
-		</div>
-
-		<div *ngIf="!isPtBr">
-			<ion-list>
+		
+			<ion-list *ngSwitchCase="'ingles'" >
 				<ion-item button *ngFor="let track of playlist" (click)="start(track)">
 					<ion-label [color]="track == activeTrack ? 'medium' : null">
 						<h2>{{ track.name | titlecase }}</h2>
@@ -37,10 +46,7 @@
 		
 	</ion-content>
 
-
-
-
-	<ion-footer *ngIf="!isPtBr && activeTrack">
+	<ion-footer *ngIf="musics == 'ingles' && activeTrack">
 		<ion-toolbar>
 			<ion-row>
 				<ion-col size="12" class="ion-text-center">
@@ -93,7 +99,7 @@
 						<ion-icon slot="icon-only" name="skip-forward"></ion-icon>
 					</ion-button>
 
-					<ion-button fill="clear" (click)="setRandom()" [color]="isRandom ? 'medium' : null">
+					<ion-button fill="clear" (click)="setRandom()" [color]="isRandom ? null : 'medium' ">
 					<ion-icon name="shuffle"></ion-icon>
 					</ion-button>
 			

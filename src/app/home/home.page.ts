@@ -1,10 +1,11 @@
 import { Component, OnInit, ViewChild } from '@angular/core';
 import { Howl } from 'howler';
-import { IonRange } from '@ionic/angular';
+import { Events, IonRange } from '@ionic/angular';
 import { SongsService } from '../services/songs.service';
 import { ActivatedRoute , ParamMap, Router} from '@angular/router';
 import { UtilService } from '../services/util.service';
 import { MSG } from '../enum/msg.enum';
+import { EVENTOS } from '../enum/eventos.enum';
 
 
 
@@ -20,7 +21,7 @@ export interface Track {
   styleUrls: ['home.page.scss'],
 })
 export class HomePage implements OnInit {
-	
+	musics:string = 'ingles'
   	playlist: Track[] = []
 
   	activeTrack: Track = null;
@@ -30,14 +31,22 @@ export class HomePage implements OnInit {
   	isRandom = false;
 	@ViewChild('range') range: IonRange;
 	isPtBr:boolean;
+	isOnline: boolean = navigator.onLine; 
 
-	originalUrl = 'https://castbox.fm/app/castbox/player/id3078172/id335887881?v=8.22.11&autoplay=0'
+	pet: string = "puppies";
 
   	constructor(
 		private songsService: SongsService,
 		private route: ActivatedRoute,
-		private readonly utilService: UtilService	  
-		) {}
+		private readonly utilService: UtilService,
+		public events: Events	  
+		) {
+			events.subscribe(EVENTOS.ONLINE_OFLINE, (onlineOffline, time) => {
+				this.isOnline = onlineOffline;
+				console.log('onlineOffline', this.isOnline, time)
+			});
+		
+		}
 
 
 	async ngOnInit() {
@@ -161,11 +170,9 @@ export class HomePage implements OnInit {
     this.isRandom = !this.isRandom
   }
 
-  onIframeError(event){
-
-	console.log(event)
-	alert(event)
-
+  segmentChanged(ev: any) {
+    console.log('Segment changed', ev);
   }
+
 
 }

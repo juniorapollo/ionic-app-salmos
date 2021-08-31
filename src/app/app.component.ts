@@ -1,15 +1,18 @@
 import { Component } from '@angular/core';
 
-import { Platform } from '@ionic/angular';
+import { Events, Platform } from '@ionic/angular';
 import { SplashScreen } from '@ionic-native/splash-screen/ngx';
 import { StatusBar } from '@ionic-native/status-bar/ngx';
-
+import { EVENTOS } from './enum/eventos.enum';
 
 @Component({
   selector: 'app-root',
   templateUrl: 'app.component.html'
 })
 export class AppComponent {
+
+  public onlineOffline: boolean = navigator.onLine;
+
   public appPages = [
     
     {
@@ -50,14 +53,6 @@ export class AppComponent {
     {
       title: 'Playlist Salmos',
       url: '/home',
-      icon: 'musical-note',
-      queryParams:{
-        ptBr: true
-      }
-    },
-    {
-      title: 'Playlist Salmos - Inglês',
-      url: '/home',
       icon: 'musical-notes',
       queryParams:{
         ptBr: false
@@ -72,19 +67,21 @@ export class AppComponent {
     private platform: Platform,
     private splashScreen: SplashScreen,
     private statusBar: StatusBar,
+    public events: Events
   ) {
     this.splashScreen.show();
     const prefersColor = window.matchMedia('(prefers-color-scheme: dark)');
     this.dark = prefersColor.matches;
-   
-        this.updateDarkMode(false);
+    this.updateDarkMode(false);
 
-        // setTimeout(() => {
-        //   this.updateDarkMode(false);
+    // setTimeout(() => {
+    //   this.updateDarkMode(false);
 
-        // }, 5000);
-   
+    // }, 5000);
+
     this.initializeApp();
+
+    this.events.publish(EVENTOS.ONLINE_OFLINE, this.onlineOffline, Date.now())
   }
 
   updateDarkMode(force: boolean) {
@@ -95,11 +92,27 @@ export class AppComponent {
     this.platform.ready().then(() => {
       this.statusBar.styleDefault();
       this.splashScreen.hide();
+
+
+      window.addEventListener('online', () => {
+        //Do task when internet connection returns
+        this.onlineOffline = true
+        this.events.publish(EVENTOS.ONLINE_OFLINE, this.onlineOffline, Date.now())
+      });
+  
+      window.addEventListener('offline', () => {
+        //Do task when no internet connection
+        this.onlineOffline = false
+        this.events.publish(EVENTOS.ONLINE_OFLINE, this.onlineOffline, Date.now())
+      });
+
+
+
     });
   }
 
   ngOnInit(){ 
-    console.log("ngOnInit(): appComponent")
+   
 
   }
 }
