@@ -42,7 +42,7 @@ export class AppComponent {
 
     },
     {
-      title: 'Credos',
+      title: 'Declaração de Fé',
       url: '/credos',
       icon: 'bookmarks',
       queryParams:{}
@@ -62,19 +62,7 @@ export class AppComponent {
       queryParams:{
         ptBr: false
       }
-    },
-    {
-      title: 'Blog Guardião da Doutrina',
-      url: 'https://guardiaodadoutrina.blogspot.com/',
-      icon: 'musical-notes',
-      openBrowser: true
-    },
-
-
-    
-    
-
-    
+    }
   ];
 
   dark = false;
@@ -83,7 +71,7 @@ export class AppComponent {
   constructor(
     private platform: Platform,
     private splashScreen: SplashScreen,
-    private statusBar: StatusBar
+    private statusBar: StatusBar,
   ) {
     this.splashScreen.show();
     const prefersColor = window.matchMedia('(prefers-color-scheme: dark)');

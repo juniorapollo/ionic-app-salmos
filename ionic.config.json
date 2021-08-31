@@ -1,7 +1,8 @@
 {
   "name": "Salmos-Genebrinos",
   "integrations": {
-    "cordova": {}
+    "cordova": {},
+    "capacitor": {}
   },
   "type": "angular",
   "id": "0a995e10"

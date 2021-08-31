@@ -9,23 +9,30 @@
   </ion-toolbar>
 </ion-header> 
 
-  <ion-searchbar  
-          id='search'
-          placeholder="Título/Trecho"
-          color = "medium"
-          type="search"
-          animated=true
-          showCancelButton=true
-          spellcheck=true
-          inputmode="search" 
-          mode="ios"
-          cancelButtonText="Cancelar"
-          (keyup.enter)="searchItems($event)"
-          (ionClear)="initializeItems()"
-          (ionCancel)="initializeItems()"
-          (ionBlur)="searchItems($event)"    
-         >
-  </ion-searchbar>
+  <form (ngSubmit)="searchItems($event)">
+    <ion-buttons hidden right>
+      <button type="submit" small bg-primary blue>test</button>
+    </ion-buttons>
+    
+    <ion-searchbar id='search'
+                  placeholder="Título/Trecho"
+                  color = "medium"
+                  type="search"
+                  animated=false
+                  showCancelButton=true
+                  spellcheck=true
+                  inputmode="text"
+                  mode="ios"
+                  cancelButtonText="Cancelar"
+                  (search)="searchItems($event)"
+                  (ionClear)="initializeItems()"
+                  (ionCancel)="initializeItems()"
+                  (ionBlur)="searchItems($event)"    
+                  (keydown.enter)="searchItems($event)"
+    >
+    </ion-searchbar>
+        
+</form>
 
   <ion-content>
     

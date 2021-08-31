@@ -20,7 +20,7 @@ export interface Track {
   styleUrls: ['home.page.scss'],
 })
 export class HomePage implements OnInit {
-
+	
   	playlist: Track[] = []
 
   	activeTrack: Track = null;
@@ -30,6 +30,8 @@ export class HomePage implements OnInit {
   	isRandom = false;
 	@ViewChild('range') range: IonRange;
 	isPtBr:boolean;
+
+	originalUrl = 'https://castbox.fm/app/castbox/player/id3078172/id335887881?v=8.22.11&autoplay=0'
 
   	constructor(
 		private songsService: SongsService,
@@ -60,8 +62,11 @@ export class HomePage implements OnInit {
 				this.isPtBr = JSON.parse(params['ptBr']) 
 		});
 
-		
+		this.utilService.closeLoader()
+
 	}
+
+	
 	
 	ionViewDidEnter(){
 		this.utilService.closeLoader()
@@ -72,6 +77,8 @@ export class HomePage implements OnInit {
 		this.isPtBr = !this.isPtBr		  	  
 		if(this.isPlaying) 
 		this.togglePlayer(true)
+
+		this.utilService.closeLoader()
 			
 	}
 
@@ -152,6 +159,13 @@ export class HomePage implements OnInit {
   
   setRandom(){
     this.isRandom = !this.isRandom
+  }
+
+  onIframeError(event){
+
+	console.log(event)
+	alert(event)
+
   }
 
 }

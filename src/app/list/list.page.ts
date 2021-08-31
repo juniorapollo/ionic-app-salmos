@@ -86,15 +86,24 @@ export class ListPage {
 
   }
 
-  async searchItems(ev) {
+  async searchItems(event) {
+    
+    event.preventDefault();
     this.isSearch = true
     // Reset items back to all of the items
     await this.initializeItems();    
     
     // set val to the value of the ev target
-    var val = ev.target.value;
+    var val = event.target.value;
+    if(val == undefined)
+      val = event.target[0].value;
     
-    this.filtrar(val)   
+      
+    if (val && val.trim() != '') {
+      this.filtrar(val)   
+    }
+  
+    this.filtrar(val.trim())   
 
     this.isSearch = false
   }
@@ -165,11 +174,11 @@ export class ListPage {
 
   filtrarPorAuthor(data : any, val:string){
     if(+val >= 0) return false
-    return data.author.toLowerCase().indexOf(val.toLowerCase()) >= 0 
+    return data.author.toLowerCase().trim().indexOf(val.toLowerCase().trim()) >= 0 
   }
 
   filtrarPorTitulo(data : any, val:string){
-    return data.title.toLowerCase().indexOf(val.toLowerCase()) >= 0
+    return data.title.toLowerCase().trim().indexOf(val.toLowerCase().trim()) >= 0
   }
 
 

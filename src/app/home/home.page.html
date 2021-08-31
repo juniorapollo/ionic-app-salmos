@@ -11,7 +11,17 @@
 
 	<ion-content>
 		<div *ngIf="isPtBr" style="height: 100%;">
-			<iframe  src="https://castbox.fm/app/castbox/player/id3078172/id335887881?v=8.22.11&autoplay=0" frameborder="0" width="100%" height="800"></iframe>
+			<iframe id="iframe-salmos" 
+					name="iframe-salmos" 
+					scrolling="no"
+					src="https://castbox.fm/app/castbox/player/id3078172/id335887881?v=8.22.11&autoplay=0" 
+					frameborder="0" 
+					width="100%" 
+					height="100%"
+					allowfullscreen="0"
+					>
+			
+			</iframe>
 		</div>
 
 		<div *ngIf="!isPtBr">
