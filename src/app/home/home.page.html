@@ -12,7 +12,7 @@
   <!-- Default Segment -->
   <ion-segment [(ngModel)]="musics" (ionChange)="segmentChanged($event)" color="seconday"> 
 	<ion-segment-button value="ingles" checked>
-	  <ion-label>Inglês</ion-label>
+	  <ion-label warning>Inglês</ion-label>
 	</ion-segment-button>
 	<ion-segment-button [disabled]="!isOnline" value="portugues" (click)="this.player?.stop()">
 	  <ion-label>Português <span *ngIf="!isOnline">/Offline</span></ion-label>
