@@ -71,9 +71,7 @@ export class AppComponent {
   ) {
     this.splashScreen.show();
     const prefersColor = window.matchMedia('(prefers-color-scheme: dark)');
-    this.dark = prefersColor.matches;
-    this.updateDarkMode(false);
-
+    
     // setTimeout(() => {
     //   this.updateDarkMode(false);
 
@@ -84,9 +82,14 @@ export class AppComponent {
     this.events.publish(EVENTOS.ONLINE_OFLINE, this.onlineOffline, Date.now())
   }
 
-  updateDarkMode(force: boolean) {
-    document.body.classList.toggle('dark', force);
+  updateDarkMode(event:any) {
+    this.dark = event.detail.checked
+    document.body.classList.toggle('dark', this.dark);
+    
+    localStorage.setItem('Dark', JSON.stringify(this.dark));
+    
   }
+
 
   initializeApp() {
     this.platform.ready().then(() => {
@@ -112,7 +115,11 @@ export class AppComponent {
   }
 
   ngOnInit(){ 
-   
+    this.dark = JSON.parse(localStorage.getItem('Dark'));
+
+    if(this.dark) {
+      document.body.classList.add('dark');
+     }
 
   }
 }

@@ -32,6 +32,11 @@
             </a>
           </ion-menu-toggle>
 
+          <ion-item>
+            <ion-label>Modo Escuro</ion-label>
+            <ion-toggle (ionChange)="updateDarkMode($event)" slot="start" name="Modo Escuro" color="medium" [checked]="this.dark"></ion-toggle>
+          </ion-item>
+
 
         </ion-list>
           
