@@ -445,11 +445,6 @@
     }
   }
   
-  .to-top {
-    height: auto;
-    margin-bottom: -5px;
-  }
-  
   // style for ion-icon
   ion-icon[ng-reflect-disabled="true"] {
     color: #FAFBFC;
@@ -486,19 +481,6 @@
     .list-hotels .hotel-bg {
       pointer-events: none;
     }
-  }
-  
-  // google
-  .google-map {
-    height: 160px;
-    pointer-events: none;
-    margin: 0 -20px;
-  }
-  
-  // Animate CSS
-  .animated {
-    animation-duration: 1s;
-    animation-fill-mode: both;
   }
   
   .animated.infinite {
@@ -545,5 +527,20 @@
   .fadeInDown {
     animation-name: fadeInDown;
   }
+
+  .header-avatar {
+    margin: auto;
+    width: 60px;
+    height: 60px;
+    margin-top: 10px;  
+    margin-bottom: 10px;  
+    border-radius: 50%;
+    box-shadow: inset 0 0 10rem rgba(0,0,0,.25), 0 0 4rem rgba(255,255,255,.45);
+    img {
+      border-radius: 50%;
+    }
+  }
+
+
 
   

@@ -2,7 +2,7 @@ import { CapacitorConfig } from '@capacitor/cli';
 
 const config: CapacitorConfig = {
   appId: 'io.ionic.starter',
-  appName: 'Salmos-Genebrinos',
+  appName: 'Fé Reformada',
   webDir: 'www',
   bundledWebRuntime: false,
   cordova: {

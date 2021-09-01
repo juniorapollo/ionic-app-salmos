@@ -2,10 +2,19 @@
   <ion-split-pane>
     <ion-menu>
       <ion-header>
-        <ion-toolbar>
+
+        <ion-toolbar mode="ios">          
+          <ion-avatar class="header-avatar">
+            <img src="../assets/img/icon.png">
+          </ion-avatar>         
+        </ion-toolbar>
+        
+        <ion-toolbar mode="ios">          
           <ion-title>Fé Reformada</ion-title>
         </ion-toolbar>
+
       </ion-header>
+      
       <ion-content class="main-content">
         <ion-list lines="full">
           <ion-menu-toggle auto-hide="false" *ngFor="let p of appPages">
