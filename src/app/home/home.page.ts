@@ -175,4 +175,59 @@ export class HomePage implements OnInit {
   }
 
 
+
+  slideOpts = {
+    initialSlide: 2,
+    speed: 400
+  };
+
+  sliderConfig = {
+    slidesPerView: 1,
+    centeredSlides: true,
+    speed: 500,
+    effect: 'flip',
+    autoHeight: true,
+    cssMode: true,
+    initialSlide: 14,
+    allowClick: false,
+    loop: true,
+    //autoplay:true,
+
+    //preloadImages: false,
+    // Enable lazy loading
+    lazy: true,
+  };
+
+  items = [
+	  0,
+	  0,
+	  0,
+	  0,
+	  0,
+	  0,
+	  0,
+	  0,
+	  0,
+	  0,
+	  0,
+	  0,
+	  0,
+	  0,
+	  0,
+	  0,
+	  0,
+	  0,
+	  0,
+	  0,
+	  0,
+	  0,
+	  0,
+	  0,
+	  0,
+	  0,
+	  0,
+	  0,  
+  ]
+
+
 }

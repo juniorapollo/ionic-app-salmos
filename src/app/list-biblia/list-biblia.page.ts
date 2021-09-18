@@ -11,15 +11,15 @@ import { Observable, Observer } from 'rxjs';
 })
 export class ListBibliaPage implements OnInit {
 
-  private items:any
+  items:any
   
-  private title:string = "Almeida Corrigida Fiel"
+  title:string = "Almeida Corrigida Fiel"
   items$ =  new Observable(observer=>{
    // observer.next(this.bibliaService.findAll())
     //this.utilService.showLoader('Carregando..')
     
-    setTimeout(() => {
-      observer.next(this.bibliaService.findAll(observer))
+    setTimeout(async () => {
+      observer.next(await this.bibliaService.listarNomesIndexLivro())
     }, 200);
 
   });
@@ -66,27 +66,16 @@ export class ListBibliaPage implements OnInit {
     }
   }
 
-  async goToListCapitulo( livro ){
-    //console.log(keyName)
-
-    //let obj:any =  await this.bibliaService.findAllBooks();
-    // const data = await this.bibliaService.findByName( obj, keyName );
-    // const chapters =  await data[0].chapters;
-    // const name = await data[0].name;
+  async goToListCapitulo( index:number ){
+    let livro = await this.bibliaService.getLivroByIndex(index)
     let navigationExtras: NavigationExtras = {
       state: {
-        // chapters: chapters,
-        // name: name,
-        // length:chapters.length,
-        // listCapitulo : true,
-        data : livro
+        livro : livro
       }
     };
   
     this.router.navigate(['capitulos'], navigationExtras).then(res=>{
-      
-      console.log("******************")
-      console.log(res);
+
     }).catch(err=>{
       console.log(err);
     });

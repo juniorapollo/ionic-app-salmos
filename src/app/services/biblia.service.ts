@@ -2,6 +2,7 @@ import { Injectable } from '@angular/core';
 import { UtilService } from './util.service';
 import { HttpClient } from '@angular/common/http';
 import { Observable, Subject, Observer } from 'rxjs';
+import { Biblia,Livro } from '../models/bible_model';
 
 @Injectable({
   providedIn: 'root'
@@ -10,7 +11,7 @@ export class BibliaService {
   
   private dataUrl: string = "assets/data/pt_acf.json";
 
-  private data:any[] = new Array();
+  private livros:Livro[] = new Array();
 
   teste:number = 0
   
@@ -18,20 +19,18 @@ export class BibliaService {
                private http: HttpClient ) { }
 
 
-  findAll(observer:Observer<any>){
+  getAllLivros(observer:Observer<any>){
     
     this.http.get(this.dataUrl).subscribe((data:any)=>{
+      console.log(data)
       data.bible.forEach(element => {
-        this.data.push(element)  
+        this.livros.push(element)  
       });
     observer.complete();
-       
     });
    
-   
-    console.log(this.teste)
-    this.teste++
-    return this.data
+  
+    return this.livros
   }
 
   async findByName(data: any, name: any) {
@@ -57,6 +56,38 @@ export class BibliaService {
         resolve(data.bible)
       });
     });
+  }
+
+  async listarNomesIndexLivro(){
+    let biblia:Biblia = await this.getBiblia()
+
+    let nomeIndex = biblia.livros.map((livro, index) => {return {
+      primeiroLivro: index == 0,
+      ultimoLivro: index == biblia.livros.length - 1,
+      index: index,
+      nome: livro.name,
+      totalCapitulos: livro.chapters.length,
+      showMsgNovoTestamento: index == 39,
+      showMsgVelhoTestamento: index == 0,
+      // capitulo: capitulo
+    }})
+
+    return nomeIndex
+  }
+
+  async getLivroByIndex(index): Promise<Livro>{
+    let biblia:Biblia = await this.getBiblia()
+    console.log(index)
+    return biblia.livros[index]
+
+  }
+
+  async getBiblia() : Promise<Biblia>{
+    let result:any = await this.http.get(this.dataUrl).toPromise()
+    let biblia:Biblia = result
+
+    return biblia;
+  
   }
 
   

@@ -32,11 +32,11 @@ export class AppComponent {
         favoritos: true
       }
     },
-    // {
-    //   title: 'Blíblia - ACF',
-    //   url: '/listBiblia',
-    //   icon: 'list'
-    // },
+    {
+      title: 'Bíblia - ACF',
+      url: '/listBiblia',
+      icon: 'book'
+    },
     {
       title: 'Confissões Fé',
       url: '/confissoes',
@@ -94,7 +94,6 @@ export class AppComponent {
   initializeApp() {
     this.platform.ready().then(() => {
       this.statusBar.styleDefault();
-      this.splashScreen.hide();
 
 
       window.addEventListener('online', () => {
@@ -109,6 +108,7 @@ export class AppComponent {
         this.events.publish(EVENTOS.ONLINE_OFLINE, this.onlineOffline, Date.now())
       });
 
+      this.splashScreen.hide();
 
 
     });

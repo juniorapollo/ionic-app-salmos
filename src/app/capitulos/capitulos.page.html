@@ -15,7 +15,7 @@
     <ion-title start size="small">
       <strong>
         {{ livro.name | uppercase }} 
-        <span *ngIf="!listCapitulo">{{ ' '+ capAtual+'. ' }} {{ 1 +'-'+ capituloLenght }} </span>
+        <span *ngIf="!listCapitulo">{{ capAtual+1 }} </span>
       </strong>
 
     </ion-title>
@@ -30,10 +30,10 @@
   <ion-grid *ngIf="livro != null">
     <ion-row >
       <ion-col size="12" class="ion-text-center ion-title"><span> CAPÍTULOS   </span></ion-col>
-      <ion-col  *ngFor="let capitulo of livro.chapters; let i = index;"  (click)="goToCapitulo(i)">
+      <ion-col  *ngFor="let capitulo of livro.chapters; let index = index;"  (click)="goToCapitulo(capitulo, index)">
         <ion-card id="carCapitulo" disabled="false" mode="md" color="light" button="false">
           <ion-item class="ion-text-center">
-            <ion-label id="numeroCapitulo"> {{ i+1 }}</ion-label>
+            <ion-label id="numeroCapitulo"> {{ index+1 }}</ion-label>
           </ion-item>
         </ion-card>
       </ion-col>
@@ -44,37 +44,54 @@
 
 <!-- Slides -->
 <ion-content *ngIf="!listCapitulo" class="ion-padding" zoom="true">
-  <ion-slides #mySlider [options]="sliderConfig" 
-              (ionSlideDidChange)="slideChanged($event,index,slides)"
-              (ionSlidesDidLoad)="sidesDidLoad(mySlider)" >
+  <ion-slides #mySlider [options]="sliderConfig"
+        (ionSlideNextStart)="ionSlideNextStart(mySlider)"
+        (ionSlideDidChange)="ionSlideNextStart($event)"
+        (ionSlideNextEnd)="ionSlideNextStart($event)"
+        (ionSlidePrevEnd)="ionSlideNextStart($event)"
+        (ionSlidePrevStart)="ionSlideNextStart($event)"
+        (ionSlideReachEnd)="ionSlideNextStart($event)"
+        (ionSlideReachStart)="ionSlideNextStart($event)"
+        (ionSlideTap)="ionSlideNextStart($event)"
+        (ionSlideWillChange)="ionSlideNextStart($event)"
 
-    <ion-slide >
+
+  >
+  
+  <ion-slide >
+    <div class="swiper-zoom-container">
+      <ion-row>
+        <ion-col class="ion-text-justify" size="12" *ngFor="let versiculo of versiculos;  let jx = index;">
+            <div><strong>{{ jx+1 }}.</strong> {{ versiculo }}</div>
+        </ion-col>
+      </ion-row>
+    </div>
+  </ion-slide>
+
+            
+  >
+
+    <!-- <ion-slide>
       <div class="swiper-zoom-container">
         <ion-row>
           <ion-col class="ion-text-justify" size="12" *ngFor="let verso of observable | async; let j = index;">
-            <div>
-              <strong>{{ j+1 }}.</strong> {{ verso}}
-            </div>
-
+              <div><strong>{{ j+1 }}.</strong> {{ verso }}</div>
           </ion-col>
         </ion-row>
       </div>
     </ion-slide>
-
+ -->
 
     
-      <ion-slide *ngFor="let capitulos of capitulosParaCarregar | async">
+      <!-- <ion-slide *ngFor="let capitulo of capitulosObs | async">
         <div class="swiper-zoom-container">
           <ion-row>
-            <ion-col class="ion-text-justify" size="12" *ngFor="let verso of capitulos; let j = index;">
-              <div>
-                <strong>{{ j+1 }}.++</strong> {{ verso }}
-              </div>
-  
+            <ion-col class="ion-text-justify" size="12" *ngFor="let versox of capitulo; let jx = index;">
+                <div><strong>{{ jx+1 }}.</strong> {{ versox }}</div>
             </ion-col>
           </ion-row>
         </div>
-      </ion-slide>
+      </ion-slide> -->
 
     
   </ion-slides>

@@ -4,7 +4,7 @@
       <ion-menu-button></ion-menu-button>
     </ion-buttons>
     <ion-title start size="medium">
-      <strong> {{title}} </strong>
+      <strong> {{title | titlecase}} </strong>
     </ion-title>
   </ion-toolbar>
 </ion-header> 
@@ -26,13 +26,13 @@
       </ion-searchbar> -->
 
 <ion-content>
-  <ion-list *ngFor="let livro of items; let index= index  ">   
+  <ion-list *ngFor="let livro of items; ">   
     <ion-item-group>
-      <ion-item-divider mode="ios" full *ngIf="index == 0" color="light">{{'Velho Testamento' | uppercase}}</ion-item-divider>
-      <ion-item-divider *ngIf="index == 39" color="light">{{'Novo Testamento' | uppercase}}</ion-item-divider>
-      <ion-item (click)="goToListCapitulo(livro)"> 
+      <ion-item-divider full *ngIf="livro.showMsgVelhoTestamento"  color="light"><strong>{{'Velho Testamento' | uppercase}}</strong></ion-item-divider>
+      <ion-item-divider full *ngIf="livro.showMsgNovoTestamento" color="light"><strong>{{'Novo Testamento' | uppercase}}</strong></ion-item-divider>
+      <ion-item (click)="goToListCapitulo(livro.index)"> 
         <ion-label>
-          <h2>{{livro.name}}</h2>
+          {{livro.nome}}
         </ion-label>
       </ion-item>
     </ion-item-group>
