@@ -14,8 +14,8 @@
 
     <ion-title start size="small">
       <strong>
-        {{ livro.name | uppercase }} 
-        <span *ngIf="!listCapitulo">{{ capAtual+1 }} </span>
+        {{ livro?.name | uppercase }} 
+        <span *ngIf="!listCapitulo">{{ indexCapitulo }} </span>
       </strong>
 
     </ion-title>

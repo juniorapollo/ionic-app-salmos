@@ -116,7 +116,7 @@ export class CapitulosPage implements OnInit {
 
   livro: Livro;
   versiculos: any[]
-  indexCapitulo: number
+  indexCapitulo: number = 0
 
   // Sao os capitulos da biblia
   capitulos: any[] = new Array();

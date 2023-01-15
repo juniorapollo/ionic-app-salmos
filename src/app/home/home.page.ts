@@ -33,8 +33,6 @@ export class HomePage implements OnInit {
 	isPtBr:boolean;
 	isOnline: boolean = navigator.onLine; 
 
-	pet: string = "puppies";
-
   	constructor(
 		private songsService: SongsService,
 		private route: ActivatedRoute,
