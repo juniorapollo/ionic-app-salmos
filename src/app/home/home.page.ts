@@ -21,7 +21,7 @@ export interface Track {
   styleUrls: ['home.page.scss'],
 })
 export class HomePage implements OnInit {
-	musics:string = 'ingles'
+	musics:string = 'ptBr'
   	playlist: Track[] = []
 
   	activeTrack: Track = null;
@@ -55,7 +55,7 @@ export class HomePage implements OnInit {
 		songs.forEach(song => {
 		let player:Track = {}
 		player.name = song.title
-		player.path = song.pathMp3
+		player.path = song.pathMp3_ptBr || song.pathMp3
 		player.author =  song.author
 		this.playlist.push(player)
 		});

@@ -3,6 +3,7 @@
         {
             "id": "1",
             "type": "SALMO",
+            "pathMp3_ptBr": "https://d2pb17nicmpb2v.cloudfront.net/ptBr/Salmo+1.mp3",
             "pathMp3": "assets/mp3/GenPs001_vocal_homoph_BoP84.MP3",
             "coro": [],
             "title": "SALMO 1",
@@ -37,6 +38,7 @@
         {
             "id": "2",
             "type": "SALMO",
+            "pathMp3_ptBr": "https://d2pb17nicmpb2v.cloudfront.net/ptBr/Salmo+2.mp3",
             "pathMp3": "assets/mp3/GenPs002_vocal_homoph_BoP84.MP3",
             "coro": [],
             "title": "SALMO 2",
@@ -87,6 +89,7 @@
         {
             "id": "3",
             "type": "SALMO",
+            "pathMp3_ptBr": "https://d2pb17nicmpb2v.cloudfront.net/ptBr/Salmo+3.mp3",
             "pathMp3": "assets/mp3/GenPs003_vocal_homoph_BoP84.MP3",
             "coro": [],
             "title": "SALMO 3",
@@ -125,6 +128,7 @@
         {
             "id": "4",
             "type": "SALMO",
+            "pathMp3_ptBr": "https://d2pb17nicmpb2v.cloudfront.net/ptBr/Salmo+4.mp3",
             "pathMp3": "assets/mp3/GenPs004_vocal_homoph_BoP84.MP3",
             "coro": [],
             "title": "SALMO 4",
@@ -171,6 +175,7 @@
         {
             "id": "5",
             "type": "SALMO",
+            "pathMp3_ptBr": "https://d2pb17nicmpb2v.cloudfront.net/ptBr/Salmo+5.mp3",
             "pathMp3": "assets/mp3/GenPs005_vocal_homoph_BoP84.MP3",
             "coro": [],
             "title": "SALMO 5",
@@ -244,6 +249,7 @@
         {
             "id": "6",
             "type": "SALMO",
+            "pathMp3_ptBr": "https://d2pb17nicmpb2v.cloudfront.net/ptBr/Salmo+6.mp3",
             "pathMp3": "assets/mp3/GenPs006_vocal_homoph_BoP84.MP3",
             "coro": [],
             "title": "SALMO 6",
@@ -302,6 +308,7 @@
         {
             "id": "7",
             "type": "SALMO",
+            "pathMp3_ptBr": "https://d2pb17nicmpb2v.cloudfront.net/ptBr/Salmo+7.mp3",
             "pathMp3": "assets/mp3/GenPs007_vocal_homoph_BoP84.MP3",
             "coro": [],
             "title": "SALMO 7",
@@ -372,6 +379,7 @@
         {
             "id": "8",
             "type": "SALMO",
+            "pathMp3_ptBr": "https://d2pb17nicmpb2v.cloudfront.net/ptBr/Salmo+8.mp3",
             "pathMp3": "assets/mp3/GenPs008_vocal_homoph_BoP84.MP3",
             "coro": [],
             "title": "SALMO 8",
@@ -412,6 +420,7 @@
         {
             "id": "9",
             "type": "SALMO",
+            "pathMp3_ptBr": "https://d2pb17nicmpb2v.cloudfront.net/ptBr/Salmo+9.mp3",
             "pathMp3": "assets/mp3/GenPs009_vocal_homoph_BoP84.MP3",
             "coro": [],
             "title": "SALMO 9",
@@ -536,6 +545,7 @@
         {
             "id": "10",
             "type": "SALMO",
+            "pathMp3_ptBr": "https://d2pb17nicmpb2v.cloudfront.net/ptBr/Salmo+10.mp3",
             "pathMp3": "assets/mp3/GenPs010_vocal_homoph_BoP84.MP3",
             "coro": [],
             "title": "SALMO 10",
@@ -609,6 +619,7 @@
         {
             "id": "11",
             "type": "SALMO",
+            "pathMp3_ptBr": "https://d2pb17nicmpb2v.cloudfront.net/ptBr/Salmo+11.mp3",
             "pathMp3": "assets/mp3/GenPs011_vocal_homoph_BoP84.MP3",
             "coro": [],
             "title": "SALMO 11",
@@ -646,6 +657,7 @@
         {
             "id": "12",
             "type": "SALMO",
+            "pathMp3_ptBr": "https://d2pb17nicmpb2v.cloudfront.net/ptBr/Salmo+12.mp3",
             "pathMp3": "assets/mp3/GenPs012_vocal_homoph_BoP84.MP3",
             "coro": [],
             "title": "SALMO 12",
@@ -686,6 +698,7 @@
         {
             "id": "13",
             "type": "SALMO",
+            "pathMp3_ptBr": "https://d2pb17nicmpb2v.cloudfront.net/ptBr/Salmo+13.mp3",
             "pathMp3": "assets/mp3/GenPs013_vocal_homoph_BoP84.MP3",
             "coro": [],
             "title": "SALMO 13",
@@ -724,6 +737,7 @@
         {
             "id": "14",
             "type": "SALMO",
+            "pathMp3_ptBr": "https://d2pb17nicmpb2v.cloudfront.net/ptBr/Salmo+14.mp3",
             "pathMp3": "assets/mp3/GenPs014_vocal_homoph_BoP84.MP3",
             "coro": [],
             "title": "SALMO 14",
@@ -776,6 +790,7 @@
         {
             "id": "15",
             "type": "SALMO",
+            "pathMp3_ptBr": "https://d2pb17nicmpb2v.cloudfront.net/ptBr/Salmo+15.mp3",
             "pathMp3": "assets/mp3/GenPs015_vocal_homoph_BoP84.MP3",
             "coro": [],
             "title": "SALMO 15",
@@ -814,6 +829,7 @@
         {
             "id": "16",
             "type": "SALMO",
+            "pathMp3_ptBr": "https://d2pb17nicmpb2v.cloudfront.net/ptBr/Salmo+16.mp3",
             "pathMp3": "assets/mp3/GenPs016_vocal_homoph_BoP84.MP3",
             "coro": [],
             "title": "SALMO 16",
@@ -864,6 +880,7 @@
         {
             "id": "17",
             "type": "SALMO",
+            "pathMp3_ptBr": "https://d2pb17nicmpb2v.cloudfront.net/ptBr/Salmo+17.mp3",
             "pathMp3": "assets/mp3/GenPs017_vocal_homoph_BoP84.MP3",
             "coro": [],
             "title": "SALMO 17",
@@ -944,6 +961,7 @@
         {
             "id": "18",
             "type": "SALMO",
+            "pathMp3_ptBr": "https://d2pb17nicmpb2v.cloudfront.net/ptBr/Salmo+18.mp3",
             "pathMp3": "assets/mp3/GenPs018_vocal_homoph_BoP84.MP3",
             "coro": [],
             "title": "SALMO 18",
@@ -1114,6 +1132,7 @@
         {
             "id": "19",
             "type": "SALMO",
+            "pathMp3_ptBr": "https://d2pb17nicmpb2v.cloudfront.net/ptBr/Salmo+19.mp3",
             "pathMp3": "assets/mp3/GenPs019_vocal_homoph_BoP84.MP3",
             "coro": [],
             "title": "SALMO 19",
@@ -1207,6 +1226,7 @@
         {
             "id": "20",
             "type": "SALMO",
+            "pathMp3_ptBr": "https://d2pb17nicmpb2v.cloudfront.net/ptBr/Salmo+20.mp3",
             "pathMp3": "assets/mp3/GenPs020_vocal_homoph_BoP84.MP3",
             "coro": [],
             "title": "SALMO 20",
@@ -1267,6 +1287,7 @@
         {
             "id": "21",
             "type": "SALMO",
+            "pathMp3_ptBr": "https://d2pb17nicmpb2v.cloudfront.net/ptBr/Salmo+21.mp3",
             "pathMp3": "assets/mp3/GenPs021_vocal_homoph_BoP84.MP3",
             "coro": [],
             "title": "SALMO 21",
@@ -1357,6 +1378,7 @@
         {
             "id": "22",
             "type": "SALMO",
+            "pathMp3_ptBr": "https://d2pb17nicmpb2v.cloudfront.net/ptBr/Salmo+22.mp3",
             "pathMp3": "assets/mp3/GenPs022_vocal_homoph_BoP84.MP3",
             "coro": [],
             "title": "SALMO 22",
@@ -1477,6 +1499,7 @@
         {
             "id": "23",
             "type": "SALMO",
+            "pathMp3_ptBr": "https://d2pb17nicmpb2v.cloudfront.net/ptBr/Salmo+23.mp3",
             "pathMp3": "assets/mp3/GenPs023_vocal_homoph_BoP84.MP3",
             "coro": [],
             "title": "SALMO 23",
@@ -1511,6 +1534,7 @@
         {
             "id": "24",
             "type": "SALMO",
+            "pathMp3_ptBr": "https://d2pb17nicmpb2v.cloudfront.net/ptBr/Salmo+24.mp3",
             "pathMp3": "assets/mp3/GenPs024_vocal_homoph_BoP84.MP3",
             "coro": [],
             "title": "SALMO 24",
@@ -1561,6 +1585,7 @@
         {
             "id": "25",
             "type": "SALMO",
+            "pathMp3_ptBr": "https://d2pb17nicmpb2v.cloudfront.net/ptBr/Salmo+25.mp3",
             "pathMp3": "assets/mp3/GenPs025_vocal_homoph_BoP84.MP3",
             "coro": [],
             "title": "SALMO 25",
@@ -1641,6 +1666,7 @@
         {
             "id": "26",
             "type": "SALMO",
+            "pathMp3_ptBr": null,
             "pathMp3": "assets/mp3/GenPs026_vocal_homoph_BoP84.MP3",
             "coro": [],
             "title": "SALMO 26",
@@ -1723,6 +1749,7 @@
         {
             "id": "27",
             "type": "SALMO",
+            "pathMp3_ptBr": null,
             "pathMp3": "assets/mp3/GenPs027_vocal_homoph_BoP84.MP3",
             "coro": [],
             "title": "SALMO 27",
@@ -1803,6 +1830,7 @@
         {
             "id": "28",
             "type": "SALMO",
+            "pathMp3_ptBr": null,
             "pathMp3": "assets/mp3/GenPs028_vocal_homoph_BoP84.MP3",
             "coro": [],
             "title": "SALMO 28",
@@ -1869,6 +1897,7 @@
         {
             "id": "29",
             "type": "SALMO",
+            "pathMp3_ptBr": "https://d2pb17nicmpb2v.cloudfront.net/ptBr/Salmo+29.mp3",
             "pathMp3": "assets/mp3/GenPs029_vocal_homoph_BoP84.MP3",
             "coro": [],
             "title": "SALMO 29",
@@ -1919,6 +1948,7 @@
         {
             "id": "30",
             "type": "SALMO",
+            "pathMp3_ptBr": null,
             "pathMp3": "assets/mp3/GenPs030_vocal_homoph_BoP84.MP3",
             "coro": [],
             "title": "SALMO 30",
@@ -1977,6 +2007,7 @@
         {
             "id": "31",
             "type": "SALMO",
+            "pathMp3_ptBr": null,
             "pathMp3": "assets/mp3/GenPs031_vocal_homoph_BoP84.MP3",
             "coro": [],
             "title": "SALMO 31",
@@ -2123,6 +2154,7 @@
         {
             "id": "32",
             "type": "SALMO",
+            "pathMp3_ptBr": "https://d2pb17nicmpb2v.cloudfront.net/ptBr/Salmo+32.mp3",
             "pathMp3": "assets/mp3/GenPs032_vocal_homoph_BoP84.MP3",
             "coro": [],
             "title": "SALMO 32",
@@ -2173,6 +2205,7 @@
         {
             "id": "33",
             "type": "SALMO",
+            "pathMp3_ptBr": "https://d2pb17nicmpb2v.cloudfront.net/ptBr/Salmo+33.mp3",
             "pathMp3": "assets/mp3/GenPs033_vocal_homoph_BoP84.MP3",
             "coro": [],
             "title": "SALMO 33",
@@ -2267,6 +2300,7 @@
         {
             "id": "34",
             "type": "SALMO",
+            "pathMp3_ptBr": null,
             "pathMp3": "assets/mp3/GenPs034_vocal_homoph_BoP84.MP3",
             "coro": [],
             "title": "SALMO 34",
@@ -2387,6 +2421,7 @@
         {
             "id": "35",
             "type": "SALMO",
+            "pathMp3_ptBr": "https://d2pb17nicmpb2v.cloudfront.net/ptBr/Salmo+35.mp3",
             "pathMp3": "assets/mp3/GenPs035_vocal_homoph_BoP84.MP3",
             "coro": [],
             "title": "SALMO 35",
@@ -2537,6 +2572,7 @@
         {
             "id": "36",
             "type": "SALMO",
+            "pathMp3_ptBr": "https://d2pb17nicmpb2v.cloudfront.net/ptBr/Salmo+36.mp3",
             "pathMp3": "assets/mp3/GenPs036_vocal_homoph_BoP84.MP3",
             "coro": [],
             "title": "SALMO 36",
@@ -2589,6 +2625,7 @@
         {
             "id": "37",
             "type": "SALMO",
+            "pathMp3_ptBr": null,
             "pathMp3": "assets/mp3/GenPs037_vocal_homoph_BoP84.MP3",
             "coro": [],
             "title": "SALMO 37",
@@ -2735,6 +2772,7 @@
         {
             "id": "38",
             "type": "SALMO",
+            "pathMp3_ptBr": null,
             "pathMp3": "assets/mp3/GenPs038_vocal_homoph_BoP84.MP3",
             "coro": [],
             "title": "SALMO 38",
@@ -2873,6 +2911,7 @@
         {
             "id": "39",
             "type": "SALMO",
+            "pathMp3_ptBr": null,
             "pathMp3": "assets/mp3/GenPs039_vocal_homoph_BoP84.MP3",
             "coro": [],
             "title": "SALMO 39",
@@ -2947,6 +2986,7 @@
         {
             "id": "40",
             "type": "SALMO",
+            "pathMp3_ptBr": "https://d2pb17nicmpb2v.cloudfront.net/ptBr/Salmo+40.mp3",
             "pathMp3": "assets/mp3/GenPs040_vocal_homoph_BoP84.MP3",
             "coro": [],
             "title": "SALMO 40",
@@ -3065,6 +3105,7 @@
         {
             "id": "41",
             "type": "SALMO",
+            "pathMp3_ptBr": "https://d2pb17nicmpb2v.cloudfront.net/ptBr/Salmo+41.mp3",
             "pathMp3": "assets/mp3/GenPs041_vocal_homoph_BoP84.MP3",
             "coro": [],
             "title": "SALMO 41",
@@ -3117,6 +3158,7 @@
         {
             "id": "42",
             "type": "SALMO",
+            "pathMp3_ptBr": "https://d2pb17nicmpb2v.cloudfront.net/ptBr/Salmo+42.mp3",
             "pathMp3": "assets/mp3/GenPs042_vocal_homoph_BoP84.MP3",
             "coro": [],
             "title": "SALMO 42",
@@ -3187,6 +3229,7 @@
         {
             "id": "43",
             "type": "SALMO",
+            "pathMp3_ptBr": "https://d2pb17nicmpb2v.cloudfront.net/ptBr/Salmo+43.mp3",
             "pathMp3": "assets/mp3/GenPs043_vocal_homoph_BoP84.MP3",
             "coro": [],
             "title": "SALMO 43",
@@ -3229,6 +3272,7 @@
         {
             "id": "44",
             "type": "SALMO",
+            "pathMp3_ptBr": "https://d2pb17nicmpb2v.cloudfront.net/ptBr/Salmo+44.mp3",
             "pathMp3": "assets/mp3/GenPs044_vocal_homoph_BoP84.MP3",
             "coro": [],
             "title": "SALMO 44",
@@ -3339,6 +3383,7 @@
         {
             "id": "45",
             "type": "SALMO",
+            "pathMp3_ptBr": "https://d2pb17nicmpb2v.cloudfront.net/ptBr/Salmo+45.mp3",
             "pathMp3": "assets/mp3/GenPs045_vocal_homoph_BoP84.MP3",
             "coro": [],
             "title": "SALMO 45",
@@ -3419,6 +3464,7 @@
         {
             "id": "46",
             "type": "SALMO",
+            "pathMp3_ptBr": "https://d2pb17nicmpb2v.cloudfront.net/ptBr/Salmo+46.mp3",
             "pathMp3": "assets/mp3/GenPs046_vocal_homoph_BoP84.MP3",
             "coro": [],
             "title": "SALMO 46",
@@ -3479,6 +3525,7 @@
         {
             "id": "47",
             "type": "SALMO",
+            "pathMp3_ptBr": "https://d2pb17nicmpb2v.cloudfront.net/ptBr/Salmo+47.mp3",
             "pathMp3": "assets/mp3/GenPs047_vocal_homoph_BoP84.MP3",
             "coro": [],
             "title": "SALMO 47",
@@ -3513,6 +3560,7 @@
         {
             "id": "48",
             "type": "SALMO",
+            "pathMp3_ptBr": "https://d2pb17nicmpb2v.cloudfront.net/ptBr/Salmo+48.mp3",
             "pathMp3": "assets/mp3/GenPs048_vocal_homoph_BoP84.MP3",
             "coro": [],
             "title": "SALMO 48",
@@ -3579,6 +3627,7 @@
         {
             "id": "49",
             "type": "SALMO",
+            "pathMp3_ptBr": "https://d2pb17nicmpb2v.cloudfront.net/ptBr/Salmo+49.mp3",
             "pathMp3": "assets/mp3/GenPs049_vocal_homoph_BoP84.MP3",
             "coro": [],
             "title": "SALMO 49",
@@ -3659,6 +3708,7 @@
         {
             "id": "50",
             "type": "SALMO",
+            "pathMp3_ptBr": "https://d2pb17nicmpb2v.cloudfront.net/ptBr/Salmo+50.mp3",
             "pathMp3": "assets/mp3/GenPs050_vocal_homoph_BoP84.MP3",
             "coro": [],
             "title": "SALMO 50",
@@ -3751,6 +3801,7 @@
         {
             "id": "51",
             "type": "SALMO",
+            "pathMp3_ptBr": "https://d2pb17nicmpb2v.cloudfront.net/ptBr/Salmo+51.mp3",
             "pathMp3": "assets/mp3/GenPs051_vocal_homoph_BoP84.MP3",
             "coro": [],
             "title": "SALMO 51",
@@ -3831,6 +3882,7 @@
         {
             "id": "52",
             "type": "SALMO",
+            "pathMp3_ptBr": "https://d2pb17nicmpb2v.cloudfront.net/ptBr/Salmo+52.mp3",
             "pathMp3": "assets/mp3/GenPs052_vocal_homoph_BoP84.MP3",
             "coro": [],
             "title": "SALMO 52",
@@ -3876,6 +3928,7 @@
         {
             "id": "53",
             "type": "SALMO",
+            "pathMp3_ptBr": "https://d2pb17nicmpb2v.cloudfront.net/ptBr/Salmo+53.mp3",
             "pathMp3": "assets/mp3/GenPs053_vocal_homoph_BoP84.MP3",
             "coro": [],
             "title": "SALMO 53",
@@ -3921,6 +3974,7 @@
         {
             "id": "54",
             "type": "SALMO",
+            "pathMp3_ptBr": "https://d2pb17nicmpb2v.cloudfront.net/ptBr/Salmo+54.mp3",
             "pathMp3": "assets/mp3/GenPs054_vocal_homoph_BoP84.MP3",
             "coro": [],
             "title": "SALMO 54",
@@ -3951,6 +4005,7 @@
         {
             "id": "55",
             "type": "SALMO",
+            "pathMp3_ptBr": "https://d2pb17nicmpb2v.cloudfront.net/ptBr/Salmo+55.mp3",
             "pathMp3": "assets/mp3/GenPs055_vocal_homoph_BoP84.MP3",
             "coro": [],
             "title": "SALMO 55",
@@ -4065,6 +4120,7 @@
         {
             "id": "56",
             "type": "SALMO",
+            "pathMp3_ptBr": "https://d2pb17nicmpb2v.cloudfront.net/ptBr/Salmo+56.mp3",
             "pathMp3": "assets/mp3/GenPs056_vocal_homoph_BoP84.MP3",
             "coro": [],
             "title": "SALMO 56",
@@ -4125,6 +4181,7 @@
         {
             "id": "57",
             "type": "SALMO",
+            "pathMp3_ptBr": "https://d2pb17nicmpb2v.cloudfront.net/ptBr/Salmo+57.mp3",
             "pathMp3": "assets/mp3/GenPs057_vocal_homoph_BoP84.MP3",
             "coro": [],
             "title": "SALMO 57",
@@ -4191,6 +4248,7 @@
         {
             "id": "58",
             "type": "SALMO",
+            "pathMp3_ptBr": "https://d2pb17nicmpb2v.cloudfront.net/ptBr/Salmo+58.mp3",
             "pathMp3": "assets/mp3/GenPs058_vocal_homoph_BoP84.MP3",
             "coro": [],
             "title": "SALMO 58",
@@ -4249,6 +4307,7 @@
         {
             "id": "59",
             "type": "SALMO",
+            "pathMp3_ptBr": "https://d2pb17nicmpb2v.cloudfront.net/ptBr/Salmo+59.mp3",
             "pathMp3": "assets/mp3/GenPs059_vocal_homoph_BoP84.MP3",
             "coro": [],
             "title": "SALMO 59",
@@ -4319,6 +4378,7 @@
         {
             "id": "60",
             "type": "SALMO",
+            "pathMp3_ptBr": "https://d2pb17nicmpb2v.cloudfront.net/ptBr/Salmo+60.mp3",
             "pathMp3": "assets/mp3/GenPs060_vocal_homoph_BoP84.MP3",
             "coro": [],
             "title": "SALMO 60",
@@ -4389,6 +4449,7 @@
         {
             "id": "61",
             "type": "SALMO",
+            "pathMp3_ptBr": "https://d2pb17nicmpb2v.cloudfront.net/ptBr/Salmo+61.mp3",
             "pathMp3": "assets/mp3/GenPs061_vocal_homoph_BoP84.MP3",
             "coro": [],
             "title": "SALMO 61",
@@ -4435,6 +4496,7 @@
         {
             "id": "62",
             "type": "SALMO",
+            "pathMp3_ptBr": "https://d2pb17nicmpb2v.cloudfront.net/ptBr/Salmo+62.mp3",
             "pathMp3": "assets/mp3/GenPs062_vocal_homoph_BoP84.MP3",
             "coro": [],
             "title": "SALMO 62",
@@ -4517,6 +4579,7 @@
         {
             "id": "63",
             "type": "SALMO",
+            "pathMp3_ptBr": "https://d2pb17nicmpb2v.cloudfront.net/ptBr/Salmo+63.mp3",
             "pathMp3": "assets/mp3/GenPs063_vocal_homoph_BoP84.MP3",
             "coro": [],
             "title": "SALMO 63",
@@ -4577,6 +4640,7 @@
         {
             "id": "64",
             "type": "SALMO",
+            "pathMp3_ptBr": "https://d2pb17nicmpb2v.cloudfront.net/ptBr/Salmo+64.mp3",
             "pathMp3": "assets/mp3/GenPs064_vocal_homoph_BoP84.MP3",
             "coro": [],
             "title": "SALMO 64",
@@ -4629,6 +4693,7 @@
         {
             "id": "65",
             "type": "SALMO",
+            "pathMp3_ptBr": "https://d2pb17nicmpb2v.cloudfront.net/ptBr/Salmo+65.mp3",
             "pathMp3": "assets/mp3/GenPs065_vocal_homoph_BoP84.MP3",
             "coro": [],
             "title": "SALMO 65",
@@ -4699,6 +4764,7 @@
         {
             "id": "66",
             "type": "SALMO",
+            "pathMp3_ptBr": "https://d2pb17nicmpb2v.cloudfront.net/ptBr/Salmo+66.mp3",
             "pathMp3": "assets/mp3/GenPs066_vocal_homoph_BoP84.MP3",
             "coro": [],
             "title": "SALMO 66",
@@ -4779,6 +4845,7 @@
         {
             "id": "67",
             "type": "SALMO",
+            "pathMp3_ptBr": "https://d2pb17nicmpb2v.cloudfront.net/ptBr/Salmo+67.mp3",
             "pathMp3": "assets/mp3/GenPs067_vocal_homoph_BoP84.MP3",
             "coro": [],
             "title": "SALMO 67",
@@ -4813,6 +4880,7 @@
         {
             "id": "68",
             "type": "SALMO",
+            "pathMp3_ptBr": "https://d2pb17nicmpb2v.cloudfront.net/ptBr/Salmo+68.mp3",
             "pathMp3": "assets/mp3/GenPs068_vocal_homoph_BoP84.MP3",
             "coro": [],
             "title": "SALMO 68",
@@ -4991,6 +5059,7 @@
         {
             "id": "69",
             "type": "SALMO",
+            "pathMp3_ptBr": "https://d2pb17nicmpb2v.cloudfront.net/ptBr/Salmo+69.mp3",
             "pathMp3": "assets/mp3/GenPs069_vocal_homoph_BoP84.MP3",
             "coro": [],
             "title": "SALMO 69",
@@ -5131,6 +5200,7 @@
         {
             "id": "70",
             "type": "SALMO",
+            "pathMp3_ptBr": "https://d2pb17nicmpb2v.cloudfront.net/ptBr/Salmo+70.mp3",
             "pathMp3": "assets/mp3/GenPs070_vocal_homoph_BoP84.MP3",
             "coro": [],
             "title": "SALMO 70",
@@ -5161,6 +5231,7 @@
         {
             "id": "71",
             "type": "SALMO",
+            "pathMp3_ptBr": "https://d2pb17nicmpb2v.cloudfront.net/ptBr/Salmo+71.mp3",
             "pathMp3": "assets/mp3/GenPs071_vocal_homoph_BoP84.MP3",
             "coro": [],
             "title": "SALMO 71",
@@ -5291,6 +5362,7 @@
         {
             "id": "72",
             "type": "SALMO",
+            "pathMp3_ptBr": "https://d2pb17nicmpb2v.cloudfront.net/ptBr/Salmo+72.mp3",
             "pathMp3": "assets/mp3/GenPs072_vocal_homoph_BoP84.MP3",
             "coro": [],
             "title": "SALMO 72",
@@ -5351,6 +5423,7 @@
         {
             "id": "73",
             "type": "SALMO",
+            "pathMp3_ptBr": "https://d2pb17nicmpb2v.cloudfront.net/ptBr/Salmo+73.mp3",
             "pathMp3": "assets/mp3/GenPs073_vocal_homoph_BoP84.MP3",
             "coro": [],
             "title": "SALMO 73",
@@ -5481,6 +5554,7 @@
         {
             "id": "74",
             "type": "SALMO",
+            "pathMp3_ptBr": "https://d2pb17nicmpb2v.cloudfront.net/ptBr/Salmo+74.mp3",
             "pathMp3": "assets/mp3/GenPs074_vocal_homoph_BoP84.MP3",
             "coro": [],
             "title": "SALMO 74",
@@ -5587,6 +5661,7 @@
         {
             "id": "75",
             "type": "SALMO",
+            "pathMp3_ptBr": "https://d2pb17nicmpb2v.cloudfront.net/ptBr/Salmo+75.mp3",
             "pathMp3": "assets/mp3/GenPs075_vocal_homoph_BoP84.MP3",
             "coro": [],
             "title": "SALMO 75",
@@ -5639,6 +5714,7 @@
         {
             "id": "76",
             "type": "SALMO",
+            "pathMp3_ptBr": "https://d2pb17nicmpb2v.cloudfront.net/ptBr/Salmo+76.mp3",
             "pathMp3": "assets/mp3/GenPs076_vocal_homoph_BoP84.MP3",
             "coro": [],
             "title": "SALMO 76",
@@ -5689,6 +5765,7 @@
         {
             "id": "77",
             "type": "SALMO",
+            "pathMp3_ptBr": "https://d2pb17nicmpb2v.cloudfront.net/ptBr/Salmo+77.mp3",
             "pathMp3": "assets/mp3/GenPs077_vocal_homoph_BoP84.MP3",
             "coro": [],
             "title": "SALMO 77",
@@ -5789,6 +5866,7 @@
         {
             "id": "78",
             "type": "SALMO",
+            "pathMp3_ptBr": "https://d2pb17nicmpb2v.cloudfront.net/ptBr/Salmo+78.mp3",
             "pathMp3": "assets/mp3/GenPs078_vocal_homoph_BoP84.MP3",
             "coro": [],
             "title": "SALMO 78",
@@ -6015,6 +6093,7 @@
         {
             "id": "79",
             "type": "SALMO",
+            "pathMp3_ptBr": "https://d2pb17nicmpb2v.cloudfront.net/ptBr/Salmo+79.mp3",
             "pathMp3": "assets/mp3/GenPs079_vocal_homoph_BoP84.MP3",
             "coro": [],
             "title": "SALMO 79",
@@ -6097,6 +6176,7 @@
         {
             "id": "80",
             "type": "SALMO",
+            "pathMp3_ptBr": "https://d2pb17nicmpb2v.cloudfront.net/ptBr/Salmo+80.mp3",
             "pathMp3": "assets/mp3/GenPs080_vocal_homoph_BoP84.MP3",
             "coro": [],
             "title": "SALMO 80",
@@ -6179,6 +6259,7 @@
         {
             "id": "81",
             "type": "SALMO",
+            "pathMp3_ptBr": "https://d2pb17nicmpb2v.cloudfront.net/ptBr/Salmo+81.mp3",
             "pathMp3": "assets/mp3/GenPs081_vocal_homoph_BoP84.MP3",
             "coro": [],
             "title": "SALMO 81",
@@ -6244,6 +6325,7 @@
         {
             "id": "82",
             "type": "SALMO",
+            "pathMp3_ptBr": "https://d2pb17nicmpb2v.cloudfront.net/ptBr/Salmo+82.mp3",
             "pathMp3": "assets/mp3/GenPs082_vocal_homoph_BoP84.MP3",
             "coro": [],
             "title": "SALMO 82",
@@ -6284,6 +6366,7 @@
         {
             "id": "83",
             "type": "SALMO",
+            "pathMp3_ptBr": "https://d2pb17nicmpb2v.cloudfront.net/ptBr/Salmo+83.mp3",
             "pathMp3": "assets/mp3/GenPs083_vocal_homoph_BoP84.MP3",
             "coro": [],
             "title": "SALMO 83",
@@ -6350,6 +6433,7 @@
         {
             "id": "84",
             "type": "SALMO",
+            "pathMp3_ptBr": "https://d2pb17nicmpb2v.cloudfront.net/ptBr/Salmo+84.mp3",
             "pathMp3": "assets/mp3/GenPs084_vocal_homoph_BoP84.MP3",
             "coro": [],
             "title": "SALMO 84",
@@ -6410,6 +6494,7 @@
         {
             "id": "85",
             "type": "SALMO",
+            "pathMp3_ptBr": "https://d2pb17nicmpb2v.cloudfront.net/ptBr/Salmo+85.mp3",
             "pathMp3": "assets/mp3/GenPs085_vocal_homoph_BoP84.MP3",
             "coro": [],
             "title": "SALMO 85",
@@ -6450,6 +6535,7 @@
         {
             "id": "86",
             "type": "SALMO",
+            "pathMp3_ptBr": "https://d2pb17nicmpb2v.cloudfront.net/ptBr/Salmo+86.mp3",
             "pathMp3": "assets/mp3/GenPs086_vocal_homoph_BoP84.MP3",
             "coro": [],
             "title": "SALMO 86",
@@ -6540,6 +6626,7 @@
         {
             "id": "87",
             "type": "SALMO",
+            "pathMp3_ptBr": "https://d2pb17nicmpb2v.cloudfront.net/ptBr/Salmo+87.mp3",
             "pathMp3": "assets/mp3/GenPs087_vocal_homoph_BoP84.MP3",
             "coro": [],
             "title": "SALMO 87",
@@ -6580,6 +6667,7 @@
         {
             "id": "88",
             "type": "SALMO",
+            "pathMp3_ptBr": "https://d2pb17nicmpb2v.cloudfront.net/ptBr/Salmo+88.mp3",
             "pathMp3": "assets/mp3/GenPs088_vocal_homoph_BoP84.MP3",
             "coro": [],
             "title": "SALMO 88",
@@ -6670,6 +6758,7 @@
         {
             "id": "89",
             "type": "SALMO",
+            "pathMp3_ptBr": "https://d2pb17nicmpb2v.cloudfront.net/ptBr/Salmo+89.mp3",
             "pathMp3": "assets/mp3/GenPs089_vocal_homoph_BoP84.MP3",
             "coro": [],
             "title": "SALMO 89",
@@ -6840,6 +6929,7 @@
         {
             "id": "90",
             "type": "SALMO",
+            "pathMp3_ptBr": "https://d2pb17nicmpb2v.cloudfront.net/ptBr/Salmo+90.mp3",
             "pathMp3": "assets/mp3/GenPs090_vocal_homoph_BoP84.MP3",
             "coro": [],
             "title": "SALMO 90",
@@ -6914,6 +7004,7 @@
         {
             "id": "91",
             "type": "SALMO",
+            "pathMp3_ptBr": "https://d2pb17nicmpb2v.cloudfront.net/ptBr/Salmo+91.mp3",
             "pathMp3": "assets/mp3/GenPs091_vocal_homoph_BoP84.MP3",
             "coro": [],
             "title": "SALMO 91",
@@ -7004,6 +7095,7 @@
         {
             "id": "92",
             "type": "SALMO",
+            "pathMp3_ptBr": "https://d2pb17nicmpb2v.cloudfront.net/ptBr/Salmo+92.mp3",
             "pathMp3": "assets/mp3/GenPs092_vocal_homoph_BoP84.MP3",
             "coro": [],
             "title": "SALMO 92",
@@ -7062,6 +7154,7 @@
         {
             "id": "93",
             "type": "SALMO",
+            "pathMp3_ptBr": "https://d2pb17nicmpb2v.cloudfront.net/ptBr/Salmo+93.mp3",
             "pathMp3": "assets/mp3/GenPs093_vocal_homoph_BoP84.MP3",
             "coro": [],
             "title": "SALMO 93",
@@ -7102,6 +7195,7 @@
         {
             "id": "94",
             "type": "SALMO",
+            "pathMp3_ptBr": "https://d2pb17nicmpb2v.cloudfront.net/ptBr/Salmo+94.mp3",
             "pathMp3": "assets/mp3/GenPs094_vocal_homoph_BoP84.MP3",
             "coro": [],
             "title": "SALMO 94",
@@ -7200,6 +7294,7 @@
         {
             "id": "95",
             "type": "SALMO",
+            "pathMp3_ptBr": "https://d2pb17nicmpb2v.cloudfront.net/ptBr/Salmo+95.mp3",
             "pathMp3": "assets/mp3/GenPs095_vocal_homoph_BoP84.MP3",
             "coro": [],
             "title": "SALMO 95",
@@ -7250,6 +7345,7 @@
         {
             "id": "96",
             "type": "SALMO",
+            "pathMp3_ptBr": "https://d2pb17nicmpb2v.cloudfront.net/ptBr/Salmo+96.mp3",
             "pathMp3": "assets/mp3/GenPs096_vocal_homoph_BoP84.MP3",
             "coro": [],
             "title": "SALMO 96",
@@ -7309,6 +7405,7 @@
         {
             "id": "97",
             "type": "SALMO",
+            "pathMp3_ptBr": "https://d2pb17nicmpb2v.cloudfront.net/ptBr/Salmo+97.mp3",
             "pathMp3": "assets/mp3/GenPs097_vocal_homoph_BoP84.MP3",
             "coro": [],
             "title": "SALMO 97",
@@ -7385,6 +7482,7 @@
         {
             "id": "98",
             "type": "SALMO",
+            "pathMp3_ptBr": "https://d2pb17nicmpb2v.cloudfront.net/ptBr/Salmo+98.mp3",
             "pathMp3": "assets/mp3/GenPs098_vocal_homoph_BoP84.MP3",
             "coro": [],
             "title": "SALMO 98",
@@ -7435,6 +7533,7 @@
         {
             "id": "99",
             "type": "SALMO",
+            "pathMp3_ptBr": "https://d2pb17nicmpb2v.cloudfront.net/ptBr/Salmo+99.mp3",
             "pathMp3": "assets/mp3/GenPs099_vocal_homoph_BoP84.MP3",
             "coro": [],
             "title": "SALMO 99",
@@ -7475,6 +7574,7 @@
         {
             "id": "100",
             "type": "SALMO",
+            "pathMp3_ptBr": null,
             "pathMp3": "assets/mp3/GenPs100_vocal_homoph_BoP84.MP3",
             "coro": [],
             "title": "SALMO 100",
@@ -7509,6 +7609,7 @@
         {
             "id": "101",
             "type": "SALMO",
+            "pathMp3_ptBr": "https://d2pb17nicmpb2v.cloudfront.net/ptBr/Salmo+101.mp3",
             "pathMp3": "assets/mp3/GenPs101_vocal_homoph_BoP84.MP3",
             "coro": [],
             "title": "SALMO 101",
@@ -7567,6 +7668,7 @@
         {
             "id": "102",
             "type": "SALMO",
+            "pathMp3_ptBr": null,
             "pathMp3": "assets/mp3/GenPs102_vocal_homoph_BoP84.MP3",
             "coro": [],
             "title": "SALMO 102",
@@ -7707,6 +7809,7 @@
         {
             "id": "103",
             "type": "SALMO",
+            "pathMp3_ptBr": "https://d2pb17nicmpb2v.cloudfront.net/ptBr/Salmo+103.mp3",
             "pathMp3": "assets/mp3/GenPs103_vocal_homoph_BoP84.MP3",
             "coro": [],
             "title": "SALMO 103",
@@ -7781,6 +7884,7 @@
         {
             "id": "104",
             "type": "SALMO",
+            "pathMp3_ptBr": "https://d2pb17nicmpb2v.cloudfront.net/ptBr/Salmo+104.mp3",
             "pathMp3": "assets/mp3/GenPs104_vocal_homoph_BoP84.MP3",
             "coro": [],
             "title": "SALMO 104",
@@ -7911,6 +8015,7 @@
         {
             "id": "105",
             "type": "SALMO",
+            "pathMp3_ptBr": "https://d2pb17nicmpb2v.cloudfront.net/ptBr/Salmo+105.mp3",
             "pathMp3": "assets/mp3/GenPs105_vocal_homoph_BoP84.MP3",
             "coro": [],
             "title": "SALMO 105",
@@ -8081,6 +8186,7 @@
         {
             "id": "106",
             "type": "SALMO",
+            "pathMp3_ptBr": null,
             "pathMp3": "assets/mp3/GenPs106_vocal_homoph_BoP84.MP3",
             "coro": [],
             "title": "SALMO 106",
@@ -8291,6 +8397,7 @@
         {
             "id": "107",
             "type": "SALMO",
+            "pathMp3_ptBr": null,
             "pathMp3": "assets/mp3/GenPs107_vocal_homoph_BoP84.MP3",
             "coro": [],
             "title": "SALMO 107",
@@ -8511,6 +8618,7 @@
         {
             "id": "108",
             "type": "SALMO",
+            "pathMp3_ptBr": null,
             "pathMp3": "assets/mp3/GenPs108_vocal_homoph_BoP84.MP3",
             "coro": [],
             "title": "SALMO 108",
@@ -8581,6 +8689,7 @@
         {
             "id": "109",
             "type": "SALMO",
+            "pathMp3_ptBr": null,
             "pathMp3": "assets/mp3/GenPs109_vocal_homoph_BoP84.MP3",
             "coro": [],
             "title": "SALMO 109",
@@ -8719,6 +8828,7 @@
         {
             "id": "110",
             "type": "SALMO",
+            "pathMp3_ptBr": null,
             "pathMp3": "assets/mp3/GenPs110_vocal_homoph_BoP84.MP3",
             "coro": [],
             "title": "SALMO 110",
@@ -8765,6 +8875,7 @@
         {
             "id": "111",
             "type": "SALMO",
+            "pathMp3_ptBr": "https://d2pb17nicmpb2v.cloudfront.net/ptBr/Salmo+111.mp3",
             "pathMp3": "assets/mp3/GenPs111_vocal_homoph_BoP84.MP3",
             "coro": [],
             "title": "SALMO 111",
@@ -8815,6 +8926,7 @@
         {
             "id": "112",
             "type": "SALMO",
+            "pathMp3_ptBr": "https://d2pb17nicmpb2v.cloudfront.net/ptBr/Salmo+112.mp3",
             "pathMp3": "assets/mp3/GenPs112_vocal_homoph_BoP84.MP3",
             "coro": [],
             "title": "SALMO 112",
@@ -8857,6 +8969,7 @@
         {
             "id": "113",
             "type": "SALMO",
+            "pathMp3_ptBr": "https://d2pb17nicmpb2v.cloudfront.net/ptBr/Salmo+113.mp3",
             "pathMp3": "assets/mp3/GenPs113_vocal_homoph_BoP84.MP3",
             "coro": [],
             "title": "SALMO 113",
@@ -8899,6 +9012,7 @@
         {
             "id": "114",
             "type": "SALMO",
+            "pathMp3_ptBr": null,
             "pathMp3": "assets/mp3/GenPs114_vocal_homoph_BoP84.MP3",
             "coro": [],
             "title": "SALMO 114",
@@ -8941,6 +9055,7 @@
         {
             "id": "115",
             "type": "SALMO",
+            "pathMp3_ptBr": "https://d2pb17nicmpb2v.cloudfront.net/ptBr/Salmo+115.mp3",
             "pathMp3": "assets/mp3/GenPs115_vocal_homoph_BoP84.MP3",
             "coro": [],
             "title": "SALMO 115",
@@ -9015,6 +9130,7 @@
         {
             "id": "116",
             "type": "SALMO",
+            "pathMp3_ptBr": null,
             "pathMp3": "assets/mp3/GenPs116_vocal_homoph_BoP84.MP3",
             "coro": [],
             "title": "SALMO 116",
@@ -9091,6 +9207,7 @@
         {
             "id": "117",
             "type": "SALMO",
+            "pathMp3_ptBr": "https://d2pb17nicmpb2v.cloudfront.net/ptBr/Salmo+117.mp3",
             "pathMp3": "assets/mp3/GenPs117_vocal_homoph_BoP84.MP3",
             "coro": [],
             "title": "SALMO 117",
@@ -9115,6 +9232,7 @@
         {
             "id": "118",
             "type": "SALMO",
+            "pathMp3_ptBr": null,
             "pathMp3": "assets/mp3/GenPs118_vocal_homoph_BoP84.MP3",
             "coro": [],
             "title": "SALMO 118",
@@ -9225,6 +9343,7 @@
         {
             "id": "119-1",
             "type": "SALMO",
+            "pathMp3_ptBr": "https://d2pb17nicmpb2v.cloudfront.net/ptBr/Salmo+119.1-8+-+Aleph.mp3",
             "pathMp3": "assets/mp3/GenPs119_vocal_homoph_BoP84.MP3",
             "coro": [],
             "title": "Salmo 119.1-8 – Aleph",
@@ -9267,6 +9386,7 @@
         {
             "id": "119-2",
             "type": "SALMO",
+            "pathMp3_ptBr": "https://d2pb17nicmpb2v.cloudfront.net/ptBr/Salmo+119.9-16+-+Beth.mp3",
             "pathMp3": "assets/mp3/GenPs119_vocal_homoph_BoP84.MP3",
             "coro": [],
             "title": "Salmo 119.9-16 – Beth",
@@ -9301,6 +9421,7 @@
         {
             "id": "119-3",
             "type": "SALMO",
+            "pathMp3_ptBr": "https://d2pb17nicmpb2v.cloudfront.net/ptBr/Salmo+119.17-24+Gimel.mp3",
             "pathMp3": "assets/mp3/GenPs119_vocal_homoph_BoP84.MP3",
             "coro": [],
             "title": "Salmo 119.17-24 – Gimel",
@@ -9335,6 +9456,7 @@
         {
             "id": "119-4",
             "type": "SALMO",
+            "pathMp3_ptBr": "https://d2pb17nicmpb2v.cloudfront.net/ptBr/Salmo+119.+25-32+Daleth.mp3",
             "pathMp3": "assets/mp3/GenPs119_vocal_homoph_BoP84.MP3",
             "coro": [],
             "title": "Salmo 119.25-32 – Daleth",
@@ -9369,6 +9491,7 @@
         {
             "id": "119-5",
             "type": "SALMO",
+            "pathMp3_ptBr": "https://d2pb17nicmpb2v.cloudfront.net/ptBr/Salmo+119.+33-40+He.mp3",
             "pathMp3": "assets/mp3/GenPs119_vocal_homoph_BoP84.MP3",
             "coro": [],
             "title": "Salmo 119.33-40 – He",
@@ -9411,6 +9534,7 @@
         {
             "id": "119-6",
             "type": "SALMO",
+            "pathMp3_ptBr": "https://d2pb17nicmpb2v.cloudfront.net/ptBr/Salmo+119.+41-48+Vav.mp3",
             "pathMp3": "assets/mp3/GenPs119_vocal_homoph_BoP84.MP3",
             "coro": [],
             "title": "Salmo 119.41-48 – Vav",
@@ -9445,6 +9569,7 @@
         {
             "id": "119-7",
             "type": "SALMO",
+            "pathMp3_ptBr": "https://d2pb17nicmpb2v.cloudfront.net/ptBr/Salmo+119.+49-56+Zain.mp3",
             "pathMp3": "assets/mp3/GenPs119_vocal_homoph_BoP84.MP3",
             "coro": [],
             "title": "Salmo 119.49-56 – Zain",
@@ -9479,6 +9604,7 @@
         {
             "id": "119-8",
             "type": "SALMO",
+            "pathMp3_ptBr": "https://d2pb17nicmpb2v.cloudfront.net/ptBr/Salmo+119.57-64+Heth.mp3",
             "pathMp3": "assets/mp3/GenPs119_vocal_homoph_BoP84.MP3",
             "coro": [],
             "title": "Salmo 119.57-64 – Heth",
@@ -9513,6 +9639,7 @@
         {
             "id": "119-9",
             "type": "SALMO",
+            "pathMp3_ptBr": "https://d2pb17nicmpb2v.cloudfront.net/ptBr/Salmo+119.65-72+Teth.mp3",
             "pathMp3": "assets/mp3/GenPs119_vocal_homoph_BoP84.MP3",
             "coro": [],
             "title": "Salmo 119.65-72 – Teth",
@@ -9547,6 +9674,7 @@
         {
             "id": "119-10",
             "type": "SALMO",
+            "pathMp3_ptBr": "https://d2pb17nicmpb2v.cloudfront.net/ptBr/Salmo+119.73-80+Iod.mp3",
             "pathMp3": "assets/mp3/GenPs119_vocal_homoph_BoP84.MP3",
             "coro": [],
             "title": "Salmo 119.73-80 – Iod",
@@ -9581,6 +9709,7 @@
         {
             "id": "119-11",
             "type": "SALMO",
+            "pathMp3_ptBr": "https://d2pb17nicmpb2v.cloudfront.net/ptBr/Salmo+119.81-88+-+Caph.mp3",
             "pathMp3": "assets/mp3/GenPs119_vocal_homoph_BoP84.MP3",
             "coro": [],
             "title": "Salmo 119.81-88 – Caph",
@@ -9623,6 +9752,7 @@
         {
             "id": "119-12",
             "type": "SALMO",
+            "pathMp3_ptBr": "https://d2pb17nicmpb2v.cloudfront.net/ptBr/Salmo+119.89-96+-+Lamed.mp3",
             "pathMp3": "assets/mp3/GenPs119_vocal_homoph_BoP84.MP3",
             "coro": [],
             "title": "Salmo 119.89-96 – Lamed",
@@ -9657,6 +9787,7 @@
         {
             "id": "119-13",
             "type": "SALMO",
+            "pathMp3_ptBr": "https://d2pb17nicmpb2v.cloudfront.net/ptBr/Salmo+119.97-104+-+Mem.mp3",
             "pathMp3": "assets/mp3/GenPs119_vocal_homoph_BoP84.MP3",
             "coro": [],
             "title": "Salmo 119.97-104 – Mem",
@@ -9691,6 +9822,7 @@
         {
             "id": "119-14",
             "type": "SALMO",
+            "pathMp3_ptBr": "https://d2pb17nicmpb2v.cloudfront.net/ptBr/Salmo+119.+105+-112+Nun.mp3",
             "pathMp3": "assets/mp3/GenPs119_vocal_homoph_BoP84.MP3",
             "coro": [],
             "title": "Salmo 119.105-112 – Nun",
@@ -9733,6 +9865,7 @@
         {
             "id": "119-15",
             "type": "SALMO",
+            "pathMp3_ptBr": "https://d2pb17nicmpb2v.cloudfront.net/ptBr/Salmo+119.+113+-120+Samech.mp3",
             "pathMp3": "assets/mp3/GenPs119_vocal_homoph_BoP84.MP3",
             "coro": [],
             "title": "Salmo 119.113-120 – Samech",
@@ -9767,6 +9900,7 @@
         {
             "id": "119-16",
             "type": "SALMO",
+            "pathMp3_ptBr": "https://d2pb17nicmpb2v.cloudfront.net/ptBr/Salmo+119.121-128++Ayn.mp3",
             "pathMp3": "assets/mp3/GenPs119_vocal_homoph_BoP84.MP3",
             "coro": [],
             "title": "Salmo 119.121-128 – Ayn",
@@ -9801,6 +9935,7 @@
         {
             "id": "119-17",
             "type": "SALMO",
+            "pathMp3_ptBr": "https://d2pb17nicmpb2v.cloudfront.net/ptBr/Salmo+119.129-136+Pe.mp3",
             "pathMp3": "assets/mp3/GenPs119_vocal_homoph_BoP84.MP3",
             "coro": [],
             "title": "Salmo 119.129-136 – Pe",
@@ -9835,6 +9970,7 @@
         {
             "id": "119-18",
             "type": "SALMO",
+            "pathMp3_ptBr": "https://d2pb17nicmpb2v.cloudfront.net/ptBr/Salmo+119.137-14+Tzadi.mp3",
             "pathMp3": "assets/mp3/GenPs119_vocal_homoph_BoP84.MP3",
             "coro": [],
             "title": "Salmo 119.137-144 – Tzadi",
@@ -9869,6 +10005,7 @@
         {
             "id": "119-19",
             "type": "SALMO",
+            "pathMp3_ptBr": "https://d2pb17nicmpb2v.cloudfront.net/ptBr/Salmo+119.145-152+Koph.mp3",
             "pathMp3": "assets/mp3/GenPs119_vocal_homoph_BoP84.MP3",
             "coro": [],
             "title": "Salmo 119.145-152 – Koph",
@@ -9903,6 +10040,7 @@
         {
             "id": "119-20",
             "type": "SALMO",
+            "pathMp3_ptBr": "https://d2pb17nicmpb2v.cloudfront.net/ptBr/Salmo+119.153-160+Resh.mp3",
             "pathMp3": "assets/mp3/GenPs119_vocal_homoph_BoP84.MP3",
             "coro": [],
             "title": "Salmo 119.153-160 – Resh",
@@ -9937,6 +10075,7 @@
         {
             "id": "119-21",
             "type": "SALMO",
+            "pathMp3_ptBr": "https://d2pb17nicmpb2v.cloudfront.net/ptBr/Salmo+119_161-18-Shin.mp3",
             "pathMp3": "assets/mp3/GenPs119_vocal_homoph_BoP84.MP3",
             "coro": [],
             "title": "Salmo 119.161-168 – Shin",
@@ -9971,6 +10110,7 @@
         {
             "id": "119-22",
             "type": "SALMO",
+            "pathMp3_ptBr": "https://d2pb17nicmpb2v.cloudfront.net/ptBr/Salmo+119_169-176-Tav.mp3",
             "pathMp3": "assets/mp3/GenPs119_vocal_homoph_BoP84.MP3",
             "coro": [],
             "title": "Salmo 119.169-176 – Tav",
@@ -10005,6 +10145,7 @@
         {
             "id": "120",
             "type": "SALMO",
+            "pathMp3_ptBr": null,
             "pathMp3": "assets/mp3/GenPs120_vocal_homoph_BoP84.MP3",
             "coro": [],
             "title": "SALMO 120",
@@ -10035,6 +10176,7 @@
         {
             "id": "121",
             "type": "SALMO",
+            "pathMp3_ptBr": "https://d2pb17nicmpb2v.cloudfront.net/ptBr/Salmo+121.mp3",
             "pathMp3": "assets/mp3/GenPs121_vocal_homoph_BoP84.MP3",
             "coro": [],
             "title": "SALMO 121",
@@ -10073,6 +10215,7 @@
         {
             "id": "122",
             "type": "SALMO",
+            "pathMp3_ptBr": "https://d2pb17nicmpb2v.cloudfront.net/ptBr/Salmo+122.mp3",
             "pathMp3": "assets/mp3/GenPs122_vocal_homoph_BoP84.MP3",
             "coro": [],
             "title": "SALMO 122",
@@ -10119,6 +10262,7 @@
         {
             "id": "123",
             "type": "SALMO",
+            "pathMp3_ptBr": null,
             "pathMp3": "assets/mp3/GenPs123_vocal_homoph_BoP84.MP3",
             "coro": [],
             "title": "SALMO 123",
@@ -10149,6 +10293,7 @@
         {
             "id": "124",
             "type": "SALMO",
+            "pathMp3_ptBr": "https://d2pb17nicmpb2v.cloudfront.net/ptBr/Salmo+124.mp3",
             "pathMp3": "assets/mp3/GenPs124_vocal_homoph_BoP84.MP3",
             "coro": [],
             "title": "SALMO 124",
@@ -10187,6 +10332,7 @@
         {
             "id": "125",
             "type": "SALMO",
+            "pathMp3_ptBr": null,
             "pathMp3": "assets/mp3/GenPs125_vocal_homoph_BoP84.MP3",
             "coro": [],
             "title": "SALMO 125",
@@ -10229,6 +10375,7 @@
         {
             "id": "126",
             "type": "SALMO",
+            "pathMp3_ptBr": null,
             "pathMp3": "assets/mp3/GenPs126_vocal_homoph_BoP84.MP3",
             "coro": [],
             "title": "SALMO 126",
@@ -10259,6 +10406,7 @@
         {
             "id": "127",
             "type": "SALMO",
+            "pathMp3_ptBr": "https://d2pb17nicmpb2v.cloudfront.net/ptBr/Salmo+127.mp3",
             "pathMp3": "assets/mp3/GenPs127_vocal_homoph_BoP84.MP3",
             "coro": [],
             "title": "SALMO 127",
@@ -10293,6 +10441,7 @@
         {
             "id": "128",
             "type": "SALMO",
+            "pathMp3_ptBr": "https://d2pb17nicmpb2v.cloudfront.net/ptBr/Salmo+128.mp3",
             "pathMp3": "assets/mp3/GenPs128_vocal_homoph_BoP84.MP3",
             "coro": [],
             "title": "SALMO 128",
@@ -10327,6 +10476,7 @@
         {
             "id": "129",
             "type": "SALMO",
+            "pathMp3_ptBr": null,
             "pathMp3": "assets/mp3/GenPs129_vocal_homoph_BoP84.MP3",
             "coro": [],
             "title": "SALMO 129",
@@ -10361,6 +10511,7 @@
         {
             "id": "130",
             "type": "SALMO",
+            "pathMp3_ptBr": null,
             "pathMp3": "assets/mp3/GenPs130_vocal_homoph_BoP84.MP3",
             "coro": [],
             "title": "SALMO 130",
@@ -10411,6 +10562,7 @@
         {
             "id": "131",
             "type": "SALMO",
+            "pathMp3_ptBr": null,
             "pathMp3": "assets/mp3/GenPs131_vocal_homoph_BoP84.MP3",
             "coro": [],
             "title": "SALMO 131",
@@ -10439,6 +10591,7 @@
         {
             "id": "132",
             "type": "SALMO",
+            "pathMp3_ptBr": null,
             "pathMp3": "assets/mp3/GenPs132_vocal_homoph_BoP84.MP3",
             "coro": [],
             "title": "SALMO 132",
@@ -10533,6 +10686,7 @@
         {
             "id": "133",
             "type": "SALMO",
+            "pathMp3_ptBr": "https://d2pb17nicmpb2v.cloudfront.net/ptBr/Salmo+133.mp3",
             "pathMp3": "assets/mp3/GenPs133_vocal_homoph_BoP84.MP3",
             "coro": [],
             "title": "SALMO 133",
@@ -10559,6 +10713,7 @@
         {
             "id": "134",
             "type": "SALMO",
+            "pathMp3_ptBr": "https://d2pb17nicmpb2v.cloudfront.net/ptBr/Salmo+134.mp3",
             "pathMp3": "assets/mp3/GenPs134_vocal_homoph_BoP84.MP3",
             "coro": [],
             "title": "SALMO 134",
@@ -10581,6 +10736,7 @@
         {
             "id": "135",
             "type": "SALMO",
+            "pathMp3_ptBr": "https://d2pb17nicmpb2v.cloudfront.net/ptBr/Salmo+135.mp3",
             "pathMp3": "assets/mp3/GenPs135_vocal_homoph_BoP84.MP3",
             "coro": [],
             "title": "SALMO 135",
@@ -10679,6 +10835,7 @@
         {
             "id": "136",
             "type": "SALMO",
+            "pathMp3_ptBr": "https://d2pb17nicmpb2v.cloudfront.net/ptBr/Salmo+136.mp3",
             "pathMp3": "assets/mp3/GenPs136_vocal_homoph_BoP84.MP3",
             "coro": [],
             "title": "SALMO 136",
@@ -10779,6 +10936,7 @@
         {
             "id": "137",
             "type": "SALMO",
+            "pathMp3_ptBr": null,
             "pathMp3": "assets/mp3/GenPs137_vocal_homoph_BoP84.MP3",
             "coro": [],
             "title": "SALMO 137",
@@ -10829,6 +10987,7 @@
         {
             "id": "138",
             "type": "SALMO",
+            "pathMp3_ptBr": "https://d2pb17nicmpb2v.cloudfront.net/ptBr/Salmo+138.mp3",
             "pathMp3": "assets/mp3/GenPs138_vocal_homoph_BoP84.MP3",
             "coro": [],
             "title": "SALMO 138",
@@ -10879,6 +11038,7 @@
         {
             "id": "139",
             "type": "SALMO",
+            "pathMp3_ptBr": null,
             "pathMp3": "assets/mp3/GenPs139_vocal_homoph_BoP84.MP3",
             "coro": [],
             "title": "SALMO 139",
@@ -10993,6 +11153,7 @@
         {
             "id": "140",
             "type": "SALMO",
+            "pathMp3_ptBr": "https://d2pb17nicmpb2v.cloudfront.net/ptBr/Salmo+140.mp3",
             "pathMp3": "assets/mp3/GenPs140_vocal_homoph_BoP84.MP3",
             "coro": [],
             "title": "SALMO 140",
@@ -11057,6 +11218,7 @@
         {
             "id": "141",
             "type": "SALMO",
+            "pathMp3_ptBr": null,
             "pathMp3": "assets/mp3/GenPs141_vocal_homoph_BoP84.MP3",
             "coro": [],
             "title": "SALMO 141",
@@ -11133,6 +11295,7 @@
         {
             "id": "142",
             "type": "SALMO",
+            "pathMp3_ptBr": null,
             "pathMp3": "assets/mp3/GenPs142_vocal_homoph_BoP84.MP3",
             "coro": [],
             "title": "SALMO 142",
@@ -11185,6 +11348,7 @@
         {
             "id": "143",
             "type": "SALMO",
+            "pathMp3_ptBr": null,
             "pathMp3": "assets/mp3/GenPs143_vocal_homoph_BoP84.MP3",
             "coro": [],
             "title": "SALMO 143",
@@ -11258,6 +11422,7 @@
         {
             "id": "144",
             "type": "SALMO",
+            "pathMp3_ptBr": null,
             "pathMp3": "assets/mp3/GenPs144_vocal_homoph_BoP84.MP3",
             "coro": [],
             "title": "SALMO 144",
@@ -11328,6 +11493,7 @@
         {
             "id": "145",
             "type": "SALMO",
+            "pathMp3_ptBr": null,
             "pathMp3": "assets/mp3/GenPs145_vocal_homoph_BoP84.MP3",
             "coro": [],
             "title": "SALMO 145",
@@ -11398,6 +11564,7 @@
         {
             "id": "146",
             "type": "SALMO",
+            "pathMp3_ptBr": null,
             "pathMp3": "assets/mp3/GenPs146_vocal_homoph_BoP84.MP3",
             "coro": [],
             "title": "SALMO 146",
@@ -11456,6 +11623,7 @@
         {
             "id": "147",
             "type": "SALMO",
+            "pathMp3_ptBr": "https://d2pb17nicmpb2v.cloudfront.net/ptBr/Salmo+147.mp3",
             "pathMp3": "assets/mp3/GenPs147_vocal_homoph_BoP84.MP3",
             "coro": [],
             "title": "SALMO 147",
@@ -11526,6 +11694,7 @@
         {
             "id": "148",
             "type": "SALMO",
+            "pathMp3_ptBr": null,
             "pathMp3": "assets/mp3/GenPs148_vocal_homoph_BoP84.MP3",
             "coro": [],
             "title": "SALMO 148",
@@ -11586,6 +11755,7 @@
         {
             "id": "149",
             "type": "SALMO",
+            "pathMp3_ptBr": null,
             "pathMp3": "assets/mp3/GenPs149_vocal_homoph_BoP84.MP3",
             "coro": [],
             "title": "SALMO 149",
@@ -11626,6 +11796,7 @@
         {
             "id": "150",
             "type": "SALMO",
+            "pathMp3_ptBr": "https://d2pb17nicmpb2v.cloudfront.net/ptBr/Salmo+150.mp3",
             "pathMp3": "assets/mp3/GenPs150_vocal_homoph_BoP84.MP3",
             "coro": [],
             "title": "SALMO 150",
