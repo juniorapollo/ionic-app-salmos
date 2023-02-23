@@ -5,7 +5,6 @@ import { Song } from '../models/song_model';
 import { Favoritos } from '../enum/favoritos.enum';
 
 
-
 @Injectable({
   providedIn: 'root'
 })
@@ -40,6 +39,13 @@ export class SongsService {
       });
     });
   }
+
+
+  findByType() {
+    return this.http.get(this.dataUrl)
+  }
+
+
 
   // async findAllTitle(){
   //   return new Promise(resolve => {

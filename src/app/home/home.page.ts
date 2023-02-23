@@ -2,17 +2,21 @@ import { Component, OnInit, ViewChild } from '@angular/core';
 import { Howl } from 'howler';
 import { Events, IonRange } from '@ionic/angular';
 import { SongsService } from '../services/songs.service';
-import { ActivatedRoute , ParamMap, Router} from '@angular/router';
 import { UtilService } from '../services/util.service';
 import { MSG } from '../enum/msg.enum';
 import { EVENTOS } from '../enum/eventos.enum';
+import { Observable, of, Subject } from 'rxjs';
+import { ActivatedRoute } from '@angular/router';
 
-
+const MUSIC_TYPE = {
+	ptBr: 'ptBr',
+	enUs: 'enUs'
+}
 
 export interface Track {
 	name?: string;
-  path?: string;
-  author?: string
+  	path?: string;
+  	author?: string
 }
 
 @Component({
@@ -21,16 +25,19 @@ export interface Track {
   styleUrls: ['home.page.scss'],
 })
 export class HomePage implements OnInit {
-	musics:string = 'ptBr'
-  	playlist: Track[] = []
+	musicTypeDefault:string = MUSIC_TYPE.ptBr
+	musicTypeSelected:string
 
+  	playlist: Track[] = []
   	activeTrack: Track = null;
 	player: Howl = null;
 	isPlaying = false;
   	progress = 0;
   	isRandom = false;
+
 	@ViewChild('range') range: IonRange;
-	isPtBr:boolean;
+
+	isPtBr:boolean = true;
 	isOnline: boolean = navigator.onLine; 
 
   	constructor(
@@ -46,34 +53,9 @@ export class HomePage implements OnInit {
 		
 		}
 
-
-	async ngOnInit() {
-		this.utilService.openLoader(MSG.CARREGANDO_PAGINA)
-
-		let songs:any = await this.songsService.findAll();
-
-		songs.forEach(song => {
-		let player:Track = {}
-		player.name = song.title
-		player.path = song.pathMp3_ptBr || song.pathMp3
-		player.author =  song.author
-		this.playlist.push(player)
-		});
-
-		
-		this.route.queryParams.subscribe(params => {	
-			if(this.isPlaying) 
-				this.togglePlayer(true)
-		
-			if(params['ptBr'])		
-				this.isPtBr = JSON.parse(params['ptBr']) 
-		});
-
-		this.utilService.closeLoader()
-
+	ngOnInit() {
+		this.segmentChanged(MUSIC_TYPE.ptBr)
 	}
-
-	
 	
 	ionViewDidEnter(){
 		this.utilService.closeLoader()
@@ -131,13 +113,13 @@ export class HomePage implements OnInit {
 	}
 
 	prev() {
-    const index = this.playlist.indexOf(this.activeTrack);
+    	const index = this.playlist.indexOf(this.activeTrack);
 		if (index > 0) {
 			this.start(this.playlist[index - 1]);
 		} else {
 			this.start(this.playlist[this.playlist.length - 1]);
 		}
-  }
+  	}
   
 	random(){
 		const indexOriginal = this.playlist.indexOf(this.activeTrack);
@@ -164,68 +146,44 @@ export class HomePage implements OnInit {
 		}, 1000);
   	}
   
-  setRandom(){
-    this.isRandom = !this.isRandom
-  }
+	setRandom(){
+		this.isRandom = !this.isRandom
+	}
 
-  segmentChanged(ev: any) {
-    console.log('Segment changed', ev);
-  }
+	stop() {
+		if(this.player){
+			this.player.stop()
+			this.activeTrack = null;
+		}
+	}
 
+	async segmentChanged( selected:string ) {
+		this.utilService.openLoader(MSG.CARREGANDO_PAGINA)
+		if(this.musicTypeSelected !== selected) {
+			this.musicTypeSelected = selected
+			this.playlist = []
 
+			this.songsService.findByType().subscribe(
+				{
+					next:(data:any) => {
+						let { songs } = data
 
-  slideOpts = {
-    initialSlide: 2,
-    speed: 400
-  };
+						this.playlist = songs.map(song=> {
+							return { 
+								name: song.title,
+								path: selected === MUSIC_TYPE.ptBr ? song.pathMp3_ptBr : song.pathMp3_enUs,
+								author:  song.author
+							}
+						})
+					},
+					error: (err) => console.error(err),
+					complete: () => console.log('Requisicao Completa')
+				}
+			)
+		} 
+		this.utilService.closeLoader()
+	}
 
-  sliderConfig = {
-    slidesPerView: 1,
-    centeredSlides: true,
-    speed: 500,
-    effect: 'flip',
-    autoHeight: true,
-    cssMode: true,
-    initialSlide: 14,
-    allowClick: false,
-    loop: true,
-    //autoplay:true,
-
-    //preloadImages: false,
-    // Enable lazy loading
-    lazy: true,
-  };
-
-  items = [
-	  0,
-	  0,
-	  0,
-	  0,
-	  0,
-	  0,
-	  0,
-	  0,
-	  0,
-	  0,
-	  0,
-	  0,
-	  0,
-	  0,
-	  0,
-	  0,
-	  0,
-	  0,
-	  0,
-	  0,
-	  0,
-	  0,
-	  0,
-	  0,
-	  0,
-	  0,
-	  0,
-	  0,  
-  ]
 
 
 }
