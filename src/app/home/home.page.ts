@@ -90,6 +90,13 @@ export class HomePage implements OnInit {
 				console.log('onend');
 				this.isRandom ? this.random() : this.next();
 			},
+			onplayerror: () => {
+				console.error('Erro')
+			},
+			onloaderror: () => {				
+				this.activeTrack = track;
+				this.isRandom ? this.random() : this.next();
+			}
 		});
 		this.player.play();
 	}
@@ -172,7 +179,7 @@ export class HomePage implements OnInit {
 							return { 
 								name: song.title,
 								path: selected === MUSIC_TYPE.ptBr ? song.pathMp3_ptBr : song.pathMp3_enUs,
-								author:  song.author
+								author: song.author
 							}
 						})
 					},
