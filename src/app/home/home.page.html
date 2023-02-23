@@ -10,35 +10,23 @@
 </ion-header>
 
 <!-- Default Segment -->
-<ion-segment [(ngModel)]="musics" (ionChange)="segmentChanged($event)" color="seconday">
-	<ion-segment-button value="ptBr" checked>
+<ion-segment [(ngModel)]="musicTypeDefault" (ionChange)="segmentChanged(musicTypeDefault)" color="seconday">
+	<ion-segment-button value='ptBr' checked (click)="stop()">
 		<ion-label warning>Português</ion-label>
 	</ion-segment-button>
-	<ion-segment-button value="ingles" (click)="this.player?.stop()">
+	<ion-segment-button value='enUs' (click)="stop()">
 		<ion-label>Inglês</ion-label>
 	</ion-segment-button>
 </ion-segment>
 
 <ion-content>
-	<div [ngSwitch]="musics" style="height: 100%;">
-		<iframe *ngSwitchCase="'ingles'"
-				id="iframe-salmos"
-				name="iframe-salmos"
-				scrolling="no"
-				src="https://castbox.fm/app/castbox/player/id3078172/id335887881?v=8.22.11&autoplay=0"
-				frameborder="0"
-				width="100%"
-				height="100%"
-				allowfullscreen="0"
-		>
-
-		</iframe>
-
-		<ion-list *ngSwitchCase="'ptBr'" >
+	<div [ngSwitch]="musicTypeDefault" style="height: 100%;">
+		<ion-list>
 			<ion-item button *ngFor="let track of playlist" (click)="start(track)">
 				<ion-label [color]="track == activeTrack ? 'medium' : null">
-					<h2>{{ track.name | titlecase }}</h2>
-					<p>{{ track.author | titlecase }}</p>
+					<!-- {{segmentChanged(track)}} -->
+					<h2>{{ track?.name | titlecase }}</h2>
+					<p>{{ track?.author | titlecase }}</p>
 				</ion-label>
 			</ion-item>
 		</ion-list>
@@ -46,7 +34,7 @@
 
 </ion-content>
 
-<ion-footer *ngIf="musics == 'ptBr' && activeTrack">
+<ion-footer *ngIf="activeTrack">
 	<ion-toolbar>
 		<ion-row>
 			<ion-col size="12" class="ion-text-center">
